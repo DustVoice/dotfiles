@@ -1,0 +1,10 @@
+[user]
+	email = info@dustvoice.de
+	name = DustVoice
+	signingkey = 7A9CA430D426100E
+[core]
+	editor = nvim
+[push]
+	default = simple
+[commit]
+	gpgsign = true
