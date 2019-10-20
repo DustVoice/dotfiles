@@ -116,14 +116,15 @@ if ! shopt -oq posix; then
   fi
 fi
 
-gpgconf --kill gpg-agent
-gpg-agent --daemon
-export SSH_AUTH_SOCK=~/.gnupg/S.gpg-agent.ssh
+export SSH_AUTH_SOCK="$(gpgconf --list-dir socketdir)/S.gpg-agent.ssh"
+export GPG_TTY=$(tty)
 
 export EDITOR=nvim
 export TERMINAL=gnome-terminal
 
 export PATH=$HOME/bin:$HOME/.local/bin:$PATH:~/JUCE
+export JUCE_PATH=~/JUCE
+export FRUT_PATH=~/FRUT
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH
 export CXXFLAGS='-std=c++14'
