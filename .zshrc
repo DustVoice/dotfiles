@@ -24,12 +24,6 @@ function zle-keymap-select () {
         (*)             VI_MODE="$(insert-mode)" ;;
     esac
 
-    [[ -n "$VI_MODE_KEEP_CURSOR" ]] || if [[ "$VI_KEYMAP" == "vicmd" ]]; then
-        print -n '\e[1 q'
-    else
-        print -n '\e[5 q'
-    fi
-
     PS1="%{$terminfo_down_sc$VI_MODE$terminfo[rc]%}%F{magenta}%n%f@%F{yellow}%m%f %B%F{cyan}%~%f%b %(!.#.$) "
 
     zle reset-prompt
@@ -44,12 +38,6 @@ preexec () { print -rn -- $terminfo[el]; }
 
 zle -N zle-line-init
 zle -N zle-keymap-select
-
-function _vi_mode_reset_cursor() {
-    [[ -n "$VI_MODE_KEEP_CURSOR" ]] || print -n '\e[1 q'
-}
-autoload -U add-zsh-hook
-add-zsh-hook preexec _vi_mode_reset_cursor
 
 export KEYTIMEOUT=1
 
