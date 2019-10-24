@@ -118,6 +118,7 @@ fi
 
 export SSH_AUTH_SOCK="$(gpgconf --list-dir socketdir)/S.gpg-agent.ssh"
 export GPG_TTY=$(tty)
+gpg-connect-agent updatestartuptty /bye
 
 export EDITOR=nvim
 export TERMINAL=gnome-terminal
