@@ -6,6 +6,7 @@
 !.bashrc
 !.gitconfig
 !.inputrc
+!.password-store
 !.xinitrc
 !.Xmodmap
 !.zshrc
@@ -15,6 +16,7 @@
 !.config/fish
 !.config/i3
 !.config/nitrogen
+!.config/nvim
 !.config/polybar
 
 !.gnupg/gpg-agent.conf

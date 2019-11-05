@@ -1,0 +1,6 @@
+[submodule ".password-store"]
+	path = .password-store
+	url = git@git.dustvoice.de:DustVoice/pass.git
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = git@github.com:DustVoice/nvim.git
