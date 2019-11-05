@@ -42,7 +42,7 @@ gpg-connect-agent updatestartuptty /bye > /dev/null
 set -x EDITOR 'nvim'
 set -x TERMINAL 'gnome-terminal'
 
-set -x PATH "$HOME/bin" "$HOME/.local/bin" "$HOME/JUCE" $PATH
+set -x PATH "$HOME/bin" "$HOME/.local/bin" "$HOME/JUCE" "$HOME/.gem/ruby/2.6.0/bin" $PATH
 set -x JUCE_PATH "$HOME/JUCE"
 set -x FRUT_PATH "$HOME/FRUT"
 
