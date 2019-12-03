@@ -17,8 +17,8 @@ bindsym $mod+u border none
 bindsym $mod+i border pixel 1
 bindsym $mod+o border normal
 
-font xft:URWGothic-Book 11
-#font Hack 11
+#font xft:URWGothic-Book 11
+font Hack 11
 
 floating_modifier $mod
 
