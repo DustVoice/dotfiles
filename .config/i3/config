@@ -82,6 +82,7 @@ bindsym $mod+a focus parent
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+Shift+w move workspace
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
@@ -220,7 +221,8 @@ mode "resize" {
 }
 
 # Autostart applications
-# exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+# exec --no-startup-id nitrogen --restore; sleep 1;
+# exec --no-startup-id picom -bCG --backend glx --vsync
 # exec --no-startup-id nm-applet
 # exec --no-startup-id xfce4-power-manager
 # exec --no-startup-id pamac-tray
@@ -297,5 +299,3 @@ mode "$mode_gaps_outer" {
 # touchpad on and off controller on laptop with Fn+<touchpad control functional key>
 # bindsym XF86TouchpadOn exec --no-startup-id synclient Touchpadoff=0
 # bindsym XF86TouchpadOff exec --no-startup-id synclient Touchpadoff=1
-
-# exec compton
