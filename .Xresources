@@ -1,0 +1,2 @@
+rofi.run-command: fish -c '{cmd}'
+rofi.run-list-command: 'fish -c functions'
