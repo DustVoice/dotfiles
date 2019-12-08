@@ -1,25 +1,19 @@
-*
+/*
+/*/
+!/.gitignore
 
-!.gitignore
+!/.bashrc
+!/.gitconfig
+!/.inputrc
+!/.password-store
+!/.xinitrc
+!/.Xmodmap
+!/.Xresources
+!/.zshrc
+!/README.md
 
-!.bash_aliases
-!.bashrc
-!.gitconfig
-!.inputrc
-!.password-store
-!.xinitrc
-!.Xmodmap
-!.Xresources
-!.zshrc
-!README.md
+!/.config/
 
-!.config/.compton.conf
-!.config/fish
-!.config/i3
-!.config/nitrogen
-!.config/nvim
-!.config/polybar
-
-!.gnupg/gpg-agent.conf
-!.gnupg/gpg.conf
-!.gnupg/sshcontrol
+!/.gnupg/gpg-agent.conf
+!/.gnupg/gpg.conf
+!/.gnupg/sshcontrol

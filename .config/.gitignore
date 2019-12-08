@@ -1,0 +1,11 @@
+/*
+/*/
+!/.gitignore
+
+!/.compton.conf/
+!/fish/
+!/i3/
+!/i3status/
+!/nitrogen/
+!/nvim/
+!/polybar/
