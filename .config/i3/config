@@ -272,7 +272,7 @@ mode "resize" {
 
 # Autostart applications
 exec --no-startup-id nitrogen --restore; sleep 1;
-exec --no-startup-id picom -bCG --backend glx
+# exec --no-startup-id picom -bCG --backend glx
 # exec --no-startup-id nm-applet
 # exec --no-startup-id xfce4-power-manager
 # exec --no-startup-id pamac-tray
@@ -288,9 +288,9 @@ bar {
 }
 
 # Theme colors
-client.focused #a6f6c6 #3f853f #e6e6e6 #0099ff #8abeb7
+client.focused #a6f6c6 #3f853f #e6e6e6 #ff0077 #8abeb7
 client.focused_inactive #c6c6c6 #1f1f1f #c6c6c6 #1f1f1f #8abeb7
-client.unfocused #c6c6c6 #1f1f1f #c6c6c6 #1f1f1f #8abeb7
+client.unfocused #c6c6c6 #1f1f1f #c6c6c6 #ff0077 #8abeb7
 client.urgent #f6a6a6 #3f1f1f #e6c6c6 #3f1f1f #8abeb7
 client.placeholder #c6c6c6 #1f1f1f #c6c6c6 #1f1f1f #8abeb7
 
