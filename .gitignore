@@ -7,7 +7,7 @@
 !/.inputrc
 !/.password-store
 !/.xinitrc
-!/.Xmodmap
+!/.Xmodmap.example
 !/.Xresources
 !/.zshrc
 !/README.md
