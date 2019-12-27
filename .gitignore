@@ -5,6 +5,7 @@
 !/.bashrc
 !/.gitconfig
 !/.inputrc
+!/.nvidia-xinitrc
 !/.password-store
 !/.xinitrc
 !/.Xmodmap.example
