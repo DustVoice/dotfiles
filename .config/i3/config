@@ -272,13 +272,9 @@ mode "resize" {
 
 # Autostart applications
 exec --no-startup-id nitrogen --restore; sleep 1;
-# exec --no-startup-id picom -bCG --backend glx
-# exec --no-startup-id nm-applet
-# exec --no-startup-id xfce4-power-manager
-# exec --no-startup-id pamac-tray
-# exec --no-startup-id clipit
-# exec_always --no-startup-id ff-theme-util
-# exec_always --no-startup-id fix_xcursor
+exec --no-startup-id picom -bCG --backend glx --unredir-if-possible-delay 1000
+exec --no-startup-id nm-applet
+exec --no-startup-id xfce4-power-manager
 # exec_always --no-startup-id ~/.config/polybar/i3wmthemer_bar_launch.sh
 
 bar {
@@ -302,10 +298,9 @@ client.background #1f1f1f
 #
 #smart_gaps on
 
-# Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
-set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_outer Outer Gaps: l|h|0 (local), Shift + l|h|0 (global)
+set $mode_gaps_inner Inner Gaps: l|h|0 (local), Shift + l|h|0 (global)
 bindsym $mod+Shift+g mode "$mode_gaps"
 
 mode "$mode_gaps" {
@@ -315,27 +310,27 @@ mode "$mode_gaps" {
         bindsym Escape mode "default"
 }
 mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
-        bindsym 0     gaps inner current set 0
+        bindsym l           gaps inner current plus 5
+        bindsym h           gaps inner current minus 5
+        bindsym 0           gaps inner current set 0
 
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+l     gaps inner all plus 5
+        bindsym Shift+h     gaps inner all minus 5
         bindsym Shift+0     gaps inner all set 0
 
-        bindsym Return mode "default"
+        bindsym Return mode "$mode_gaps"
         bindsym Escape mode "default"
 }
 mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
-        bindsym minus gaps outer current minus 5
-        bindsym 0     gaps outer current set 0
+        bindsym l           gaps outer current plus 5
+        bindsym h           gaps outer current minus 5
+        bindsym 0           gaps outer current set 0
 
-        bindsym Shift+plus  gaps outer all plus 5
-        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+l     gaps outer all plus 5
+        bindsym Shift+h     gaps outer all minus 5
         bindsym Shift+0     gaps outer all set 0
 
-        bindsym Return mode "default"
+        bindsym Return mode "$mode_gaps"
         bindsym Escape mode "default"
 }
 
