@@ -272,10 +272,10 @@ mode "resize" {
 
 # Autostart applications
 exec --no-startup-id nitrogen --restore; sleep 1;
-exec --no-startup-id picom -bCG --backend glx --unredir-if-possible-delay 1000
+exec --no-startup-id picom -bCG --backend glx --unredir-if-possible-delay 1000 --vsync
 exec --no-startup-id nm-applet
 exec --no-startup-id /usr/lib/xfce-polkit/xfce-polkit
-exec --no-startup-id xfce4-power-manager
+# exec --no-startup-id xfce4-power-manager
 # exec_always --no-startup-id ~/.config/polybar/i3wmthemer_bar_launch.sh
 
 bar {
