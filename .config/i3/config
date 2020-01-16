@@ -125,17 +125,6 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
-bindsym $mod+$alt_mod+1 workspace $ws11
-bindsym $mod+$alt_mod+2 workspace $ws12
-bindsym $mod+$alt_mod+3 workspace $ws13
-bindsym $mod+$alt_mod+4 workspace $ws14
-bindsym $mod+$alt_mod+5 workspace $ws15
-bindsym $mod+$alt_mod+6 workspace $ws16
-bindsym $mod+$alt_mod+7 workspace $ws17
-bindsym $mod+$alt_mod+8 workspace $ws18
-bindsym $mod+$alt_mod+9 workspace $ws19
-bindsym $mod+$alt_mod+0 workspace $ws20
-
 # Move to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
 bindsym $mod+Ctrl+2 move container to workspace $ws2
@@ -147,17 +136,6 @@ bindsym $mod+Ctrl+7 move container to workspace $ws7
 bindsym $mod+Ctrl+8 move container to workspace $ws8
 bindsym $mod+Ctrl+9 move container to workspace $ws9
 bindsym $mod+Ctrl+0 move container to workspace $ws10
-
-bindsym $mod+$alt_mod+Ctrl+1 move container to workspace $ws11
-bindsym $mod+$alt_mod+Ctrl+2 move container to workspace $ws12
-bindsym $mod+$alt_mod+Ctrl+3 move container to workspace $ws13
-bindsym $mod+$alt_mod+Ctrl+4 move container to workspace $ws14
-bindsym $mod+$alt_mod+Ctrl+5 move container to workspace $ws15
-bindsym $mod+$alt_mod+Ctrl+6 move container to workspace $ws16
-bindsym $mod+$alt_mod+Ctrl+7 move container to workspace $ws17
-bindsym $mod+$alt_mod+Ctrl+8 move container to workspace $ws18
-bindsym $mod+$alt_mod+Ctrl+9 move container to workspace $ws19
-bindsym $mod+$alt_mod+Ctrl+0 move container to workspace $ws20
 
 # Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
@@ -171,20 +149,9 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 
-bindsym $mod+$alt_mod+Shift+1 move container to workspace $ws11; workspace $ws11
-bindsym $mod+$alt_mod+Shift+2 move container to workspace $ws12; workspace $ws12
-bindsym $mod+$alt_mod+Shift+3 move container to workspace $ws13; workspace $ws13
-bindsym $mod+$alt_mod+Shift+4 move container to workspace $ws14; workspace $ws14
-bindsym $mod+$alt_mod+Shift+5 move container to workspace $ws15; workspace $ws15
-bindsym $mod+$alt_mod+Shift+6 move container to workspace $ws16; workspace $ws16
-bindsym $mod+$alt_mod+Shift+7 move container to workspace $ws17; workspace $ws17
-bindsym $mod+$alt_mod+Shift+8 move container to workspace $ws18; workspace $ws18
-bindsym $mod+$alt_mod+Shift+9 move container to workspace $ws19; workspace $ws19
-bindsym $mod+$alt_mod+Shift+0 move container to workspace $ws20; workspace $ws20
-
-bindsym $mod+x exec --no-startup-id i3-input -F 'workspace %s' -P 'go to workspace: '
-bindsym $mod+Shift+x exec --no-startup-id "i3-input -F 'move container to workspace \\"%s\\"; workspace \\"%s\\"' -P 'move container and go to workspace: '"
-bindsym $mod+Ctrl+x exec --no-startup-id i3-input -F 'move container to workspace %s' -P 'move container to workspace: '
+bindsym $mod+x exec --no-startup-id i3-input -F 'workspace "%s"' -P 'Go to workspace: '
+bindsym $mod+Shift+x exec --no-startup-id "i3-input -F 'move container to workspace \\"%s\\"; workspace \\"%s\\"' -P 'Move container and go to workspace: '"
+bindsym $mod+Ctrl+x exec --no-startup-id i3-input -F 'move container to workspace "%s"' -P 'Move container to workspace: '
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -248,7 +215,7 @@ mode "$mode_system" {
 # Resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+        # These bjndings trigger as soon as you enter the resize mode
         # Pressing left will shrink the window’s width.
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
@@ -270,15 +237,16 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
+# Rename workspace
+bindsym $mod+z exec --no-startup-id i3-input -F 'rename workspace to "%s"' -P 'New name for this workspace: '
+
 # Autostart applications
 exec --no-startup-id nitrogen --restore; sleep 1;
-# exec --no-startup-id picom -bCG --backend glx
-# exec --no-startup-id nm-applet
+exec --no-startup-id picom -bCG --backend glx --unredir-if-possible-delay 1000 --vsync
+exec --no-startup-id nm-applet
+exec --no-startup-id /usr/lib/xfce-polkit/xfce-polkit
+exec --no-startup-id xss-lock -- i3lock -n -e -c 333333
 # exec --no-startup-id xfce4-power-manager
-# exec --no-startup-id pamac-tray
-# exec --no-startup-id clipit
-# exec_always --no-startup-id ff-theme-util
-# exec_always --no-startup-id fix_xcursor
 # exec_always --no-startup-id ~/.config/polybar/i3wmthemer_bar_launch.sh
 
 bar {
@@ -302,10 +270,9 @@ client.background #1f1f1f
 #
 #smart_gaps on
 
-# Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
-set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_outer Outer Gaps: l|h|0 (local), Shift + l|h|0 (global)
+set $mode_gaps_inner Inner Gaps: l|h|0 (local), Shift + l|h|0 (global)
 bindsym $mod+Shift+g mode "$mode_gaps"
 
 mode "$mode_gaps" {
@@ -315,27 +282,27 @@ mode "$mode_gaps" {
         bindsym Escape mode "default"
 }
 mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
-        bindsym 0     gaps inner current set 0
+        bindsym l           gaps inner current plus 5
+        bindsym h           gaps inner current minus 5
+        bindsym 0           gaps inner current set 0
 
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+l     gaps inner all plus 5
+        bindsym Shift+h     gaps inner all minus 5
         bindsym Shift+0     gaps inner all set 0
 
-        bindsym Return mode "default"
+        bindsym Return mode "$mode_gaps"
         bindsym Escape mode "default"
 }
 mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
-        bindsym minus gaps outer current minus 5
-        bindsym 0     gaps outer current set 0
+        bindsym l           gaps outer current plus 5
+        bindsym h           gaps outer current minus 5
+        bindsym 0           gaps outer current set 0
 
-        bindsym Shift+plus  gaps outer all plus 5
-        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+l     gaps outer all plus 5
+        bindsym Shift+h     gaps outer all minus 5
         bindsym Shift+0     gaps outer all set 0
 
-        bindsym Return mode "default"
+        bindsym Return mode "$mode_gaps"
         bindsym Escape mode "default"
 }
 

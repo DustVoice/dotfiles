@@ -5,6 +5,7 @@
 !/.bashrc
 !/.gitconfig
 !/.inputrc
+!/.nvidia-xinitrc
 !/.password-store
 !/.xinitrc
 !/.Xmodmap.example
@@ -17,3 +18,5 @@
 !/.gnupg/gpg-agent.conf
 !/.gnupg/gpg.conf
 !/.gnupg/sshcontrol
+
+!/Wallpapers/
