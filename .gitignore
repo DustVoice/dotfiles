@@ -18,9 +18,9 @@
 
 !/.config/
 !/.zsh/
+!/AUR/
+!/Wallpapers/
 
 !/.gnupg/gpg-agent.conf
 !/.gnupg/gpg.conf
 !/.gnupg/sshcontrol
-
-!/Wallpapers/
