@@ -12,6 +12,7 @@
 !/.xinitrc
 !/.Xmodmap.example
 !/.Xresources
+!/.zshenv
 !/.zshrc
 !/README.md
 
