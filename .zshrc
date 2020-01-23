@@ -84,16 +84,13 @@ MODE_CURSOR_VISUAL="magenta steady block"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git)
-plugins=(colored-man-pages colorize command-not-found git zsh-autosuggestions zsh-syntax-highlighting history-substring-search zsh-vim-mode)
+plugins=(colored-man-pages colorize command-not-found git zsh-completions zsh-autosuggestions zsh-syntax-highlighting history-substring-search zsh-vim-mode)
+
+autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
-bindkey -M vicmd 'K' history-substring-search-up
-bindkey -M vicmd 'J' history-substring-search-down
-
-bindkey -M vicmd 'L' autosuggest-accept
-bindkey -M vicmd 'H' autosuggest-clear
-bindkey -M vicmd '$' autosuggest-accept
-bindkey -M vicmd '0' autosuggest-clear
+bindkey -M vicmd '^K' history-substring-search-up
+bindkey -M vicmd '^J' history-substring-search-down
 
 gpg-connect-agent updatestartuptty /bye
