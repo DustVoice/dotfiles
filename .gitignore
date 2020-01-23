@@ -6,6 +6,7 @@
 !/.gitconfig
 !/.inputrc
 !/.nvidia-xinitrc
+!/.oh-my-zsh
 !/.password-store
 !/.tmux.conf
 !/.xinitrc
@@ -15,6 +16,7 @@
 !/README.md
 
 !/.config/
+!/.zsh/
 
 !/.gnupg/gpg-agent.conf
 !/.gnupg/gpg.conf
