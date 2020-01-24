@@ -4,6 +4,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM="$HOME/.zsh"
 
+OH_MY_ZSH="$ZSH/oh-my-zsh.sh"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -68,29 +70,34 @@ setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 setopt COMPLETE_ALIASES
 
-ZSH_AUTOSUGGEST_USE_ASYNC="true"
-ZSH_AUTOSUGGEST_STRATEGY=(history)
+if [[ -a $OH_MY_ZSH ]]; then
+    ZSH_AUTOSUGGEST_USE_ASYNC="true"
+    ZSH_AUTOSUGGEST_STRATEGY=(history)
 
-MODE_CURSOR_DEFAULT="white blinking bar"
-MODE_CURSOR_VICMD="magenta steady block"
-MODE_CURSOR_VIINS="white blinking bar"
-MODE_CURSOR_SEARCH="cyan steady underline"
-MODE_CURSOR_REPLACE="red steady underline"
-MODE_CURSOR_VISUAL="magenta steady block"
+    MODE_CURSOR_DEFAULT="white blinking bar"
+    MODE_CURSOR_VICMD="magenta steady block"
+    MODE_CURSOR_VIINS="white blinking bar"
+    MODE_CURSOR_SEARCH="cyan steady underline"
+    MODE_CURSOR_REPLACE="red steady underline"
+    MODE_CURSOR_VISUAL="magenta steady block"
 
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-# plugins=(git)
-plugins=(colored-man-pages colorize command-not-found git zsh-completions zsh-autosuggestions zsh-syntax-highlighting history-substring-search zsh-vim-mode)
+    # Which plugins would you like to load?
+    # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+    # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+    # Example format: plugins=(rails git textmate ruby lighthouse)
+    # Add wisely, as too many plugins slow down shell startup.
+    # plugins=(git)
+    plugins=(colored-man-pages colorize command-not-found git zsh-completions zsh-autosuggestions zsh-syntax-highlighting history-substring-search zsh-vim-mode)
 
-autoload -U compinit && compinit
+    autoload -U compinit && compinit
 
-source $ZSH/oh-my-zsh.sh
+    source $OH_MY_ZSH
 
-bindkey -M vicmd '^K' history-substring-search-up
-bindkey -M vicmd '^J' history-substring-search-down
+    bindkey -M vicmd '^K' history-substring-search-up
+    bindkey -M vicmd '^J' history-substring-search-down
+else
+    PS1=$'%b%n@%M %~
+%(!.#.$) '
+fi
 
 gpg-connect-agent updatestartuptty /bye

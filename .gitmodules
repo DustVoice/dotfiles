@@ -4,9 +4,6 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = git@github.com:DustVoice/nvim.git
-[submodule ".oh-my-zsh"]
-	path = .oh-my-zsh
-	url = https://github.com/ohmyzsh/ohmyzsh.git
 [submodule ".zsh/plugins/zsh-vim-mode"]
 	path = .zsh/plugins/zsh-vim-mode
 	url = https://github.com/softmoth/zsh-vim-mode.git
@@ -19,3 +16,6 @@
 [submodule ".zsh/plugins/zsh-completions"]
 	path = .zsh/plugins/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
