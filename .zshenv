@@ -1,11 +1,19 @@
-typeset -U PATH path MANPATH LD_LIBRARY_PATH
+typeset -TUx PATH path
+typeset -TUx MANPATH manpath
+typeset -TUx LD_LIBRARY_PATH ld_library_path
 
-MANPATH="/usr/local/man:$MANPATH"
-export MANPATH
+path=("$HOME/bin" "$HOME/.local/bin" "/usr/local/bin" "$path[@]" "$HOME/JUCE")
+
+if [[ -a $HOME/.zshpath ]]; then
+    source $HOME/.zshpath
+fi
+
+manpath=("/usr/local/man" "$manpath")
+
+ld_library_path=("$LD_LIBRARY_PATH")
 
 # You may need to manually set your language environment
-LANG=en_US.UTF-8
-export LANG
+export LANG='en_US.UTF-8'
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -14,8 +22,7 @@ export LANG
 #   export EDITOR='mvim'
 # fi
 
-EDITOR='nvim'
-export EDITOR
+export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -29,32 +36,17 @@ export EDITOR
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-SSH_AUTH_SOCK="$(gpgconf --list-dir socketdir)/S.gpg-agent.ssh"
-export SSH_AUTH_SOCK
+export SSH_AUTH_SOCK="$(gpgconf --list-dir socketdir)/S.gpg-agent.ssh"
+export GPG_TTY=$(tty)
 
-GPG_TTY=$(tty)
-export GPG_TTY
+export TERMINAL='xfce4-terminal'
 
-TERMINAL='xfce4-terminal'
-export TERMINAL
+export JUCE_PATH='~/JUCE'
+export FRUT_PATH='~/FRUT'
 
-path=("$HOME/bin" "$HOME/.local/bin" "/usr/local/bin" "$path[@]" "$HOME/JUCE")
-export PATH
+export CXXFLAGS='-std=c++14'
 
-JUCE_PATH='~/JUCE'
-export JUCE_PATH
-
-FRUT_PATH='~/FRUT'
-export FRUT_PATH
-
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH
-
-CXXFLAGS='-std=c++14'
-export CXXFLAGS
-
-LIBGL_ALWAYS_INDIRECT=1
-export LIBGL_ALWAYS_INDIRECT
+export LIBGL_ALWAYS_INDIRECT=1
 
 alias la='ls -lahF'
 alias ll='ls -lhF'
