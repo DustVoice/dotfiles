@@ -22,7 +22,7 @@ font Hack 11
 
 floating_modifier $mod
 
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec alacritty
 
 # Window kill command
 bindsym $mod+Shift+q kill

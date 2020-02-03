@@ -39,7 +39,7 @@ export EDITOR='nvim'
 export SSH_AUTH_SOCK="$(gpgconf --list-dir socketdir)/S.gpg-agent.ssh"
 export GPG_TTY=$(tty)
 
-export TERMINAL='xfce4-terminal'
+export TERMINAL='alacritty'
 
 export JUCE_PATH='~/JUCE'
 export FRUT_PATH='~/FRUT'
@@ -47,3 +47,5 @@ export FRUT_PATH='~/FRUT'
 export CXXFLAGS='-std=c++14'
 
 export LIBGL_ALWAYS_INDIRECT=1
+
+export XDG_CONFIG_HOME="$HOME/.config"

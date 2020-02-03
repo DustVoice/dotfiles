@@ -3,6 +3,7 @@
 !/.gitignore
 
 !/.compton.conf/
+!/alacritty/
 !/fish/
 !/i3/
 !/i3status/
