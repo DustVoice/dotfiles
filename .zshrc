@@ -112,5 +112,6 @@ alias picom-default='picom -bGC --backend glx --unredir-if-possible-delay 1000 -
 alias screenkey-obs='screenkey --no-systray -t 2 -p fixed -s small -g 960x36+960+4 --key-mode composed --bak-mode full --mods-mode normal --scr 0 -f Hack'
 alias tmate-obs='tmate -k tmk-ET35fx5m9cA7cxOt4jjWkSmaOy -r DustVoice'
 alias xfce-polkit='/usr/lib/xfce-polkit/xfce-polkit'
+alias davinci-resolve='/opt/resolve/bin/resolve'
 
 alias rofi-scripts='alias | sed -e "s/=.*//"'
