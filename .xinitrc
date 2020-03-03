@@ -10,4 +10,4 @@ fi
 setxkbmap "us,us" ",intl" "grp:shifts_toggle"
 [ -f ~/.Xmodmap ] && xmodmap ~/.Xmodmap
 
-exec i3
+exec bspwm
