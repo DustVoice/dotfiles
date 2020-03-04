@@ -1,0 +1,46 @@
+#!/bin/sh
+
+dmenu_string="Wrong parameter"
+
+case $1 in
+    "rename")
+        dmenu_string="Rename desktop to: " ;;
+    "delete")
+        dmenu_string="Really delete this desktop? (n = abort): " ;;
+    "swap")
+        dmenu_string="Swap desktop with desktop: " ;;
+    "swapfollow")
+        dmenu_string="Swap and follow desktop with desktop: " ;;
+esac
+
+if [[ $1 == "delete" ]]; then
+    desktop=$(echo "" | dmenu -p "$dmenu_string")
+else
+    if [[ $1 != "bubbleprev" && $1 != "bubblenext" ]]; then
+        desktop=$(bspc query -m focused -D --names | dmenu -p "$dmenu_string")
+    fi
+fi
+
+case $1 in
+    "rename")
+        if [[ $desktop != "" ]];
+        then
+            bspc desktop -n $desktop
+        fi
+        ;;
+    "delete")
+        echo $desktop
+        if [[ $desktop != "n" ]];
+        then
+            bspc desktop -r
+        fi
+        ;;
+    "swap")
+        bspc desktop -s $desktop ;;
+    "swapfollow")
+        bspc desktop -s $desktop --follow ;;
+    "bubbleprev")
+        bspc desktop -b prev ;;
+    "bubblenext")
+        bspc desktop -b next ;;
+esac

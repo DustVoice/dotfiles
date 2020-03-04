@@ -118,37 +118,43 @@ alt + d
     dmenu_run
 
 alt + x
-    $HOME/.config/dmenu/dmenu-bspwm-movement-desktop.sh goto
+    $HOME/.config/dmenu/dmenu-bspwm-desktop-content.sh goto
 
 alt + shift + x
-    $HOME/.config/dmenu/dmenu-bspwm-movement-desktop.sh move
+    $HOME/.config/dmenu/dmenu-bspwm-desktop-content.sh move
 
 alt + ctrl + shift + x
-    $HOME/.config/dmenu/dmenu-bspwm-movement-desktop.sh movefollow
+    $HOME/.config/dmenu/dmenu-bspwm-desktop-content.sh movefollow
 
-alt + z
-    $HOME/.config/dmenu/dmenu-bspwm-rename-desktop.sh rename
+alt + z; r
+    $HOME/.config/dmenu/dmenu-bspwm-desktop.sh rename
 
-alt + shift + z
-    $HOME/.config/dmenu/dmenu-bspwm-rename-desktop.sh swap
+alt + z; d
+    $HOME/.config/dmenu/dmenu-bspwm-desktop.sh delete
 
-alt + ctrl + shift + z
-    $HOME/.config/dmenu/dmenu-bspwm-rename-desktop.sh swapfollow
+alt + z; s
+    $HOME/.config/dmenu/dmenu-bspwm-desktop.sh swap
+
+alt + z; h
+    $HOME/.config/dmenu/dmenu-bspwm-desktop.sh bubbleprev
+
+alt + z; l
+    $HOME/.config/dmenu/dmenu-bspwm-desktop.sh bubblenext
 
 alt + a; g
-    $HOME/.config/dmenu/dmenu-bspwm-movement-monitor.sh goto
+    $HOME/.config/dmenu/dmenu-bspwm-monitor.sh goto
 
 alt + a; s
-    $HOME/.config/dmenu/dmenu-bspwm-movement-monitor.sh swap
+    $HOME/.config/dmenu/dmenu-bspwm-monitor.sh swap
 
 alt + a; shift + n
-    $HOME/.config/dmenu/dmenu-bspwm-movement-monitor.sh movenode
+    $HOME/.config/dmenu/dmenu-bspwm-monitor.sh movenode
 
 alt + a; ctrl + shift + n
-    $HOME/.config/dmenu/dmenu-bspwm-movement-monitor.sh movenodefollow
+    $HOME/.config/dmenu/dmenu-bspwm-monitor.sh movenodefollow
 
 alt + a; shift + d
-    $HOME/.config/dmenu/dmenu-bspwm-movement-monitor.sh movedesktop
+    $HOME/.config/dmenu/dmenu-bspwm-monitor.sh movedesktop
 
 alt + a; ctrl + shift + d
     $HOME/.config/dmenu/dmenu-bspwm-movement-monitor.sh movedesktopfollow
