@@ -4,9 +4,12 @@
 
 !/.compton.conf/
 !/alacritty/
+!/bspwm/
+!/dmenu/
 !/fish/
 !/i3/
 !/i3status/
 !/nitrogen/
 !/nvim/
 !/polybar/
+!/sxhkd/
