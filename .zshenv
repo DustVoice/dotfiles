@@ -1,5 +1,4 @@
 typeset -TUx PATH path
-typeset -TUx MANPATH manpath
 typeset -TUx LD_LIBRARY_PATH ld_library_path
 
 path=("$HOME/bin" "$HOME/.local/bin" "/usr/local/bin" "$path[@]" "$HOME/JUCE")
@@ -7,8 +6,6 @@ path=("$HOME/bin" "$HOME/.local/bin" "/usr/local/bin" "$path[@]" "$HOME/JUCE")
 if [[ -a $HOME/.zshpath ]]; then
     source $HOME/.zshpath
 fi
-
-manpath=("/usr/local/man" "$manpath")
 
 ld_library_path=("$LD_LIBRARY_PATH")
 

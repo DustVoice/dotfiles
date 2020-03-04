@@ -8,7 +8,7 @@ alt + Escape
 
 # quit/restart bspwm
 
-alt + shift + {ctrl + q,e}
+alt + shift + {q,e}
     bspc {quit,wm -r}
 
 # close and kill
