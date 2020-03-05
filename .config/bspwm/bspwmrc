@@ -37,6 +37,7 @@ bspc config presel_feedback_color           "#5e81ac"
 #xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_HDMI-A-0)
 
 bspc rule -a Screenkey manage=off
+bspc rule -a Zathura state=tiled manage=on
 
 nitrogen --restore &
 /usr/lib/xfce-polkit/xfce-polkit &
