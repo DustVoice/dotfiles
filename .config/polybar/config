@@ -1,17 +1,17 @@
 [colors]
 background = #000000
 background-alt = #000000
-foreground = #cccccc
-foreground-alt = #cccccc
-primary = #526274
-secondary = #57553a
+foreground = #ffffff
+foreground-alt = #ffffff
+primary = #a6f6c6
+secondary = #a6f6c6
 alert = #a17c38
 active = {active}
 inactive = {inactive}
-highlight = #57553a
+highlight = #a6f6c6
 error = #a64848
 
-bspwmborder = #57553a
+bspwmborder = #a6f6c6
 pulse = #41434f
 xkb = #844d2c
 memory = #57553a
@@ -36,7 +36,7 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 radius = 3
-line-size = 2
+line-size = 3
 line-color = #000000
 
 border-size = 0
