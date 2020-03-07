@@ -35,7 +35,7 @@ offset-y = 0%
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-radius = 3
+radius = 0
 line-size = 3
 line-color = #000000
 
