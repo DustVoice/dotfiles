@@ -48,7 +48,7 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-modules-left = bspwm sep
+modules-left = bspwm
 
 ;modules-center = xwindow
 
