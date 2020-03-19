@@ -97,7 +97,7 @@ format-mounted = <label-mounted>
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
-label-mounted = "DISK %used% / %total%"
+label-mounted = %used% / %total%
 label-mounted-padding = 1
 label-mounted-foreground = ${colors.foreground}
 label-mounted-background = ${colors.background}
@@ -117,7 +117,7 @@ type = internal/pulseaudio
 
 format-volume = <label-volume>
 
-label-volume = "VOL: %percentage%%"
+label-volume = "%percentage%%"
 label-volume-padding = 1
 label-volume-foreground = ${colors.foreground}
 
@@ -166,6 +166,8 @@ type = internal/bspwm
 
 pin-workspaces = true
 
+format = <label-state>[<label-mode>]
+
 label-focused = %name%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
@@ -182,12 +184,26 @@ label-empty = %name%
 label-empty-foreground = #333333
 label-empty-padding = 1
 
+label-monocle = m
+label-tiled = t
+label-floating = s
+label-fullscreen = f
+
+label-marked = m
+label-marked-foreground = #a6f6c6
+label-locked = x
+label-locked-foreground = #a6f6c6
+label-sticky = y
+label-sticky-foreground = #a6f6c6
+label-private = z
+label-private-foreground = #a6f6c6
+
 ; label-separator = |
 
 [module/cpu]
 type = internal/cpu
 
-label = CPU %percentage%%
+label = %percentage%%
 label-padding-left = 1
 
 [module/memory]
@@ -195,7 +211,7 @@ type = internal/memory
 
 format = <label>
 
-label = RAM %gb_used% / %gb_total% | SWAP %gb_swap_used% / %gb_swap_total%
+label = %gb_used% / %gb_total% | %gb_swap_used% / %gb_swap_total%
 label-padding = 1
 
 [module/temperature]
