@@ -185,7 +185,7 @@ label-empty-foreground = #333333
 label-empty-padding = 1
 
 label-monocle = m
-label-tiled = t
+label-pseudotiled = T
 label-floating = s
 label-fullscreen = f
 
