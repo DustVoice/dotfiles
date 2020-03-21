@@ -96,6 +96,8 @@ if [[ -a $OH_MY_ZSH ]]; then
 
     bindkey -M vicmd '^K' history-substring-search-up
     bindkey -M vicmd '^J' history-substring-search-down
+
+    KEYTIMEOUT=5
 else
     PS1=$'%b%n@%M %~
 %(!.#.$) '
