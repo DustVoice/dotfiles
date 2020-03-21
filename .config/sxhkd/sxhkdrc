@@ -94,11 +94,11 @@ alt + ctrl + {1-9}
     bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
-alt + ctrl + space
+alt + ctrl + 0
     bspc node -p cancel
 
 # cancel the preselection for the focused desktop
-alt + ctrl + shift + space
+alt + ctrl + shift + 0
     bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 
