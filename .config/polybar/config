@@ -1,24 +1,15 @@
 [colors]
-background = #000000
-background-alt = #000000
-foreground = #ffffff
-foreground-alt = #ffffff
-primary = #a6f6c6
-secondary = #a6f6c6
-alert = #a17c38
+background = #282a36
+background-alt = #44475a
+foreground = #f8f8f2
+foreground-alt = #c8c8d2
+primary = #f8f8f2
+secondary = #c8c8d2
+alert = #f1fa8c
 active = {active}
 inactive = {inactive}
-highlight = #a6f6c6
-error = #a64848
-
-bspwmborder = #a6f6c6
-pulse = #41434f
-xkb = #844d2c
-memory = #57553a
-eth = #a17c38
-pc = #41434f
-xwindow = #a17c38
-mus = #57553a
+highlight = #8be9fd
+error = #ff5555
 
 [bar/top]
 monitor = ${env:MONITOR:}
@@ -57,7 +48,7 @@ modules-right = date sep xkeyboard sep cpu space temperature sep memory sep file
 tray-position = right
 tray-padding = 0
 tray-maxsize = 14
-tray-background = #000000
+tray-background = ${colors.background}
 
 wm-restack = bspwm
 
@@ -123,7 +114,7 @@ label-volume-foreground = ${colors.foreground}
 
 label-muted = "muted"
 label-muted-padding = 1
-label-muted-foreground = #333333
+label-muted-foreground = ${colors.foreground-alt}
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -135,7 +126,7 @@ label-layout-padding = 1
 
 label-indicator-on = %name%
 label-indicator-on-padding-right = 1
-label-indicator-on-foreground = #333333
+label-indicator-on-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
