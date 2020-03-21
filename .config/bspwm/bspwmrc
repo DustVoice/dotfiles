@@ -3,7 +3,7 @@
 sxhkd &
 
 for monitor in $(bspc query -M); do
-    bspc monitor $monitor -d 1
+    bspc monitor $monitor -d \~
 done
 
 bspc config border_width                    2
