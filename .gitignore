@@ -9,6 +9,8 @@
 !/.oh-my-zsh
 !/.password-store
 !/.tmux.conf
+!/.vim
+!/.vimrc
 !/.xinitrc
 !/.Xmodmap.example
 !/.Xresources
