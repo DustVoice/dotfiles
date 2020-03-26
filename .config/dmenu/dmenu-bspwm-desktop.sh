@@ -13,7 +13,7 @@ case $1 in
         dmenu_string="Swap and follow desktop with desktop: " ;;
 esac
 
-if [[ $1 == "delete" ]]; then
+if [[ $1 == "delete" || $1 == "rename" ]]; then
     desktop=$(echo "" | dmenu -p "$dmenu_string")
 else
     if [[ $1 != "bubbleprev" && $1 != "bubblenext" ]]; then
