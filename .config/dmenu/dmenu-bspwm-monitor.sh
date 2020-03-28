@@ -17,7 +17,7 @@ case $1 in
         dmenu_string="Move and follow desktop to monitor: " ;;
 esac
 
-monitor=$(bspc query -M --names | dmenu -p "$dmenu_string")
+monitor=$(bspc query -M --names | dmenu -i -fn Hack -nb "#282a36" -nf "#f8f8f2" -sb "#44475a" -sf "#f8f8f2" -p "$dmenu_string")
 
 case $1 in
     "goto")

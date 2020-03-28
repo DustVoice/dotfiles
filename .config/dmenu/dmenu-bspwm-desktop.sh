@@ -14,10 +14,10 @@ case $1 in
 esac
 
 if [[ $1 == "delete" || $1 == "rename" ]]; then
-    desktop=$(echo "" | dmenu -p "$dmenu_string")
+    desktop=$(echo "" | dmenu -i -fn Hack -nb "#282a36" -nf "#f8f8f2" -sb "#44475a" -sf "#f8f8f2" -p "$dmenu_string")
 else
     if [[ $1 != "bubbleprev" && $1 != "bubblenext" ]]; then
-        desktop=$(bspc query -m focused -D --names | dmenu -p "$dmenu_string")
+        desktop=$(bspc query -m focused -D --names | dmenu -i -fn Hack -nb "#282a36" -nf "#f8f8f2" -sb "#44475a" -sf "#f8f8f2" -p "$dmenu_string")
     fi
 fi
 
