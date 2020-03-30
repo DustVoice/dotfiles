@@ -2,7 +2,7 @@
 background = #282a36
 background-alt = #44475a
 foreground = #f8f8f2
-foreground-alt = #c8c8d2
+foreground-alt = #6272a4
 primary = #f8f8f2
 secondary = #c8c8d2
 alert = #f1fa8c
@@ -168,11 +168,12 @@ label-occupied = %name%
 label-occupied-padding = 1
 
 label-urgent = %name%
+label-urgent-foreground = ${colors.background}
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 
 label-empty = %name%
-label-empty-foreground = #333333
+label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 1
 
 label-monocle = m
