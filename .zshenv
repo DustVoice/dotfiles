@@ -1,7 +1,7 @@
 typeset -TUx PATH path
 typeset -TUx LD_LIBRARY_PATH ld_library_path
 
-path=("$HOME/bin" "$HOME/.local/bin" "/usr/local/bin" "$path[@]" "$HOME/JUCE")
+path=("$HOME/bin" "$HOME/.local/bin" "/usr/local/bin" "$path[@]")
 
 if [[ -f $HOME/.zshpath ]]; then
     source $HOME/.zshpath
