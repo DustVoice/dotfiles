@@ -34,6 +34,5 @@ bspc rule -a Zathura state=tiled manage=on
 
 nitrogen --restore &
 /usr/lib/xfce-polkit/xfce-polkit &
-xss-lock -l -- xsecurelock &
 
 $HOME/.config/polybar/launch.sh
