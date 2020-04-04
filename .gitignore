@@ -4,7 +4,6 @@
 
 !/.bashrc
 !/.gitconfig
-!/.inputrc
 !/.nvidia-xinitrc
 !/.oh-my-zsh
 !/.password-store
@@ -13,7 +12,6 @@
 !/.vimrc
 !/.xinitrc
 !/.Xmodmap.example
-!/.Xresources
 !/.zshenv
 !/.zshpath.example
 !/.zshrc
