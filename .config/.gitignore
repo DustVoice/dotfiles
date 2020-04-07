@@ -4,7 +4,6 @@
 
 !/vconsole.conf
 
-!/.compton.conf/
 !/alacritty/
 !/bspwm/
 !/dmenu/
