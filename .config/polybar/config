@@ -192,6 +192,9 @@ label-private-foreground = #a6f6c6
 
 ; label-separator = |
 
+enable-click = true
+enable-scroll = false
+
 [module/cpu]
 type = internal/cpu
 
