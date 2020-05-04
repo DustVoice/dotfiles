@@ -13,6 +13,7 @@
 !/.xinitrc
 !/.Xmodmap.example
 !/.Xresources
+!/.xsession
 !/.zshenv
 !/.zshpath.example
 !/.zshrc

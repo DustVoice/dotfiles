@@ -1,6 +1,25 @@
 #!/usr/bin/env bash
 
-sxhkd &
+command -v sxhkd >/dev/null 2>&1
+return_val=$?
+if [ $return_val -ne 0 ]; then
+    echo >&2 "Can't seem to find the sxhkd executable. Exiting!"
+    bspc quit && exit 1
+else
+    sxhkd &
+    return_val=$?
+    if [ $return_val -ne 0 ]; then
+        echo >&2 "Couldn't fire up sxhkd: $return_val. Exiting!"
+        bspc quit && exit 1
+    fi
+fi
+
+command -v alacritty >/dev/null 2>&1
+return_val=$?
+if [ $return_val -ne 0 ]; then
+    echo >&2 "Can't seem to find the alacritty executable. Exiting!"
+    bspc quit && exit 1
+fi
 
 for monitor in $(bspc query -M); do
     bspc monitor $monitor -d \~
@@ -32,7 +51,37 @@ bspc config presel_feedback_color "#6272a4"
 bspc rule -a Screenkey manage=off
 bspc rule -a Zathura state=tiled manage=on
 
-nitrogen --restore &
-/usr/lib/xfce-polkit/xfce-polkit &
+command -v nitrogen >/dev/null 2>&1
+return_val=$?
+if [ $return_val -ne 0 ]; then
+    echo >&2 "Can't seem to find the nitrogen executable"
+else
+    nitrogen --restore &
+    return_val=$?
+    if [ $return_val -ne 0 ]; then
+        echo >&2 "Couldn't fire up nitrogen: $return_val"
+    fi
+fi
 
-$HOME/.config/polybar/launch.sh
+command -v /usr/lib/xfce-polkit/xfce-polkit >/dev/null 2>&1
+return_val=$?
+if [ $return_val -ne 0 ]; then
+    echo >&2 "Can't seem to find the /usr/lib/xfce-polkit/xfce-polkit executable"
+else
+    /usr/lib/xfce-polkit/xfce-polkit &
+    return_val=$?
+    if [ $return_val -ne 0 ]; then
+        echo >&2 "Couldn't fire up xfce-polkit: $return_val"
+    fi
+fi
+
+command -v polybar >/dev/null 2>&1
+if [ $? -ne 0 ]; then
+    echo >&2 "Can't seem to find the polybar executable. Starting barless!"
+    bspc config top_padding 0
+else
+    $HOME/.config/polybar/launch
+    if [ $? -ne 0 ]; then
+        echo >&2 "Couldn't fire up polybar: $?"
+    fi
+fi

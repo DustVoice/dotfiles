@@ -10,4 +10,5 @@ fi
 setxkbmap "us,us" ",intl" "grp:shifts_toggle"
 [ -f ~/.Xmodmap ] && xmodmap ~/.Xmodmap
 
-exec bspwm
+mkdir -p $HOME/.local/share/bspwm
+exec bspwm >$HOME/.local/share/bspwm/output.log 2>$HOME/.local/share/bspwm/error.log
