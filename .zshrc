@@ -104,7 +104,3 @@ else
 fi
 
 gpg-connect-agent updatestartuptty /bye
-
-if [[ -f $HOME/.zsh_alias ]]; then
-    source $HOME/.zsh_alias
-fi

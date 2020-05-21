@@ -46,3 +46,12 @@ export CXXFLAGS='-std=c++14'
 export LIBGL_ALWAYS_INDIRECT=1
 
 export XDG_CONFIG_HOME="$HOME/.config"
+
+alias layout='xkblayout-state print "%s %v"'
+alias picom-default='picom -bgc --backend glx --unredir-if-possible-delay 1000 --vsync'
+alias screenkey-obs='screenkey --no-systray -t 2 -p fixed -s small -g 960x36+960+4 --key-mode composed --bak-mode full --mods-mode normal --scr 0 -f hack'
+alias tmate-obs='tmate -k tmk-et35fx5m9ca7cxot4jjwksmaoy -r dustvoice'
+alias xfce-polkit='/usr/lib/xfce-polkit/xfce-polkit'
+alias davinci-resolve='/opt/resolve/bin/resolve'
+
+alias rofi-scripts='alias | sed -e "s/=.*//"'
