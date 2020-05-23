@@ -20,10 +20,8 @@
 !/README.md
 
 !/.config/
+!/.gnupg/
+!/.ssh/
 !/.zsh/
 !/AUR/
 !/Wallpapers/
-
-!/.gnupg/gpg-agent.conf
-!/.gnupg/gpg.conf
-!/.gnupg/sshcontrol
