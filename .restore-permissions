@@ -57,10 +57,11 @@ if [ $? -eq 0 ]; then
 fi
 echo '< Done executing "./.config/nvim/.restore-permissions"'
 
-echo 'Adapting permissions of "./.config/polybar/config"'
-chown -R $(whoami) ./.config/polybar/config
+echo 'Adapting permissions of "./.config/polybar"'
+chown -R $(whoami) ./.config/polybar
 find ./.config/polybar -type d -exec chmod 755 {} \;
 find ./.config/polybar -type f -exec chmod 644 {} \;
+chmod 755 ./.config/polybar/launch
 
 echo 'Adapting permissions of "./.config/sxhkd/sxhkdrc"'
 chown -R $(whoami) ./.config/sxhkd/sxhkdrc
