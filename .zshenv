@@ -47,6 +47,8 @@ export LIBGL_ALWAYS_INDIRECT=1
 
 export XDG_CONFIG_HOME="$HOME/.config"
 
+export WINIT_X11_SCALE_FACTOR=1
+
 alias layout='xkblayout-state print "%s %v"'
 alias picom-default='picom -bgc --backend glx --unredir-if-possible-delay 1000 --vsync'
 alias screenkey-obs='screenkey --no-systray -t 2 -p fixed -s small -g 960x36+960+4 --key-mode composed --bak-mode full --mods-mode normal --scr 0 -f hack'
