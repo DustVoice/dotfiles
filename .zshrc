@@ -102,5 +102,3 @@ else
     PS1=$'%b%n@%M %~
 %(!.#.$) '
 fi
-
-gpg-connect-agent updatestartuptty /bye
