@@ -18,4 +18,4 @@
 *.color7:     #BFBFBF
 *.color15:    #E6E6E6
 
-!Xft.dpi: 192
+!Xft.dpi: 96
