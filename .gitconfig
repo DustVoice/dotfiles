@@ -6,6 +6,7 @@
 	editor = nvim
 [push]
 	default = simple
+	followTags = true
 [commit]
 	gpgsign = true
 [gpg]
