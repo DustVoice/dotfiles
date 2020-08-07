@@ -38,8 +38,7 @@ export GPG_TTY=$(tty)
 
 export TERMINAL='alacritty'
 
-export JUCE_PATH='~/JUCE'
-export FRUT_PATH='~/FRUT'
+export JUCE_PATH="$HOME/JUCE"
 
 export CXXFLAGS='-std=c++14'
 
