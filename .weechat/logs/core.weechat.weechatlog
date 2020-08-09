@@ -1,0 +1,435 @@
+2020-01-29 20:15:43		New key binding (context "default"): meta2-1;5P => /bar scroll buflist * -100%
+2020-01-29 20:15:43		New key binding (context "default"): meta2-1;5Q => /bar scroll buflist * +100%
+2020-01-29 20:15:43		New key binding (context "default"): meta-meta-OQ => /bar scroll buflist * e
+2020-01-29 20:15:43		New key binding (context "default"): meta2-1;3Q => /bar scroll buflist * e
+2020-01-29 20:15:43		New key binding (context "default"): meta2-1;3P => /bar scroll buflist * b
+2020-01-29 20:15:43		New key binding (context "default"): meta-meta-OP => /bar scroll buflist * b
+2020-01-29 20:15:43		New key binding (context "default"): meta-OQ => /bar scroll buflist * +100%
+2020-01-29 20:15:43		New key binding (context "default"): meta-OP => /bar scroll buflist * -100%
+2020-01-29 20:15:43		New key binding (context "default"): meta-meta2-12~ => /bar scroll buflist * e
+2020-01-29 20:15:43		New key binding (context "default"): meta-meta2-11~ => /bar scroll buflist * b
+2020-01-29 20:15:43		New key binding (context "default"): meta2-12^ => /bar scroll buflist * +100%
+2020-01-29 20:15:43		New key binding (context "default"): meta2-12~ => /bar scroll buflist * +100%
+2020-01-29 20:15:43		New key binding (context "default"): meta2-11^ => /bar scroll buflist * -100%
+2020-01-29 20:15:43		New key binding (context "default"): meta2-11~ => /bar scroll buflist * -100%
+2020-01-29 20:15:43		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, perl, python, relay, script, trigger, xfer
+2020-01-29 20:15:47		script: downloading list of scripts...
+2020-01-29 20:15:48		script: 364 scripts for WeeChat 2.7
+2020-01-29 20:15:48		python: loading script "/home/dustvoice/.weechat/python/vimode.py"
+2020-01-29 20:15:48		python: registered script "vimode", version 0.7 (Add vi/vim-like modes and keybindings to WeeChat.)
+2020-01-29 20:15:48		[vimode.py] Problematic keybindings detected:
+2020-01-29 20:15:48		[vimode.py]     meta-jmeta-f -> /buffer -
+2020-01-29 20:15:48		[vimode.py]     meta-jmeta-l -> /buffer +
+2020-01-29 20:15:48		[vimode.py]     meta-jmeta-r -> /server raw
+2020-01-29 20:15:48		[vimode.py]     meta-jmeta-s -> /server jump
+2020-01-29 20:15:48		[vimode.py]     meta-wmeta-meta2-A -> /window up
+2020-01-29 20:15:48		[vimode.py]     meta-wmeta-meta2-B -> /window down
+2020-01-29 20:15:48		[vimode.py]     meta-wmeta-meta2-C -> /window right
+2020-01-29 20:15:48		[vimode.py]     meta-wmeta-meta2-D -> /window left
+2020-01-29 20:15:48		[vimode.py]     meta-wmeta2-1;3A -> /window up
+2020-01-29 20:15:48		[vimode.py]     meta-wmeta2-1;3B -> /window down
+2020-01-29 20:15:48		[vimode.py]     meta-wmeta2-1;3C -> /window right
+2020-01-29 20:15:48		[vimode.py]     meta-wmeta2-1;3D -> /window left
+2020-01-29 20:15:48		[vimode.py]     meta-wmeta-b -> /window balance
+2020-01-29 20:15:48		[vimode.py]     meta-wmeta-s -> /window swap
+2020-01-29 20:15:48		[vimode.py] These keybindings may conflict with vimode.
+2020-01-29 20:15:48		[vimode.py] You can remove problematic key bindings and add recommended ones by using /vimode bind_keys, or only list them with /vimode bind_keys --list
+2020-01-29 20:15:48		[vimode.py] For help, see: https://github.com/GermainZ/weechat-vimode/blob/master/FAQ.md#problematic-key-bindings
+2020-01-29 20:15:48		[vimode.py] To force disable warnings, you can set plugins.var.python.vimode.no_warn to 'on'
+2020-01-29 20:15:51		Running commands:
+2020-01-29 20:15:51		Key "ctrl-W" unbound (context: "default")
+2020-01-29 20:15:51		New key binding (context "default"): ctrl-W => /input delete_previous_word
+2020-01-29 20:15:51		New key binding (context "default"): ctrl-^ => /input jump_last_buffer_displayed
+2020-01-29 20:15:51		New key binding (context "default"): ctrl-Wh => /window left
+2020-01-29 20:15:51		New key binding (context "default"): ctrl-Wj => /window down
+2020-01-29 20:15:51		New key binding (context "default"): ctrl-Wk => /window up
+2020-01-29 20:15:51		New key binding (context "default"): ctrl-Wl => /window right
+2020-01-29 20:15:51		New key binding (context "default"): ctrl-W= => /window balance
+2020-01-29 20:15:51		New key binding (context "default"): ctrl-Wx => /window swap
+2020-01-29 20:15:51		New key binding (context "default"): ctrl-Ws => /window splith
+2020-01-29 20:15:51		New key binding (context "default"): ctrl-Wv => /window splitv
+2020-01-29 20:15:51		New key binding (context "default"): ctrl-Wq => /window merge
+2020-01-29 20:15:51		Key "meta-jmeta-f" unbound (context: "default")
+2020-01-29 20:15:51		Key "meta-jmeta-l" unbound (context: "default")
+2020-01-29 20:15:51		Key "meta-jmeta-r" unbound (context: "default")
+2020-01-29 20:15:51		Key "meta-jmeta-s" unbound (context: "default")
+2020-01-29 20:15:51		Key "meta-wmeta-meta2-A" unbound (context: "default")
+2020-01-29 20:15:51		Key "meta-wmeta-meta2-B" unbound (context: "default")
+2020-01-29 20:15:51		Key "meta-wmeta-meta2-C" unbound (context: "default")
+2020-01-29 20:15:51		Key "meta-wmeta-meta2-D" unbound (context: "default")
+2020-01-29 20:15:51		Key "meta-wmeta2-1;3A" unbound (context: "default")
+2020-01-29 20:15:51		Key "meta-wmeta2-1;3B" unbound (context: "default")
+2020-01-29 20:15:51		Key "meta-wmeta2-1;3C" unbound (context: "default")
+2020-01-29 20:15:51		Key "meta-wmeta2-1;3D" unbound (context: "default")
+2020-01-29 20:15:51		Key "meta-wmeta-b" unbound (context: "default")
+2020-01-29 20:15:51		Key "meta-wmeta-s" unbound (context: "default")
+2020-01-29 20:15:51		Done.
+2020-01-29 20:16:09		Option changed: plugins.var.python.vimode.mode_indicator_normal_color_bg = "blue"
+2020-01-29 20:16:50		Option changed: weechat.bar.input.items = "mode_indicator+[input_prompt]+(away),[input_search],[input_paste],input_text,[vi_buffer]"  (default: "[input_prompt]+(away),[input_search],[input_paste],input_text")
+2020-01-29 20:18:21		Option changed: weechat.bar.status.items = "[time],[buffer_last_number],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,scroll,[lag],[hotlist],completion,cmd_completion"  (default: "[time],[buffer_last_number],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,scroll,[lag],[hotlist],completion")
+2020-01-29 20:18:31		Option changed: plugins.var.python.vimode.search_vim = "on"
+2020-01-29 20:18:41		irc: server freenode added
+2020-01-29 20:19:26	=!=	Too few arguments for command "/query" (help on command: /help query)
+2020-01-29 20:19:28		fifo: pipe closed
+2020-01-29 20:19:28		python: scripts unloaded
+2020-01-29 20:20:50		python scripts loaded: vimode
+2020-01-29 20:20:50		script: 364 scripts for WeeChat 2.7
+2020-01-29 20:20:50		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, perl, python, relay, script, trigger, xfer
+2020-01-29 20:21:14	=!=	Too few arguments for command "/msg" (help on command: /help msg)
+2020-01-29 20:22:13	=!=	Too few arguments for command "/query" (help on command: /help query)
+2020-01-29 20:22:15		fifo: pipe closed
+2020-01-29 20:22:15		python: scripts unloaded
+2020-03-03 14:38:34		python scripts loaded: vimode
+2020-03-03 14:38:34		script: downloading list of scripts...
+2020-03-03 14:38:34		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2020-03-03 14:38:34		script: 364 scripts for WeeChat 2.7.1
+2020-03-03 14:38:39	=!=	You can not write text in this buffer
+2020-03-03 14:45:50		fifo: pipe closed
+2020-03-03 14:45:50		python: scripts unloaded
+2020-05-17 11:59:12		python scripts loaded: vimode
+2020-05-17 11:59:12		script: downloading list of scripts...
+2020-05-17 11:59:12		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2020-05-17 11:59:17		script: 364 scripts for WeeChat 2.8
+2020-05-17 14:53:31		python: scripts unloaded
+2020-08-08 21:02:26		New key binding (context "default"): meta-B => /buflist toggle
+2020-08-08 21:02:26	=!=	python: wrong arguments for function "bar_new" (script: vimode)
+2020-08-08 21:02:26		python: stdout/stderr (vimode): TypeError: function takes exactly 16 arguments (15 given)
+2020-08-08 21:02:26		python: stdout/stderr (vimode): The above exception was the direct cause of the following exception:
+2020-08-08 21:02:26		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-08 21:02:26		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1855, in <module>
+2020-08-08 21:02:26		python: stdout/stderr (vimode):     weechat.bar_new("vi_line_numbers", "on", "0", "window", "", "left",
+2020-08-08 21:02:26		python: stdout/stderr (vimode): SystemError: <built-in function bar_new> returned a result with an error set
+2020-08-08 21:02:26	=!=	python: unable to parse file "/home/dustvoice/.weechat/python/autoload/vimode.py"
+2020-08-08 21:02:26		script: downloading list of scripts...
+2020-08-08 21:02:26		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2020-08-08 21:02:27		script: 364 scripts for WeeChat 2.9
+2020-08-08 21:02:34	=!=	irc: command "join" must be executed on irc buffer (server, channel or private)
+2020-08-09 20:31:28		New key binding (context "default"): meta-B => /buflist toggle
+2020-08-09 20:31:28	=!=	python: wrong arguments for function "bar_new" (script: vimode)
+2020-08-09 20:31:28		python: stdout/stderr (vimode): TypeError: function takes exactly 16 arguments (15 given)
+2020-08-09 20:31:28		python: stdout/stderr (vimode): The above exception was the direct cause of the following exception:
+2020-08-09 20:31:28		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:31:28		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1855, in <module>
+2020-08-09 20:31:28		python: stdout/stderr (vimode):     weechat.bar_new("vi_line_numbers", "on", "0", "window", "", "left",
+2020-08-09 20:31:28		python: stdout/stderr (vimode): SystemError: <built-in function bar_new> returned a result with an error set
+2020-08-09 20:31:28	=!=	python: unable to parse file "/home/dustvoice/.weechat/python/autoload/vimode.py"
+2020-08-09 20:31:28		script: 364 scripts for WeeChat 2.9
+2020-08-09 20:31:28		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2020-08-09 20:31:34		python: script removed: /home/dustvoice/.weechat/python/autoload/vimode.py
+2020-08-09 20:31:34		python: script removed: /home/dustvoice/.weechat/python/vimode.py
+2020-08-09 20:31:38		script: script "vimode.py" is already installed and up-to-date
+2020-08-09 20:31:49	=!=	Error: unknown command "/vimode" (type /help for help)
+2020-08-09 20:31:58		python scripts loaded: vimode
+2020-08-09 20:31:58		script: 364 scripts for WeeChat 2.9
+2020-08-09 20:31:58		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2020-08-09 20:32:07		Running commands:
+2020-08-09 20:32:07		Key "ctrl-W" unbound (context: "default")
+2020-08-09 20:32:07		New key binding (context "default"): ctrl-W => /input delete_previous_word
+2020-08-09 20:32:07		Key "ctrl-^" unbound (context: "default")
+2020-08-09 20:32:07		New key binding (context "default"): ctrl-^ => /input jump_last_buffer_displayed
+2020-08-09 20:32:07		Key "ctrl-Wh" unbound (context: "default")
+2020-08-09 20:32:07		New key binding (context "default"): ctrl-Wh => /window left
+2020-08-09 20:32:07		Key "ctrl-Wj" unbound (context: "default")
+2020-08-09 20:32:07		New key binding (context "default"): ctrl-Wj => /window down
+2020-08-09 20:32:07		Key "ctrl-Wk" unbound (context: "default")
+2020-08-09 20:32:07		New key binding (context "default"): ctrl-Wk => /window up
+2020-08-09 20:32:07		Key "ctrl-Wl" unbound (context: "default")
+2020-08-09 20:32:07		New key binding (context "default"): ctrl-Wl => /window right
+2020-08-09 20:32:07		Key "ctrl-W=" unbound (context: "default")
+2020-08-09 20:32:07		New key binding (context "default"): ctrl-W= => /window balance
+2020-08-09 20:32:07		Key "ctrl-Wx" unbound (context: "default")
+2020-08-09 20:32:07		New key binding (context "default"): ctrl-Wx => /window swap
+2020-08-09 20:32:07		Key "ctrl-Ws" unbound (context: "default")
+2020-08-09 20:32:07		New key binding (context "default"): ctrl-Ws => /window splith
+2020-08-09 20:32:07		Key "ctrl-Wv" unbound (context: "default")
+2020-08-09 20:32:07		New key binding (context "default"): ctrl-Wv => /window splitv
+2020-08-09 20:32:07		Key "ctrl-Wq" unbound (context: "default")
+2020-08-09 20:32:07		New key binding (context "default"): ctrl-Wq => /window merge
+2020-08-09 20:32:07		Done.
+2020-08-09 20:32:11		Running commands:
+2020-08-09 20:32:11		Key "ctrl-W" unbound (context: "default")
+2020-08-09 20:32:11		New key binding (context "default"): ctrl-W => /input delete_previous_word
+2020-08-09 20:32:11		Key "ctrl-^" unbound (context: "default")
+2020-08-09 20:32:11		New key binding (context "default"): ctrl-^ => /input jump_last_buffer_displayed
+2020-08-09 20:32:11		Key "ctrl-Wh" unbound (context: "default")
+2020-08-09 20:32:11		New key binding (context "default"): ctrl-Wh => /window left
+2020-08-09 20:32:11		Key "ctrl-Wj" unbound (context: "default")
+2020-08-09 20:32:11		New key binding (context "default"): ctrl-Wj => /window down
+2020-08-09 20:32:11		Key "ctrl-Wk" unbound (context: "default")
+2020-08-09 20:32:11		New key binding (context "default"): ctrl-Wk => /window up
+2020-08-09 20:32:11		Key "ctrl-Wl" unbound (context: "default")
+2020-08-09 20:32:11		New key binding (context "default"): ctrl-Wl => /window right
+2020-08-09 20:32:11		Key "ctrl-W=" unbound (context: "default")
+2020-08-09 20:32:11		New key binding (context "default"): ctrl-W= => /window balance
+2020-08-09 20:32:11		Key "ctrl-Wx" unbound (context: "default")
+2020-08-09 20:32:11		New key binding (context "default"): ctrl-Wx => /window swap
+2020-08-09 20:32:11		Key "ctrl-Ws" unbound (context: "default")
+2020-08-09 20:32:11		New key binding (context "default"): ctrl-Ws => /window splith
+2020-08-09 20:32:11		Key "ctrl-Wv" unbound (context: "default")
+2020-08-09 20:32:11		New key binding (context "default"): ctrl-Wv => /window splitv
+2020-08-09 20:32:11		Key "ctrl-Wq" unbound (context: "default")
+2020-08-09 20:32:11		New key binding (context "default"): ctrl-Wq => /window merge
+2020-08-09 20:32:11		Done.
+2020-08-09 20:32:30		Option changed: plugins.var.python.vimode.mode_indicator_normal_color_bg = "blue"
+2020-08-09 20:33:04		Option changed: weechat.bar.input.items = "mode_indicator+[input_prompt]+(away),[input_search],[input_paste],input_text,[vi_buffer]"  (default: "[input_prompt]+(away),[input_search],[input_paste],input_text")
+2020-08-09 20:33:27		Option changed: weechat.bar.status.items = "[time],[buffer_last_number],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,scroll,[lag],[hotlist],completion,cmd_completion"  (default: "[time],[buffer_last_number],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,scroll,[lag],[hotlist],completion")
+2020-08-09 20:33:36		Option changed: plugins.var.python.vimode.search_vim = "on"
+2020-08-09 20:34:32		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:32		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1302, in cb_key_combo_default
+2020-08-09 20:34:32		python: stdout/stderr (vimode):     VI_KEYS[vi_keys](buf, input_line, cur, count)
+2020-08-09 20:34:32		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 918, in key_semicolon
+2020-08-09 20:34:32		python: stdout/stderr (vimode):     globals()[func](False)
+2020-08-09 20:34:32		python: stdout/stderr (vimode): KeyError: 'cb_motion_None'
+2020-08-09 20:34:32	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:32	=!=	python: function "cb_vi_buffer" must return a valid value
+2020-08-09 20:34:32	=!=	python: error in function "cb_vi_buffer"
+2020-08-09 20:34:33		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:33		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:33		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:33		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:33	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:33		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:33		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:33		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:33		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:33	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:33		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:33		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:33		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:33		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:33	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:34		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:34		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:34		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:34		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:34	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:34		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:34		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:34		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:34		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:34	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:34		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:34		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:34		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:34		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:34	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:34		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:34		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:34		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:34		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:34	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:34		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:34		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:34		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:34		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:34	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:34		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:34		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:34		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:34		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:34	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:35		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:35		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:35		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:35		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:35	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:35		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:35		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:35		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:35		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:35	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:35		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:35		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:35		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:35		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:35	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:35		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:35		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:35		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:35		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:35	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:35		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:35		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:35		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:35		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:35	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:35		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:35		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:35		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:35		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:35	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:36		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:36		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:36		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:36		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:36	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:36		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:36		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:36		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:36		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:36	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:36		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:36		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:36		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:36		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:36	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:36		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:36		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:36		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:36		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:36	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:37		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:37		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:37		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:37		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:37	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:37		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:37		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:37		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:37		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:37	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:37		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:37		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:37		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:37		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:37	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:37		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:37		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:37		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:37		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:37	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:37		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:37		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:37		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:37		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:37	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:37		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:37		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:37		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:37		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:37	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:37		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:37		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:37		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:37		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:37	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:37		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:37		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:37		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:37		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:37	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:38		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:38		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:38		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:38		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:38	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:38		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:38		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:38		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:38		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:38	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:38		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:38		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:38		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:38		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:38	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:38		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:38		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:38		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:38		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:38	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:38		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:38		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:38		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:38		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:38	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:38		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:38		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:38		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:38		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:38	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:38		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:38		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:38		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:38		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:38	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:38		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:38		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:38		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:38		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:38	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:34:38		python: stdout/stderr (vimode): Traceback (most recent call last):
+2020-08-09 20:34:38		python: stdout/stderr (vimode):   File "/home/dustvoice/.weechat/python/autoload/vimode.py", line 1255, in cb_key_combo_default
+2020-08-09 20:34:38		python: stdout/stderr (vimode):     vi_buffer += keys
+2020-08-09 20:34:38		python: stdout/stderr (vimode): TypeError: unsupported operand type(s) for +=: 'NoneType' and 'str'
+2020-08-09 20:34:38	=!=	python: error in function "cb_key_combo_default"
+2020-08-09 20:35:26		python: scripts unloaded
+2020-08-09 20:35:30		[vimode.py] tmux/screen users, see: https://github.com/GermainZ/weechat-vimode/blob/master/FAQ.md#esc-key-not-being-detected-instantly
+2020-08-09 20:35:30		[vimode.py] To force disable warnings, you can set plugins.var.python.vimode.no_warn to 'on'
+2020-08-09 20:35:30		python scripts loaded: vimode
+2020-08-09 20:35:30		script: 364 scripts for WeeChat 2.9
+2020-08-09 20:35:30		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2020-08-09 21:11:41		[vimode.py] tmux/screen users, see: https://github.com/GermainZ/weechat-vimode/blob/master/FAQ.md#esc-key-not-being-detected-instantly
+2020-08-09 21:11:41		[vimode.py] To force disable warnings, you can set plugins.var.python.vimode.no_warn to 'on'
+2020-08-09 21:11:41		python scripts loaded: vimode
+2020-08-09 21:11:41		script: 364 scripts for WeeChat 2.9
+2020-08-09 21:11:41		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2020-08-09 21:12:23		python: scripts unloaded
+2020-08-09 21:23:12		[vimode.py] tmux/screen users, see: https://github.com/GermainZ/weechat-vimode/blob/master/FAQ.md#esc-key-not-being-detected-instantly
+2020-08-09 21:23:12		[vimode.py] To force disable warnings, you can set plugins.var.python.vimode.no_warn to 'on'
+2020-08-09 21:23:12		python scripts loaded: vimode
+2020-08-09 21:23:12		script: 364 scripts for WeeChat 2.9
+2020-08-09 21:23:12		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2020-08-09 21:23:33		Option changed: plugins.var.python.vimode.no_warn = "on"
+2020-08-09 21:23:41		python: scripts unloaded
+2020-08-09 21:23:42		python scripts loaded: vimode
+2020-08-09 21:23:42		script: 364 scripts for WeeChat 2.9
+2020-08-09 21:23:42		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2020-08-09 21:23:48		Options saved to sec.conf
+2020-08-09 21:23:48		Options saved to weechat.conf
+2020-08-09 21:23:48		Options saved to plugins.conf
+2020-08-09 21:23:48		Options saved to charset.conf
+2020-08-09 21:23:48		Options saved to logger.conf
+2020-08-09 21:23:48		Options saved to exec.conf
+2020-08-09 21:23:48		Options saved to trigger.conf
+2020-08-09 21:23:48		Options saved to spell.conf
+2020-08-09 21:23:48		Options saved to alias.conf
+2020-08-09 21:23:48		Options saved to buflist.conf
+2020-08-09 21:23:48		Options saved to fifo.conf
+2020-08-09 21:23:48		Options saved to xfer.conf
+2020-08-09 21:23:48		Options saved to irc.conf
+2020-08-09 21:23:48		Options saved to relay.conf
+2020-08-09 21:23:48		Options saved to guile.conf
+2020-08-09 21:23:48		Options saved to lua.conf
+2020-08-09 21:23:48		Options saved to perl.conf
+2020-08-09 21:23:48		Options saved to python.conf
+2020-08-09 21:23:48		Options saved to ruby.conf
+2020-08-09 21:23:48		Options saved to script.conf
+2020-08-09 21:23:48		Options saved to fset.conf
+2020-08-09 21:23:52	=!=	Too few arguments for command "/query" (help on command: /help query)
+2020-08-09 21:23:56	=!=	irc: command "quiet" must be executed on irc buffer (server, channel or private)
+2020-08-09 21:23:59		python: scripts unloaded
+2020-08-09 21:38:54		python scripts loaded: vimode
+2020-08-09 21:38:54		script: 364 scripts for WeeChat 2.9
+2020-08-09 21:38:54		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, xfer
+2020-08-09 21:39:06		Options saved to sec.conf
+2020-08-09 21:39:06		Options saved to weechat.conf
+2020-08-09 21:39:06		Options saved to plugins.conf
+2020-08-09 21:39:06		Options saved to charset.conf
+2020-08-09 21:39:06		Options saved to logger.conf
+2020-08-09 21:39:06		Options saved to exec.conf
+2020-08-09 21:39:06		Options saved to trigger.conf
+2020-08-09 21:39:06		Options saved to spell.conf
+2020-08-09 21:39:06		Options saved to alias.conf
+2020-08-09 21:39:06		Options saved to buflist.conf
+2020-08-09 21:39:06		Options saved to fifo.conf
+2020-08-09 21:39:06		Options saved to xfer.conf
+2020-08-09 21:39:06		Options saved to irc.conf
+2020-08-09 21:39:06		Options saved to relay.conf
+2020-08-09 21:39:06		Options saved to guile.conf
+2020-08-09 21:39:06		Options saved to lua.conf
+2020-08-09 21:39:06		Options saved to perl.conf
+2020-08-09 21:39:06		Options saved to python.conf
+2020-08-09 21:39:06		Options saved to ruby.conf
+2020-08-09 21:39:06		Options saved to script.conf
+2020-08-09 21:39:06		Options saved to fset.conf

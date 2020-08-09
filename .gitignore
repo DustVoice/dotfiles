@@ -22,6 +22,7 @@
 
 !/.config/
 !/.gnupg/
+!/.weechat/
 !/.ssh/
 !/.zsh/
 !/AUR/

@@ -1,0 +1,542 @@
+2020-08-08 21:03:20	-->	dustvoice (~dustvoice@89-201-247-206.dsl.optinet.hr) has joined #archlinux
+2020-08-08 21:03:20	--	Topic for #archlinux is "Welcome to Arch Linux, Good Luck: https://archlinux.org | Rules: https://goo.gl/XWFreH | Pastebins: see !paste | status.archlinux.org | Installing? New `base` package; read the install guide carefully"
+2020-08-08 21:03:20	--	Topic set by phrik (~phrik@archlinux/bot/phrik) on Fri, 24 Jul 2020 22:12:54
+2020-08-08 21:03:20	--	Channel #archlinux: 1720 nicks (1 op, 0 voices, 1719 normals)
+2020-08-08 21:03:21	--	Channel created on Sun, 15 Feb 2004 06:08:31
+2020-08-08 21:03:28	-->	xtro (~xtro@cpe-104-173-141-189.socal.res.rr.com) has joined #archlinux
+2020-08-08 21:03:45	<--	lizr (~lizr@1.83.104.248) has quit (Ping timeout: 240 seconds)
+2020-08-08 21:04:09	<--	seankhliao (~seankhlia@233.19.90.34.bc.googleusercontent.com) has quit (Quit: it can't be DNS?! it's always DNS!!!)
+2020-08-08 21:04:34	-->	seankhliao (~seankhlia@233.19.90.34.bc.googleusercontent.com) has joined #archlinux
+2020-08-08 21:05:38	santost12	the second display is still showing the "corruption". i installed QXL driver and everything else except the for the AMD GPU. im about to do that. windows says no other monitors were detected.
+2020-08-08 21:06:12	-->	Lenny_ (lenny@srv3.blesmrt.net) has joined #archlinux
+2020-08-08 21:06:16	<--	Elodin (~weechat@unaffiliated/padawan) has quit (Ping timeout: 256 seconds)
+2020-08-08 21:06:17	-->	lizr (~lizr@1.83.106.58) has joined #archlinux
+2020-08-08 21:06:39	dustvoice	Is there an IRC chat where I could recieve some support regarding zfs? Because the AUR package `zfs-utils` doesn't compile for me, but I suppose this isn't the right channel to ask, cause ZFS isn't officially supported
+2020-08-08 21:07:05	CompanionCube	there's #zfsonlinux
+2020-08-08 21:07:21	NetSysFire	you can also ask alis
+2020-08-08 21:07:37	sheep	did you check the comments on its AUR page?
+2020-08-08 21:07:49	-->	chepaz (~chepaz@195.245.21.236) has joined #archlinux
+2020-08-08 21:09:06	<--	desmu (~desmu@2a02:908:391:8260:3c1:9333:2bd5:4202) has quit (Ping timeout: 246 seconds)
+2020-08-08 21:09:38	<--	Garb0 (~Garb0@unaffiliated/garb0) has quit (Remote host closed the connection)
+2020-08-08 21:09:53	dustvoice	sheep: Yes, but I didn't find a solution unfortunately
+2020-08-08 21:10:04	--	SpinTronix is now known as SpinTronix_
+2020-08-08 21:10:29	sheep	how much RAM do you have?
+2020-08-08 21:10:32	dustvoice	I think I'll try to hit them people up in #zfsonlinux, cause the upstream git repo doesn't compile as well
+2020-08-08 21:10:46	<--	seankhliao (~seankhlia@233.19.90.34.bc.googleusercontent.com) has quit (Quit: it can't be DNS?! it's always DNS!!!)
+2020-08-08 21:10:50	<--	Megver83 (~Icedove@pc-88-170-100-190.cm.vtr.net) has quit (Read error: Connection reset by peer)
+2020-08-08 21:10:53	-->	seankhliao (~seankhlia@233.19.90.34.bc.googleusercontent.com) has joined #archlinux
+2020-08-08 21:10:56	dustvoice	sheep: 64G should be enough ':)
+2020-08-08 21:10:58	sheep	if gcc is segfaulting then either it ran out of memory or there's some really obscure compiler bug happening
+2020-08-08 21:11:18	-->	Megver83 (~Icedove@pc-88-170-100-190.cm.vtr.net) has joined #archlinux
+2020-08-08 21:11:35	MacGyver	dustvoice: If you're actually on arch, zfs isn't *that* out there that nobody here would be willing to help you just because it's an AUR package.
+2020-08-08 21:11:41	dustvoice	hmm ok. compiler bug could be the issue, or gcc does weird stuff with the RAM... Will try another run and monitor mem usage...
+2020-08-08 21:12:07	MacGyver	I applaud the effort to search for a "more appropriate" channel but I think the risk of being shouted at in this case is rather small.
+2020-08-08 21:12:50	<--	m1cr0xf7 (~m1cr0xf7@41.46.131.90) has quit (Quit: leaving)
+2020-08-08 21:13:40	dustvoice	MacGyver: Yes I'm on arch. I know I could probably get some support here, but I'm always asking if there is a more appropriate channel first. I'll try some runs, maybe even do a memtest. I've got no hurry regarding this. Nilfs2 is nice, but I would love to run ZFS really.
+2020-08-08 21:14:10	-->	quitman (~master@217-64-148-87.pool.ovpn.com) has joined #archlinux
+2020-08-08 21:14:17	<--	ShadowKyogre (~ShadowKyo@unaffiliated/shadowkyogre) has left #archlinux
+2020-08-08 21:14:25	-->	Al3v (~arch@85-76-145-47-nat.elisa-mobile.fi) has joined #archlinux
+2020-08-08 21:14:52	NetSysFire	do you have some debug information?
+2020-08-08 21:16:34	santost12	MacGyver: this is what i was talking about earlier: https://postimg.cc/Q9KmNskT 
+2020-08-08 21:16:36	phrik	Title: 1 — Postimage.org (at postimg.cc)
+2020-08-08 21:19:35	Strykar	dustvoice: post the error you get while compiling the aur package
+2020-08-08 21:20:04	--	SpinTronix_ is now known as SpinTronix
+2020-08-08 21:20:40	MacGyver	santost12: Hmright. Hunting this is difficult. Apparently there's also a potential problem if you *do* have virtual GPUs enabled and boot with the AMD GPU passed through & enabled; so you could try rebooting, disabling the QXL GPU, then starting the VM.
+2020-08-08 21:21:18	dustvoice	Another weird issue I'm encountering on the Lenovo Yoga Laptop of my mother, I also tried this on is that sometimes the screen just starts to flicker. It's an Intel integrated graphics card. I first thought it was some issue with her Manjaro install and/or my portable Arch install, but as I tried to look at some journals and therefore booted into the archiso, the problem still occured. On my
+2020-08-08 21:21:18	dustvoice	portable arch install (just an arch install on a USB) it only occurs, after I enter my password for LUKS. It also happens more often during normal usage, after the display gets woken from sleep. I can reproduce it 70% of the time by forcing the standby with `xset dpms force standby`. The flicker starts slowly and then increases in frequency. In approx. 3s one can't see sh*t. I've also tried with
+2020-08-08 21:21:18	dustvoice	`nomodeset` etc. without success. Several reboots resolve the error temporarily. Sorry for opening up 2 issues at the same time, but I gotta admit those 2 problems are slowly but steadily driving me insane. And sorry for the wall of text. I can offer cookies for compensation
+2020-08-08 21:21:19	MacGyver	santost12: You're beyond my expertise in issues with AMD GPUs though so at this point I'm merely interpreting any results from https://www.reddit.com/r/VFIO/search?q=AMD%20code%2043&restrict_sr=1
+2020-08-08 21:21:21	phrik	Title: reddit.com: search results - AMD code 43 (at www.reddit.com)
+2020-08-08 21:21:22	<--	panikovsky (~panikovsk@5.139.149.148) has quit (Quit: Leaving)
+2020-08-08 21:21:30	<--	djapo (~archie@unaffiliated/djapo) has quit (Remote host closed the connection)
+2020-08-08 21:21:50	dustvoice	Strykar: It was indeed a segfault
+2020-08-08 21:22:09	dustvoice	Weird thing is, I just brute-force tried it like 6 times and magically it somehow worked
+2020-08-08 21:22:24	<--	akar (~akar@2a01:e0a:d5:f450:d253:ae33:86a:84dc) has quit (Ping timeout: 246 seconds)
+2020-08-08 21:22:28	dustvoice	I have no idea. Maybe it's indeed a mem issue. Will run a memtest tonight just for good measure
+2020-08-08 21:22:46	MacGyver	santost12: Oh, also, you should make sure you're passing through *all* the devices in that card's IOMMU-group.
+2020-08-08 21:22:53	MacGyver	santost12: Including the audio device on the GPU.
+2020-08-08 21:23:32	dustvoice	Well I'm gonna try to build the zfs-dkms package now. If I'm understanding stuff correctly, I therefore won't need zfs-linux right? I can use a normal linux kernel and use zfs-dkms with it right?
+2020-08-08 21:23:38	<--	simbioz (~simbioz@unaffiliated/simbioz) has quit (Ping timeout: 265 seconds)
+2020-08-08 21:23:42	dustvoice	Or would it be recommended to use the zfs-linux kernel
+2020-08-08 21:23:51	Tom^	dustvoice: https://wiki.archlinux.org/index.php/intel_graphics#Screen_flickering
+2020-08-08 21:23:52	phrik	Title: Intel graphics - ArchWiki (at wiki.archlinux.org)
+2020-08-08 21:24:00	MacGyver	Either should work if you're on [core]/linux.
+2020-08-08 21:24:03	-->	djapo (~archie@unaffiliated/djapo) has joined #archlinux
+2020-08-08 21:24:04	Tom^	dustvoice: i915.enable_psr=0
+2020-08-08 21:24:13	MacGyver	dkms will build fine for the official kernels.
+2020-08-08 21:24:29	dustvoice	MacGyver: So also for linux-zen?
+2020-08-08 21:24:33	MacGyver	The prebuilt packages are usually only there as an additional convenience.
+2020-08-08 21:24:38	MacGyver	No, not for linux-zen.
+2020-08-08 21:24:43	MacGyver	That's a different kernel.
+2020-08-08 21:24:52	dustvoice	Tom^: Thanks will look into it, but I'm pretty sure I tried the i915 option.
+2020-08-08 21:24:55	MacGyver	So only dkms would work there.
+2020-08-08 21:25:04	MacGyver	Unless somebody provides zfs-linux-zen.
+2020-08-08 21:25:09	ryzokuken	I'd been wondering what people have been using for quickly accessible dictionaries akin to some other OSes.
+2020-08-08 21:25:19	ryzokuken	dmenu with a script that hooks up to a dict?
+2020-08-08 21:25:49	ryzokuken	and from *a* dict, I mean dict(1) lol
+2020-08-08 21:25:56	dustvoice	MacGyver: Oh ok. So just there's no misunderstanding, the dkms version also won't work with linux-zen? Not that I require the zen kernel. I can also run the stock linux kernel
+2020-08-08 21:27:24	MacGyver	The dkms-version will work for any kernel for which you have the headers.
+2020-08-08 21:27:35	MacGyver	The prebuilt version for linux will not work for linux-zen.
+2020-08-08 21:27:53	santost12	MacGyver: still nothing but thank you for the suggestions and help. i tried disabling QXL and then i removed it. i used RDP and same error
+2020-08-08 21:27:54	dustvoice	MacGyver: Thanks for the info. I assumed this, but having some confirmation is always helpful
+2020-08-08 21:28:15	santost12	im going to buy another hard drive for windows.
+2020-08-08 21:28:41	-->	nabukadnezar43 (~mmturk@85.102.37.217) has joined #archlinux
+2020-08-08 21:29:42	dustvoice	Tom^: After reading your provided wiki article, I'm not so sure, I tried, but possibly *wanted* to try the kernel parameter. Will try it out after grabbing some food. Thanks to you guys anyways. Helpful as always.
+2020-08-08 21:29:59	-->	Szadek (~Szadek@193.27.14.37) has joined #archlinux
+2020-08-08 21:31:04	<--	nabukadnezar43 (~mmturk@85.102.37.217) has quit (Client Quit)
+2020-08-08 21:31:56	--	SpinTronix is now known as SpinTronix_
+2020-08-08 21:32:01	-->	ShadowKyogre (~ShadowKyo@unaffiliated/shadowkyogre) has joined #archlinux
+2020-08-08 21:32:30	<--	ShadowKyogre (~ShadowKyo@unaffiliated/shadowkyogre) has left #archlinux
+2020-08-08 21:33:08	<--	santost12 (~santost12@2001:5b0:2a59:2508:f3ca:aae8:33ca:bfd1) has quit (Quit: reboot)
+2020-08-08 21:34:55	<--	scrumplex_ (~quassel@p200300d27708cc00dea632fffe541a61.dip0.t-ipconnect.de) has quit (Quit: Quassel - Signing Off)
+2020-08-08 21:35:36	<--	irc_user (uid423822@gateway/web/irccloud.com/x-vksrowldhkawixkp) has quit (Quit: Connection closed for inactivity)
+2020-08-08 21:35:40	<--	sa02irc (~mbax@155-079-043-212.ip-addr.inexio.net) has quit (Remote host closed the connection)
+2020-08-08 21:35:59	-->	scrumplex (~quassel@pd95d4310.dip0.t-ipconnect.de) has joined #archlinux
+2020-08-08 21:37:30	-->	ShadowKyogre (~ShadowKyo@unaffiliated/shadowkyogre) has joined #archlinux
+2020-08-08 21:37:39	-->	santost12 (~santost12@2001:5b0:2a59:2508:f3ca:aae8:33ca:bfd1) has joined #archlinux
+2020-08-08 21:37:53	-->	ricus (~kiike@unaffiliated/ricus) has joined #archlinux
+2020-08-08 21:40:06	-->	Alakzadeh (~Alak@unaffiliated/alakzadeh) has joined #archlinux
+2020-08-08 21:40:15	-->	simbioz (~simbioz@unaffiliated/simbioz) has joined #archlinux
+2020-08-08 21:42:06	<--	djapo (~archie@unaffiliated/djapo) has quit (Ping timeout: 260 seconds)
+2020-08-08 21:44:42	mattfly	hmm when is libreoffice 7 arriving on arch? where do you look for this?
+2020-08-08 21:45:27	mattfly	or have it...
+2020-08-08 21:45:29	sheep	mattfly: you'll see it in pacman when it's available. Otherwise there's no public tracking
+2020-08-08 21:45:36	mattfly	oh ok
+2020-08-08 21:45:37	sheep	besides the svn/git repos
+2020-08-08 21:46:07	sheep	given how large libreoffice is and how many dependencies it has, it will probably take a few days
+2020-08-08 21:46:46	sheep	if you want immediate notifications about the source package being updated, you could subscribe to the arch-commits mailing list
+2020-08-08 21:47:08	heftig	post-factum: yes, once I get back to my desk (all my access keys are on a yubikey)
+2020-08-08 21:47:42	post-factum	heftig: ok. i've already created a bug-request for that and updated another bug
+2020-08-08 21:47:45	<--	Kruppt (~Kruppt@50.111.30.170) has quit (Remote host closed the connection)
+2020-08-08 21:48:30	heftig	post-factum: yes, thanks. they're already on my to-do list
+2020-08-08 21:50:28	-->	linux_dream (~isaac@unaffiliated/linux-dream/x-5839402) has joined #archlinux
+2020-08-08 21:50:58	<--	fstd (~fstd@unaffiliated/fisted) has quit (Ping timeout: 260 seconds)
+2020-08-08 21:51:06	<--	skinkie (~skinkie@konink.de) has left #archlinux
+2020-08-08 21:51:11	<--	Szadek (~Szadek@193.27.14.37) has quit (Ping timeout: 246 seconds)
+2020-08-08 21:51:13	<--	_illy_ (~illyohs@70-237-10-37.lightspeed.cntmoh.sbcglobal.net) has quit (Quit: WeeChat 2.9)
+2020-08-08 21:51:15	-->	fstd (~fstd@unaffiliated/fisted) has joined #archlinux
+2020-08-08 21:51:45	-->	Pidgeotto (drowsyivy@gateway/shell/tilde.team/x-yekebhqdbtfjhbeu) has joined #archlinux
+2020-08-08 21:51:45	<--	Pidgeotto (drowsyivy@gateway/shell/tilde.team/x-yekebhqdbtfjhbeu) has quit (Excess Flood)
+2020-08-08 21:52:11	--	SpinTronix_ is now known as SpinTronix
+2020-08-08 21:52:14	-->	Pidgeotto (drowsyivy@gateway/shell/tilde.team/x-nzapgtuhmzsvcxpr) has joined #archlinux
+2020-08-08 21:52:14	<--	Pidgeotto (drowsyivy@gateway/shell/tilde.team/x-nzapgtuhmzsvcxpr) has quit (Excess Flood)
+2020-08-08 21:52:45	<--	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has quit (Quit: Leaving)
+2020-08-08 21:52:47	-->	Pidgeotto (drowsyivy@gateway/shell/tilde.team/x-kllsefaqgumjtdck) has joined #archlinux
+2020-08-08 21:52:47	<--	Pidgeotto (drowsyivy@gateway/shell/tilde.team/x-kllsefaqgumjtdck) has quit (Excess Flood)
+2020-08-08 21:55:39	<--	florent (~florent@2a01:e0a:409:1890:deed:2ade:b95:9d8f) has quit (Read error: Connection reset by peer)
+2020-08-08 21:56:12	<--	Satin (~satina@unaffiliated/satin) has quit (Quit: don't press me there!)
+2020-08-08 21:56:12	<--	Inu (~Inu@unaffiliated/inu) has quit (Quit: woof)
+2020-08-08 21:56:12	<--	warsh (~warsh@unaffiliated/warsh) has quit (Quit: smell ya later)
+2020-08-08 21:56:46	<--	fyrgebraec (~enceladus@sp137-h04-128-78-140-174.dsl.sta.abo.bbox.fr) has quit (Ping timeout: 246 seconds)
+2020-08-08 21:58:02	<--	Zeyphros (~Zeyphros@2a02:908:1016:f40:2d8:61ff:fe55:26be) has quit (Quit: WeeChat 2.9)
+2020-08-08 21:58:27	-->	easo2k (a@unaffiliated/easo2k) has joined #archlinux
+2020-08-08 21:58:36	-->	Satin (~satina@unaffiliated/satin) has joined #archlinux
+2020-08-08 21:58:45	-->	henninb (~user@63.226.173.112) has joined #archlinux
+2020-08-08 21:58:46	<--	Trashlord (~trash@wikipedia/Sentient-Planet) has quit (Quit: "True ignorance is not the absence of knowledge, but the refusal to acquire it.")
+2020-08-08 21:59:46	--	ireadallthelogs is now known as sevu
+2020-08-08 22:00:32	<--	Carduus (~Carduus@pc199.phh.uni-kiel.de) has quit (Quit: leaving)
+2020-08-08 22:00:33	-->	Cirrus_Minor (~Cirrus_Mi@CAcert/Cirrus-Minor) has joined #archlinux
+2020-08-08 22:00:42	<--	henninb (~user@63.226.173.112) has quit (Remote host closed the connection)
+2020-08-08 22:01:15	-->	ttyX (~ttyX@unaffiliated/ttyx) has joined #archlinux
+2020-08-08 22:01:32	<--	kaguya (~kaguya@jkvlon0504w-grc-08-70-27-8-63.dsl.bell.ca) has quit (Quit: WeeChat 2.9)
+2020-08-08 22:01:34	-->	Inu (~Inu@unaffiliated/inu) has joined #archlinux
+2020-08-08 22:01:59	drathir_tor	not sure, but from curiosity isnt community/perl-test-simple should replace the perl-test-tester in dependencies bc of conflicting files ?
+2020-08-08 22:02:04	-->	warsh (~warsh@unaffiliated/warsh) has joined #archlinux
+2020-08-08 22:02:09	<--	santost12 (~santost12@2001:5b0:2a59:2508:f3ca:aae8:33ca:bfd1) has quit (Quit: quit)
+2020-08-08 22:02:30	-->	Carduus (~Carduus@pc199.phh.uni-kiel.de) has joined #archlinux
+2020-08-08 22:04:02	<--	heat_ (~heat@sortix/contributor/heat) has quit (Ping timeout: 260 seconds)
+2020-08-08 22:04:19	--	SpinTronix is now known as SpinTronix_
+2020-08-08 22:05:10	drathir_tor	or its like replaces not apply to packages no longer included/existing in repositories... ?
+2020-08-08 22:05:29	jonathon	mattfly: I can point you to some packages if you want; I build it a couple of days ago for myself.
+2020-08-08 22:05:49	sheep	drathir_tor:  I'm not sure what you're asking or what you mean by "bc of conflicting files". can you show us the full output of pacman?
+2020-08-08 22:06:16	drathir_tor	sheep: k one sec...
+2020-08-08 22:06:53	<--	C5OK5Y (~C5OK5Y@ip-78-102-149-138.net.upcbroadband.cz) has quit (Quit: C5OK5Y)
+2020-08-08 22:07:46	-->	ilhanraja (~ilhanraja@104.37.129.153) has joined #archlinux
+2020-08-08 22:07:46	-->	kalbasit (~kalbasit@unaffiliated/kalbasit) has joined #archlinux
+2020-08-08 22:08:21	<--	_thelion_ (~matthias@93-82-97-54.adsl.highway.telekom.at) has quit (Quit: WeeChat 2.8)
+2020-08-08 22:09:14	<--	Alakzadeh (~Alak@unaffiliated/alakzadeh) has quit (Quit: WeeChat 2.9)
+2020-08-08 22:09:22	--	SpinTronix_ is now known as SpinTronix
+2020-08-08 22:09:53	<--	finnmark (~finnmark@2a0c:f040:0:2790::4d) has quit (Ping timeout: 272 seconds)
+2020-08-08 22:10:28	drathir_tor	sheep: there You go https://gist.github.com/b7cc117147c46b2982586a0cf4a45506
+2020-08-08 22:10:30	phrik	Title: conflicting__perl-test-simple_with_perl-test-tester · GitHub (at gist.github.com)
+2020-08-08 22:11:47	-->	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has joined #archlinux
+2020-08-08 22:11:49	sheep	drathir_tor: the perl-test-tester package doesn't exist in the repos anymore. I think perl-test-simple should replace it
+2020-08-08 22:11:55	-->	Phrenic (~cailean@static-198-54-128-77.cust.tzulo.com) has joined #archlinux
+2020-08-08 22:11:58	-->	semeion (~semeion@unaffiliated/semeion) has joined #archlinux
+2020-08-08 22:12:41	bentglasstube	so I reinstalled arch entirely and I'm still having performance issues in x
+2020-08-08 22:12:43	<--	Thaodan (~Thaodan@thaodan.de) has quit (Quit: ZNC - https://znc.in)
+2020-08-08 22:13:06	drathir_tor	bentglasstube: dmesg spamming any errors ?
+2020-08-08 22:13:27	bentglasstube	no, nothing interesting in there that I see
+2020-08-08 22:13:28	-->	Thaodan (~Thaodan@thaodan.de) has joined #archlinux
+2020-08-08 22:13:42	bentglasstube	nothing interesting in xorg log either
+2020-08-08 22:13:46	Phrenic	What's the irc command for font help?
+2020-08-08 22:14:11	sheep	Phrenic: there isn't one
+2020-08-08 22:14:58	NetSysFire	bentglasstube: what performance issues?
+2020-08-08 22:15:14	-->	desmu (~desmu@2a02:908:391:8260:3c1:9333:2bd5:4202) has joined #archlinux
+2020-08-08 22:15:16	drathir_tor	bentglasstube: from curiosity does glxgears affected as well ?
+2020-08-08 22:15:21	<--	J_Darnley (~J_Darnley@d51A44418.access.telenet.be) has quit (Ping timeout: 265 seconds)
+2020-08-08 22:15:25	Namarrgon	Phrenic: plain english works best; explain your issue
+2020-08-08 22:15:42	bentglasstube	mouse movement is super choppy mostly
+2020-08-08 22:16:10	NetSysFire	what gpu?
+2020-08-08 22:16:15	Namarrgon	bentglasstube: did you try with nouveau instead of the blob?
+2020-08-08 22:16:17	bentglasstube	seems to be since I updated things a couple days ago, so I assume gpu drivers
+2020-08-08 22:16:21	-->	mr_sm1th (~mr_sm1111@94-215-58-197.cable.dynamic.v4.ziggo.nl) has joined #archlinux
+2020-08-08 22:16:36	bentglasstube	I was going to try nouveau next, but it doesn't support much on my gpu
+2020-08-08 22:16:39	mr_sm1th	I'm trying to update with pacman, but I'm getting "error: sublime-text: key "F57D4F59BD3DF454" is unknown"
+2020-08-08 22:16:52	Namarrgon	mr_sm1th: which repo do you get that package from?
+2020-08-08 22:16:53	mr_sm1th	rm -rf /etc/pacman.d/gnupg doesn't work
+2020-08-08 22:16:54	bentglasstube	01:00.0 VGA compatible controller: NVIDIA Corporation TU104 [GeForce RTX 2070 SUPER] (rev a1)
+2020-08-08 22:17:04	-->	J_Darnley (~J_Darnley@d51a44418.access.telenet.be) has joined #archlinux
+2020-08-08 22:17:07	Phrenic	I'm just missing some characters. Just looking for some font packages that provide good coverage for more obscure icons and characters.
+2020-08-08 22:17:13	mr_sm1th	Namarrgon, I'm not installing sublime-text, it's long gone from my system, but it seems to have left some files that break pacman
+2020-08-08 22:17:29	Namarrgon	mr_sm1th: post the full pacman -Syu --debug output
+2020-08-08 22:17:44	bentglasstube	glxgears looks choppy too, but stdout reports 60fps
+2020-08-08 22:18:04	drathir_tor	mr_sm1th: that most likely not help You wipe all keys maybe instead go try reinstal archlinux-keyring...
+2020-08-08 22:18:13	mr_sm1th	I did that
+2020-08-08 22:18:20	mr_sm1th	!paste
+2020-08-08 22:18:21	phrik	Paste short snippets (up to 3 lines) in channel. Please do NOT use pastebin.com or paste.ubuntu.com -- some good, sane paste services are http://ix.io, https://paste.rs, https://bpaste.net and https://gist.github.com. See !ix or !rs for an easy way to paste from a pipe.
+2020-08-08 22:18:31	Namarrgon	!pastepacman
+2020-08-08 22:18:32	phrik	LC_ALL=C pacman --debug <your pacman options> |& tee >(curl -F 'f:1=<-' ix.io)
+2020-08-08 22:18:51	<--	patrick96 (~Patrick@polybar/patrick) has quit (Read error: Connection reset by peer)
+2020-08-08 22:18:51	mr_sm1th	this seems to be the relevant part https://bpa.st/4DOQ
+2020-08-08 22:18:51	phrik	Title: View paste 4DOQ (at bpa.st)
+2020-08-08 22:19:13	<--	mrbanie (~mrbanie@unaffiliated/mrbanie) has quit (Ping timeout: 265 seconds)
+2020-08-08 22:19:25	sheep	is there a sublime-text repo in your pacman.conf?
+2020-08-08 22:19:51	Namarrgon	post the full output
+2020-08-08 22:19:55	mr_sm1th	Ok yeah that was it
+2020-08-08 22:19:58	mr_sm1th	Thank you
+2020-08-08 22:20:08	<--	segurb (~segurb@unaffiliated/segurb) has quit (Quit: https://i.imgur.com/xrUtDu3.gif)
+2020-08-08 22:20:11	mr_sm1th	Namarrgon, there was 500+ lines of new repos being added ':)
+2020-08-08 22:20:30	Namarrgon	why do you have so many mirrors in your mirrorlist?
+2020-08-08 22:20:54	drathir_tor	O,O'
+2020-08-08 22:21:29	mr_sm1th	Ehm
+2020-08-08 22:21:36	mr_sm1th	I have one for every country it seems
+2020-08-08 22:21:47	mr_sm1th	Generated on 2019-02-01
+2020-08-08 22:22:22	mr_sm1th	Anyway, thank you :)
+2020-08-08 22:23:04	<--	Phrenic (~cailean@static-198-54-128-77.cust.tzulo.com) has left #archlinux
+2020-08-08 22:23:41	-->	patrick96 (~Patrick@polybar/patrick) has joined #archlinux
+2020-08-08 22:24:35	<--	jgbyrne (~jgbyrne@host86-164-149-194.range86-164.btcentralplus.com) has quit (Ping timeout: 240 seconds)
+2020-08-08 22:24:38	<--	andril (~andril@2601:586:8400:a:eddb:2518:3553:6011) has quit (Quit: WeeChat 2.9)
+2020-08-08 22:25:16	j0hannes	I shutdown my laptop before a flight and restarted it afterwards; now the Network Connections status bar entry in KDE is gone and in the system configuration I don't find any of the previously existing connections (VPN etc.) anymore
+2020-08-08 22:25:33	<--	dvx_ (~dvx@82.113.48.124) has quit (Quit: dvx_)
+2020-08-08 22:25:34	j0hannes	ip a lists the wifi adapter as DOWN
+2020-08-08 22:26:37	NetSysFire	did you updated anything? check pacman.log
+2020-08-08 22:26:53	NetSysFire	also check that you didnt push a hw button, like the airplane mode one if you have something like this
+2020-08-08 22:27:04	-->	jgbyrne (~jgbyrne@host86-164-149-194.range86-164.btcentralplus.com) has joined #archlinux
+2020-08-08 22:28:14	-->	akar (~akar@2a01:e0a:d5:f450:d253:ae33:86a:84dc) has joined #archlinux
+2020-08-08 22:28:35	-->	Brocellous (~Brocellou@unaffiliated/brocellous) has joined #archlinux
+2020-08-08 22:30:42	<--	qin (~qin@unaffiliated/soalokin) has quit (Ping timeout: 256 seconds)
+2020-08-08 22:30:51	<--	sevu (~sevu@2a01:c22:a80a:200:781d:24ff:fed2:5c17) has quit (Ping timeout: 244 seconds)
+2020-08-08 22:31:50	<--	SanskritFritz (~quassel@2E8B45C2.catv.pool.telekom.hu) has quit (Ping timeout: 256 seconds)
+2020-08-08 22:32:34	-->	MarcinWieczorek (~marcin@afoe197.neoplus.adsl.tpnet.pl) has joined #archlinux
+2020-08-08 22:33:02	<--	klokken (~klokken@unaffiliated/klokken) has quit (Quit: klokken)
+2020-08-08 22:33:19	j0hannes	NetSysFire: there is an Fn key combination to toggle wifi, but it never worked under Arch
+2020-08-08 22:33:33	<--	ilhanraja (~ilhanraja@104.37.129.153) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-08-08 22:34:03	NetSysFire	what is your specific device?
+2020-08-08 22:34:09	NetSysFire	check rfkill just in case
+2020-08-08 22:34:25	<--	semeion (~semeion@unaffiliated/semeion) has quit (Ping timeout: 240 seconds)
+2020-08-08 22:35:03	-->	cnsvc (~cnsvc@gateway/tor-sasl/cnsvc) has joined #archlinux
+2020-08-08 22:36:12	-->	mrbanie (~mrbanie@unaffiliated/mrbanie) has joined #archlinux
+2020-08-08 22:36:30	-->	semeion (~semeion@unaffiliated/semeion) has joined #archlinux
+2020-08-08 22:37:43	_Warl0ck	does anyone know how to do a subshell with fish? like: (command)
+2020-08-08 22:38:16	_Warl0ck	wal requires "(cat ~/.cache/wal/sequences &)" to be in your shell config, but fish doesn't support that syntax and I can't find an equivalent
+2020-08-08 22:38:58	dreisner	yo dawg, i heard you like subshells.
+2020-08-08 22:39:09	-->	ilhanraja (~ilhanraja@104.37.129.153) has joined #archlinux
+2020-08-08 22:39:29	_Warl0ck	you heard right
+2020-08-08 22:39:36	dreisner	can't see why you need the explicit ( ) subshell if you're backgrounding the thing...
+2020-08-08 22:39:59	dreisner	then again, i've no idea what "wal" is.
+2020-08-08 22:40:08	NetSysFire	there is also a fish channel
+2020-08-08 22:40:10	_Warl0ck	yeah the thing is removing the parens causes other isssues, it seems to spew character codes into the active shell session
+2020-08-08 22:40:14	NetSysFire	the official one is not on freenode though
+2020-08-08 22:40:16	_Warl0ck	I asked there, it's kinda dead
+2020-08-08 22:40:24	bentglasstube	nouveau drivers don't have the performance issues
+2020-08-08 22:40:29	bentglasstube	so I guess I'm sticking with them
+2020-08-08 22:40:32	bentglasstube	thanks for the suggestion
+2020-08-08 22:40:46	dreisner	...but adding the subshell doesn't change that.
+2020-08-08 22:40:51	dreisner	FD inheritance is a thing.
+2020-08-08 22:41:02	_Warl0ck	dreisner: wal just applies a system wide colorscheme, and that line echoes the color chars
+2020-08-08 22:41:19	dreisner	and why does this have to be fish?
+2020-08-08 22:41:27	<--	kaivai (~kaivai@104.158.156.144) has quit (Ping timeout: 265 seconds)
+2020-08-08 22:41:32	dreisner	isn't wal the one executing this?
+2020-08-08 22:41:47	_Warl0ck	because that's my every day shell, and fish needs to source the colors so each shell I open is themed
+2020-08-08 22:41:56	_Warl0ck	wal just creates the colorscheme itself
+2020-08-08 22:42:16	_Warl0ck	dreisner: removing the perens is directly responsible for this issue: https://github.com/liuchengxu/vista.vim/issues/297
+2020-08-08 22:42:17	bentglasstube	nouveau seems to have some different problems not understanding left and right displays though
+2020-08-08 22:42:18	phrik	Title: [vista.vim] Fail to decode from JSON: · Issue #297 · liuchengxu/vista.vim · GitHub (at github.com)
+2020-08-08 22:42:37	-->	sevu (~sevu@x4d0d8e0b.dyn.telefonica.de) has joined #archlinux
+2020-08-08 22:43:06	<--	mimiku (~mimiku@gateway/tor-sasl/mimiku) has quit (Quit: mimiku)
+2020-08-08 22:43:06	<--	KeiraT (~k4ra@gateway/tor-sasl/k4ra) has quit (Quit: KeiraT)
+2020-08-08 22:43:20	dreisner	that makes even less sense
+2020-08-08 22:43:40	bentglasstube	wow, this is really strange.  I used xrandr to arrange my displays correctly, but now if I click on something on the left monitor, it clicks in that position on the right monitor (and vice versa)
+2020-08-08 22:43:56	_Warl0ck	I never said it made sense dreisner, im confused as well
+2020-08-08 22:44:02	-->	largetni (largetni@gateway/vpn/privateinternetaccess/largetni) has joined #archlinux
+2020-08-08 22:44:19	-->	tatsumaru (~tatsumaru@87.227.201.106) has joined #archlinux
+2020-08-08 22:44:19	dreisner	now we're talking about bad json? because of a missing subshell?
+2020-08-08 22:44:52	<--	zalt_ (~devp@unaffiliated/lambda443) has quit (Ping timeout: 256 seconds)
+2020-08-08 22:45:08	_Warl0ck	dreisner: I believe it's because the cat command throws some characters into the terminal to change its color, which it does, but for some reason they are not handled correctly and it interferes with other stuff
+2020-08-08 22:45:17	Namarrgon	bentglasstube: nouveau probably doesn't work too well on that gpu, brace for more bugs
+2020-08-08 22:45:19	tatsumaru	hey guys, my computer uses a usb printer that's connected to my mom's pc and is shared and this works fine I can print as expected. however I just installed xsane in order to use the scan function as well and when I start xsane it says - no devices found. how can I help xsane also detect the shared printer?
+2020-08-08 22:45:21	dreisner	yes, that's what cat does....
+2020-08-08 22:45:33	bentglasstube	nouveau doesn't work, nvidia drivers don't work
+2020-08-08 22:45:34	dreisner	adding a subshell doesn't magically change where the output goes.
+2020-08-08 22:45:36	bentglasstube	what is this 1990
+2020-08-08 22:45:44	Namarrgon	bentglasstube: this is nvidia
+2020-08-08 22:45:53	_Warl0ck	dreisner: https://github.com/liuchengxu/vista.vim/issues/297
+2020-08-08 22:45:55	phrik	Title: [vista.vim] Fail to decode from JSON: · Issue #297 · liuchengxu/vista.vim · GitHub (at github.com)
+2020-08-08 22:46:03	dreisner	_Warl0ck: you already posted that
+2020-08-08 22:46:05	_Warl0ck	it says it "hides shell job control messages"
+2020-08-08 22:46:11	bentglasstube	I suppose I can just swap which ports the monitors are plugged into
+2020-08-08 22:46:25	_Warl0ck	whoops meant to paste https://github.com/dylanaraps/pywal/wiki/Getting-Started#applying-the-theme-to-new-terminals
+2020-08-08 22:46:27	phrik	Title: Getting Started · dylanaraps/pywal Wiki · GitHub (at github.com)
+2020-08-08 22:46:31	dreisner	does fish emit job control message?
+2020-08-08 22:47:16	dreisner	i'm not even sure why you need to background this.
+2020-08-08 22:47:20	dreisner	it's not a continuous stream.
+2020-08-08 22:47:29	_Warl0ck	Googling it returned no results. Knowing fish, they just call it something different
+2020-08-08 22:47:32	<--	sahej (~sahej@103.208.70.146) has quit (Remote host closed the connection)
+2020-08-08 22:47:52	_Warl0ck	I think it's backgrounded so the shell isn't blocked for a few ms every time it starts
+2020-08-08 22:48:01	dreisner	a few ms!? how big is this file?
+2020-08-08 22:48:15	dreisner	should file a bug against wal so that it only reads stdout, not stdout and stderr.
+2020-08-08 22:48:22	_Warl0ck	I'm just going off the comment in that link: # Alternative (blocks terminal for 0-3ms)
+2020-08-08 22:48:25	_Warl0ck	cat ~/.cache/wal/sequences
+2020-08-08 22:48:32	-->	eoli3n (~eoli3n@pop.92-184-102-30.mobile.abo.orange.fr) has joined #archlinux
+2020-08-08 22:49:15	dreisner	0ms is pretty short. 3ms is too. i doubt you'd actually notice it.
+2020-08-08 22:50:19	_Warl0ck	yeah, it is pretty short. Seems to remove the error for now
+2020-08-08 22:50:34	dreisner	im responsible for a ip geolocation service which has a 5ms SLA at about 20M QPS. if we fail the SLA we start losing money (thousands of dollars) every seconds. surely 3ms is tolerable for you to open a shell.
+2020-08-08 22:50:45	_Warl0ck	I would like to know how to do subshells in fish anyways. I use them ib my bash scripts all the time
+2020-08-08 22:50:57	-->	samantaz (~samantaz@lfbn-rou-1-143-136.w83-114.abo.wanadoo.fr) has joined #archlinux
+2020-08-08 22:51:10	Namarrgon	they don't have a channel on freenode?
+2020-08-08 22:51:28	dreisner	it's too fucked of a shell to offer such basic functionality: https://github.com/fish-shell/fish-shell/issues/1439
+2020-08-08 22:51:29	<--	ttyX (~ttyX@unaffiliated/ttyx) has quit (Quit: Leaving)
+2020-08-08 22:51:32	phrik	Title: Provide subshell like functionality · Issue #1439 · fish-shell/fish-shell · GitHub (at github.com)
+2020-08-08 22:52:10	-->	mimiku (~mimiku@gateway/tor-sasl/mimiku) has joined #archlinux
+2020-08-08 22:52:15	-->	KeiraT (~k4ra@gateway/tor-sasl/k4ra) has joined #archlinux
+2020-08-08 22:52:16	_Warl0ck	It's great for an everyday use shell, manpage completions, git integration, etc, but for anything complex and portable I just use bash
+2020-08-08 22:52:21	tatsumaru	any help with the xsane issue please?
+2020-08-08 22:52:44	-->	heat_ (~heat@sortix/contributor/heat) has joined #archlinux
+2020-08-08 22:53:01	-->	Szybet (b97f165f@gateway/web/cgi-irc/kiwiirc.com/ip.185.127.22.95) has joined #archlinux
+2020-08-08 22:55:00	-->	xulfer (uid452788@gateway/web/irccloud.com/x-mimtcsfurjcndwhu) has joined #archlinux
+2020-08-08 22:55:17	-->	halv (~halv@p200300d3c712cb00458bde521f41c34b.dip0.t-ipconnect.de) has joined #archlinux
+2020-08-08 22:56:20	-->	boottp (~boottp@2-235-73-104.ip227.fastwebnet.it) has joined #archlinux
+2020-08-08 22:57:43	<--	boottp (~boottp@2-235-73-104.ip227.fastwebnet.it) has quit (Client Quit)
+2020-08-08 22:58:44	_Warl0ck	dreisner: scratch that, I am still getting the garbage json issue with the plain cat command. I think it just needs to be run in the background somehow
+2020-08-08 22:59:04	<--	beelzebuzz (~rasputin@gateway/tor-sasl/beelzebuzz) has quit (Ping timeout: 240 seconds)
+2020-08-08 22:59:13	dustvoice	tatsumaru: Never tried scanning with my printer unfortunately O.o
+2020-08-08 22:59:41	tatsumaru	well it has a scanner in it
+2020-08-08 22:59:51	sheep	tatsumaru: what do you get from "pacman -Q linux" and "uname -r"?
+2020-08-08 23:00:06	<--	halv (~halv@p200300d3c712cb00458bde521f41c34b.dip0.t-ipconnect.de) has quit (Client Quit)
+2020-08-08 23:00:24	tatsumaru	sheep, linux 5.7.12.arch1-1  and  5.7.12-arch1-1
+2020-08-08 23:00:29	dustvoice	Sorry for sounding sarcastic. My printer has a scanner included too. I really didn't try scanning. I don't know how I navigated around that to be perfectly honest. So really O.o
+2020-08-08 23:00:43	sheep	so it's not an issue with a kernel mismatch
+2020-08-08 23:00:55	<--	ShadowKyogre (~ShadowKyo@unaffiliated/shadowkyogre) has left #archlinux
+2020-08-08 23:00:55	<--	billybigrigger (~billybigr@S0106000c292e42fd.cg.shawcable.net) has quit (Quit: The Lounge - https://thelounge.chat)
+2020-08-08 23:01:01	tatsumaru	my mom's pc also has arch with the latest updates and the printer/scanner works fine there with xsane
+2020-08-08 23:01:15	sheep	are sane-airscan and ipp-usb installed?
+2020-08-08 23:01:55	-->	kernschrott (~kernschro@p57917920.dip0.t-ipconnect.de) has joined #archlinux
+2020-08-08 23:02:03	tatsumaru	sheep, no 
+2020-08-08 23:02:18	-->	Ruuchan (~Ruuchan@unaffiliated/ruuchan) has joined #archlinux
+2020-08-08 23:03:46	tatsumaru	maybe I need to share the scanner separately from the printer even though they are the same device?
+2020-08-08 23:03:56	sheep	install sane-airscan and ipp-usb
+2020-08-08 23:04:07	tatsumaru	sheep, installed them, now?
+2020-08-08 23:04:32	sheep	systemctl daemon-reload; systemctl enable --now ipp-usb
+2020-08-08 23:04:44	-->	ShadowKyogre (~ShadowKyo@unaffiliated/shadowkyogre) has joined #archlinux
+2020-08-08 23:04:58	-->	Ruuchan_ (~Ruuchan@unaffiliated/ruuchan) has joined #archlinux
+2020-08-08 23:05:11	-->	ttyX (~ttyX@unaffiliated/ttyx) has joined #archlinux
+2020-08-08 23:05:13	<--	Ar|stote|is (~quassel@2a02:587:9a03:661f:d8f8:f8ff:febf:1da6) has quit (Ping timeout: 260 seconds)
+2020-08-08 23:05:26	-->	boottp_ (~boottp@2-235-73-104.ip227.fastwebnet.it) has joined #archlinux
+2020-08-08 23:05:31	-->	beelzebuzz (~rasputin@gateway/tor-sasl/beelzebuzz) has joined #archlinux
+2020-08-08 23:05:56	<--	boottp_ (~boottp@2-235-73-104.ip227.fastwebnet.it) has quit (Remote host closed the connection)
+2020-08-08 23:05:58	-->	GI_Jack (~GI_Jack@pdpc/supporter/active/gi-jack) has joined #archlinux
+2020-08-08 23:06:12	tatsumaru	sheep, https://dpaste.org/YG1e
+2020-08-08 23:06:14	phrik	Title: dpaste/YG1e (Bash) (at dpaste.org)
+2020-08-08 23:06:24	sheep	ignore that
+2020-08-08 23:06:25	<--	Ruuchan (~Ruuchan@unaffiliated/ruuchan) has quit (Ping timeout: 240 seconds)
+2020-08-08 23:06:43	sheep	it might be a service that is activated on demand by dbus
+2020-08-08 23:06:48	sheep	now try using xsane again
+2020-08-08 23:06:54	<--	Szybet (b97f165f@gateway/web/cgi-irc/kiwiirc.com/ip.185.127.22.95) has quit (Quit: Connection closed)
+2020-08-08 23:07:14	tatsumaru	nope, still can't find the scanner
+2020-08-08 23:07:29	sheep	does lsusb find the scanner?
+2020-08-08 23:07:32	-->	boottp (~boottp@2-235-73-104.ip227.fastwebnet.it) has joined #archlinux
+2020-08-08 23:07:58	<--	kernschrott (~kernschro@p57917920.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2020-08-08 23:08:00	tatsumaru	well it's not connected to this PC so should it?
+2020-08-08 23:08:02	<--	binTrl_ (~binaryTra@47.29.106.122) has quit (Ping timeout: 265 seconds)
+2020-08-08 23:08:10	-->	kernschrott (~kernschro@x4e301927.dyn.telefonica.de) has joined #archlinux
+2020-08-08 23:08:16	sheep	you said it was a usb scanner, right?
+2020-08-08 23:08:28	sheep	oh wait
+2020-08-08 23:08:30	tatsumaru	yeah but it's connect to my mom's pc and my mom's pc is sharing the printer with my pc
+2020-08-08 23:08:38	sheep	what protocol is that PC using to share the scanner?
+2020-08-08 23:08:44	tatsumaru	ipp
+2020-08-08 23:09:15	sheep	is saned sharing it?
+2020-08-08 23:09:43	-->	agregory (~agregory@c-98-207-137-206.hsd1.ca.comcast.net) has joined #archlinux
+2020-08-08 23:09:45	tatsumaru	not sure what you mean
+2020-08-08 23:09:45	-->	binTrl (~binaryTra@47.29.106.122) has joined #archlinux
+2020-08-08 23:09:53	tatsumaru	I used cups to share it
+2020-08-08 23:10:01	<--	linux_dream (~isaac@unaffiliated/linux-dream/x-5839402) has quit (Quit: WeeChat 2.9)
+2020-08-08 23:10:24	sheep	I think cups would only share the printer function
+2020-08-08 23:10:44	sheep	try something like https://wiki.archlinux.org/index.php/SANE#Sharing_your_scanner_over_a_network
+2020-08-08 23:10:45	phrik	Title: SANE - ArchWiki (at wiki.archlinux.org)
+2020-08-08 23:12:33	-->	pnd (~un@104.221.66.247) has joined #archlinux
+2020-08-08 23:13:19	-->	pardoides (xfnw@gateway/shell/tilde.team/x-vkgqjydhrezactzj) has joined #archlinux
+2020-08-08 23:13:26	<--	pardoides (xfnw@gateway/shell/tilde.team/x-vkgqjydhrezactzj) has left #archlinux
+2020-08-08 23:13:42	-->	Szadek (~Szadek@185.213.155.168) has joined #archlinux
+2020-08-08 23:17:08	<--	ShadowKyogre (~ShadowKyo@unaffiliated/shadowkyogre) has left #archlinux
+2020-08-08 23:17:21	-->	ShadowKyogre (~ShadowKyo@unaffiliated/shadowkyogre) has joined #archlinux
+2020-08-08 23:18:36	<--	ShadowKyogre (~ShadowKyo@unaffiliated/shadowkyogre) has left #archlinux
+2020-08-08 23:18:40	tatsumaru	sheep, this worked, thanks a lot ! :)
+2020-08-08 23:19:03	-->	Szybet (b97f165f@gateway/web/cgi-irc/kiwiirc.com/ip.185.127.22.95) has joined #archlinux
+2020-08-08 23:19:13	-->	ShadowKyogre (~ShadowKyo@unaffiliated/shadowkyogre) has joined #archlinux
+2020-08-08 23:21:01	<--	tatsumaru (~tatsumaru@87.227.201.106) has left #archlinux
+2020-08-08 23:22:50	<--	mariuszskon_ (~mariuszsk@103.107.198.100) has quit (Ping timeout: 256 seconds)
+2020-08-08 23:23:40	<--	Megver83 (~Icedove@pc-88-170-100-190.cm.vtr.net) has quit (Quit: Megver83)
+2020-08-08 23:23:44	-->	Kilroo (~Kilroo@71.71.105.78) has joined #archlinux
+2020-08-08 23:23:53	<--	frostschutz (~frostschu@55d40828.access.ecotel.net) has quit (Remote host closed the connection)
+2020-08-08 23:23:59	-->	Megver83 (~Icedove@pc-88-170-100-190.cm.vtr.net) has joined #archlinux
+2020-08-08 23:24:32	-->	mariuszskon_ (~mariuszsk@103.107.198.100) has joined #archlinux
+2020-08-08 23:25:26	-->	incentive (~rbatty@unaffiliated/incentive) has joined #archlinux
+2020-08-08 23:25:40	<--	vuoto (~vuoto@80.71.142.174) has quit (Quit: WeeChat 2.9-dev)
+2020-08-08 23:26:37	<--	xdarklight (~freenode@unaffiliated/xdarklight) has quit (Quit: ZNC - http://znc.in)
+2020-08-08 23:26:55	<--	myr463 (~myr463@2a01:cb11:20:5700:9eeb:e8ff:fec4:afbf) has quit (Quit: myr463)
+2020-08-08 23:28:10	<--	gffa (~unknown@unaffiliated/gffa) has quit (Quit: sleep)
+2020-08-08 23:29:42	j0hannes	NetSysFire: it's an  Intel 8265/8275, rfkill doesn't report any blocking
+2020-08-08 23:30:05	-->	xdarklight (~freenode@unaffiliated/xdarklight) has joined #archlinux
+2020-08-08 23:31:29	dustvoice	The mighty ArchWiki strikes again I see. Truly a holy pool of knowledge. Never ceases to impress
+2020-08-08 23:36:07	<--	edlou (uid413273@gateway/web/irccloud.com/x-qzjwcxojxigavqfv) has quit (Quit: Connection closed for inactivity)
+2020-08-08 23:36:10	<--	xdarklight (~freenode@unaffiliated/xdarklight) has quit (Quit: ZNC - http://znc.in)
+2020-08-08 23:37:07	<--	Megver83 (~Icedove@pc-88-170-100-190.cm.vtr.net) has quit (Quit: Megver83)
+2020-08-08 23:37:31	-->	Megver83 (~Icedove@pc-88-170-100-190.cm.vtr.net) has joined #archlinux
+2020-08-08 23:37:49	<--	heat_ (~heat@sortix/contributor/heat) has quit (Remote host closed the connection)
+2020-08-08 23:38:06	-->	xdarklight (~freenode@unaffiliated/xdarklight) has joined #archlinux
+2020-08-08 23:38:22	-->	heat (~heat@sortix/contributor/heat) has joined #archlinux
+2020-08-08 23:38:54	<--	kalbasit (~kalbasit@unaffiliated/kalbasit) has quit (Remote host closed the connection)
+2020-08-08 23:40:59	<--	leonjza (~user@unaffiliated/leonjza) has quit (Ping timeout: 240 seconds)
+2020-08-08 23:41:00	<--	sorcus (~sorcus@2a01:7e01:e002:8ffc:caf2:ef3d:542:bc0e) has quit (Ping timeout: 246 seconds)
+2020-08-08 23:41:08	-->	shiki (~sevu@2a01:c22:a851:7b00:781d:24ff:fed2:5c17) has joined #archlinux
+2020-08-08 23:42:50	<--	eoli3n (~eoli3n@pop.92-184-102-30.mobile.abo.orange.fr) has quit (Ping timeout: 265 seconds)
+2020-08-08 23:43:27	-->	lesterknome_ (~lesterkno@c-24-125-54-168.hsd1.ga.comcast.net) has joined #archlinux
+2020-08-08 23:43:34	<--	sevu (~sevu@x4d0d8e0b.dyn.telefonica.de) has quit (Ping timeout: 256 seconds)
+2020-08-08 23:45:50	<--	lesterknome (~lesterkno@196.247.50.108) has quit (Ping timeout: 256 seconds)
+2020-08-08 23:46:01	<--	MarcinWieczorek (~marcin@afoe197.neoplus.adsl.tpnet.pl) has quit (Quit: ZNC 1.7.5 - https://znc.in)
+2020-08-08 23:46:24	-->	danielrparks (~danielrpa@2600:1700:3f7b:200::25) has joined #archlinux
+2020-08-08 23:48:41	<--	Volgaar (~volgaar@alyon-652-1-189-82.w109-213.abo.wanadoo.fr) has quit (Ping timeout: 256 seconds)
+2020-08-08 23:49:39	dreisner	_Warl0ck: still makes no sense if you understand shells, *and* it contradicts the manual you linked.
+2020-08-08 23:50:20	dreisner	_Warl0ck: the rational explanation at this point would either be: appear to be a syntax error or some (further) absurdity of fish.
+2020-08-08 23:50:41	bentglasstube	does anyone know what packages are required to get ardour's general midi plugin to work?
+2020-08-08 23:51:28	bentglasstube	I got it to work by installing all of pro-audio but that seems a bit heavy handed
+2020-08-08 23:52:23	dustvoice	Gotta admit, this kind of stuff was why I dropped fish and switched to zsh.
+2020-08-08 23:52:40	NetSysFire	i like using zsh but i use bash for all my scripts
+2020-08-08 23:53:23	danielrparks	that's how I bet I would too. I've been using bash for way too long to not use its syntax
+2020-08-08 23:53:42	<--	clone11 (~clone@072-189-253-117.res.spectrum.com) has quit (Read error: Connection reset by peer)
+2020-08-08 23:54:05	dustvoice	I have no problem with a different syntax. But it would be nice if it was a complete and coherent syntax instead of random shit like this
+2020-08-08 23:54:47	danielrparks	I actually missed it, but I can imagine, there's some pretty weird stuff in shell syntax
+2020-08-08 23:54:54	-->	Raptor_Mayhem (~bckempa@173-25-175-1.client.mchsi.com) has joined #archlinux
+2020-08-08 23:55:11	<--	Raptor_Mayhem (~bckempa@173-25-175-1.client.mchsi.com) has quit (Client Quit)
+2020-08-08 23:55:18	-->	Szadek_ (~Szadek@185.213.155.164) has joined #archlinux
+2020-08-08 23:55:42	-->	wrycode (~user@cpe-98-26-105-140.nc.res.rr.com) has joined #archlinux
+2020-08-08 23:55:51	dustvoice	I use bash for scripts, bc of compatibility and stuff too. But zsh with autocompletion and oh-my-zsh shenanigans is the closest I got to fish's autocompletion which I have to admit is very good.
+2020-08-08 23:56:27	<--	ilhanraja (~ilhanraja@104.37.129.153) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-08-08 23:56:59	-->	ilhanraja (~ilhanraja@104.37.129.153) has joined #archlinux
+2020-08-08 23:57:10	<--	Szadek (~Szadek@185.213.155.168) has quit (Ping timeout: 256 seconds)
+2020-08-09 00:01:05	-->	sudoforge (~sudoforge@cpepool8acmts1-40.sanbrunocable.com) has joined #archlinux
+2020-08-09 00:01:08	<--	Szadek_ (~Szadek@185.213.155.164) has quit (Quit: WeeChat 2.9)
+2020-08-09 00:01:39	<--	stoopkid (uid137696@gateway/web/irccloud.com/x-ovoenamfruuvvzfa) has quit (Quit: Connection closed for inactivity)
+2020-08-09 00:01:40	mefistofeles	dustvoice: I recommend dropping oh-my-zsh and using something like spaceship or starship
+2020-08-09 00:01:43	mefistofeles	:P
+2020-08-09 00:01:46	mefistofeles	you will never look back
+2020-08-09 00:02:06	danielrparks	noted for when I eventually switch to zsh
+2020-08-09 00:02:56	<--	ramses (~ramses@nat-35.starnet.cz) has quit (Quit: ramses)
+2020-08-09 00:03:26	NetSysFire	i made my zshrc myself. 4/10 would not recommend. i still dont understand all the completion options
+2020-08-09 00:03:28	dustvoice	mefistofeles: O.o so... you... tell me that my completely individually crafted and configured, finally working zsh is not worthy enough >.> Guess I'll check this Star Wars shit out. You surely are the devil
+2020-08-09 00:03:38	-->	billybigrigger (~billybigr@S0106000c292e42fd.cg.shawcable.net) has joined #archlinux
+2020-08-09 00:03:58	mefistofeles	dustvoice: oh, maybe it is enough :)
+2020-08-09 00:04:11	<--	pinpox (~pinpox@xdsl-87-79-223-244.nc.de) has quit (Ping timeout: 240 seconds)
+2020-08-09 00:04:17	mefistofeles	but oh-my-zsh is known for being slow, but if you have fiddle with it enough it may be good already
+2020-08-09 00:04:28	<--	shiki (~sevu@2a01:c22:a851:7b00:781d:24ff:fed2:5c17) has quit (Ping timeout: 244 seconds)
+2020-08-09 00:05:52	-->	pinpox (~pinpox@xdsl-78-34-240-220.nc.de) has joined #archlinux
+2020-08-09 00:08:09	-->	leonjza (~user@unaffiliated/leonjza) has joined #archlinux
+2020-08-09 00:09:02	-->	sevu (~sevu@2a01:c23:6446:d800:781d:24ff:fed2:5c17) has joined #archlinux
+2020-08-09 00:09:06	<--	ilhanraja (~ilhanraja@104.37.129.153) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-08-09 00:10:43	dustvoice	Well it's alright. This is the rabbit hole of arch. Optimizing and tweaking all the time. And when you FINALLY think you FINALLY have it... BOOM something new enters the room... I tweak my dotfiles all the time. Especially since I'm trying to vim-bind everything. Ironically I'm also in the search for another IRC Client while typing this in WeeChat. The gods have no mercy
+2020-08-09 00:10:43	<--	martian67 (~martian67@about/linux/regular/martian67) has quit (Ping timeout: 240 seconds)
+2020-08-09 00:11:36	NetSysFire	customizing things is fine. you are optimizing your machine for yourself basically. i recommend to automate your dotfile deployment and similar tasks
+2020-08-09 00:13:15	<--	sevu (~sevu@2a01:c23:6446:d800:781d:24ff:fed2:5c17) has quit (Ping timeout: 244 seconds)
+2020-08-09 00:13:38	-->	martian67 (~martian67@about/linux/regular/martian67) has joined #archlinux
+2020-08-09 00:13:51	-->	sevu (~sevu@2a01:c22:3457:ae00:781d:24ff:fed2:5c17) has joined #archlinux
+2020-08-09 00:13:56	<--	fweht (uid404746@gateway/web/irccloud.com/x-lwjaphdrpnykbaks) has quit (Quit: Connection closed for inactivity)
+2020-08-09 00:14:29	dustvoice	Well I've basically got a dotfiles repo with submodules that I can simply clone into my home and I'm ready to go. For everything else I've got a custom guide, which I'm knowing by heart by now. Automated dotfile deployment never kind of met all my expectations, so I'd rather do things manually
+2020-08-09 00:14:47	-->	darkstardevx (~darkstard@2601:1c2:300:c8a0::da15) has joined #archlinux
+2020-08-09 00:15:25	-->	emptiedsoul (~emptiedso@109.225.40.181) has joined #archlinux
+2020-08-09 00:15:58	NetSysFire	personally i hate settings things up manually. i dont trust my hands anymore, there will be typos. it will save me some time, especially because typos are frustrating and hard to debug
+2020-08-09 00:16:56	<--	emptiedsoul (~emptiedso@109.225.40.181) has quit (Quit: WeeChat 2.9)
+2020-08-09 00:17:04	danielrparks	I love setting things up, but I agree typos can be little demons that come to bite you later
+2020-08-09 00:17:33	dustvoice	well, new install, git init, set remote with upstream and pull. And I'm off to a great start
+2020-08-09 00:17:50	dustvoice	well not entirely... git submodule update --recursive --init helps too
+2020-08-09 00:18:04	<--	Szybet (b97f165f@gateway/web/cgi-irc/kiwiirc.com/ip.185.127.22.95) has quit (Quit: Connection closed)
+2020-08-09 00:18:24	dustvoice	And a smartcard, to have my keys. Portable af ':]
+2020-08-09 00:18:45	<--	Carduus (~Carduus@pc199.phh.uni-kiel.de) has quit (Ping timeout: 240 seconds)
+2020-08-09 00:19:17	<--	nkuld4 (~nkuld4@2601:447:8100:ce0:af7a:1c40:84f8:e6f7) has quit (Ping timeout: 260 seconds)
+2020-08-09 00:19:57	-->	zuntik (~thomas@2001:8a0:7f61:a300:2004:2f84:c7cc:e585) has joined #archlinux
+2020-08-09 00:20:03	zuntik	hieelo.
+2020-08-09 00:20:07	NetSysFire	!give zuntik welcome
+2020-08-09 00:20:07	zuntik	*Hello
+2020-08-09 00:20:08	phrik	zuntik: Welcome to #archlinux, tell us how you fucked up.
+2020-08-09 00:20:32	zuntik	haha thanks phrik
+2020-08-09 00:20:34	NetSysFire	i have a ton of custom stuff. selfmade conky widgets, hacky scripts and ugly configs. it would take me a long time to deploy them
+2020-08-09 00:20:38	NetSysFire	!give zuntik bot
+2020-08-09 00:20:39	phrik	zuntik: I'm a bot! ~does the binary solo~ 00001 000011 0000111
+2020-08-09 00:20:54	-->	ilhanraja (~ilhanraja@104.37.129.153) has joined #archlinux
+2020-08-09 00:21:07	-->	nessonic (~nessonic@2601:247:c480:24e0::98dc) has joined #archlinux
+2020-08-09 00:21:17	<--	desmu (~desmu@2a02:908:391:8260:3c1:9333:2bd5:4202) has quit (Remote host closed the connection)
+2020-08-09 00:21:22	zuntik	I have a question about fstab: I'm runnig archlinuxarm on my raspberrypi 4
+2020-08-09 00:21:31	NetSysFire	!alarm
+2020-08-09 00:21:32	phrik	If you're here because of an issue with your Raspberry Pi or other ARM device, join #archlinux-arm.
+2020-08-09 00:21:32	<--	rileyreid (~ugjka@m90-139-71-66.cust.tele2.lv) has quit (Ping timeout: 256 seconds)
+2020-08-09 00:21:44	dustvoice	I love that alarm xD
+2020-08-09 00:21:47	zuntik	ah nothing wrong with the pi
+2020-08-09 00:21:58	Scimmia	of course not
+2020-08-09 00:22:14	Scimmia	Arch just doesn't run on it, it's x86_64 only
+2020-08-09 00:22:22	zuntik	I just don't understand why the root partition is not listed in fstab
+2020-08-09 00:22:27	zuntik	only the boot partition
+2020-08-09 00:22:35	zuntik	that's all I want to know
+2020-08-09 00:22:48	zuntik	fstab has only one entry
+2020-08-09 00:22:52	zuntik	why is this?
+2020-08-09 00:23:00	dustvoice	Well you could always make your own entry?
+2020-08-09 00:23:06	Scimmia	ask your distro, since they're the ones that set it up
+2020-08-09 00:23:12	<--	HuntsMan (~hunts@unaffiliated/huntsman) has quit (Quit: Konversation terminated!)
+2020-08-09 00:23:16	danielrparks	you're probably using the root= command-line argument to tell the kernel where the root filesystem is, so you don't need it in fstab?
+2020-08-09 00:23:33	-->	mluser-home (~mluser-ho@cpe-107-11-253-108.columbus.res.rr.com) has joined #archlinux
+2020-08-09 00:23:40	NetSysFire	!notarch
+2020-08-09 00:23:41	phrik	This channel is for Arch Linux support only. Also see https://wiki.archlinux.org/index.php/Code_of_conduct#Arch_Linux_distribution_support_.2Aonly.2A
+2020-08-09 00:23:43	dustvoice	It's not that we don't wonna help, it's just that with custom distros, in this case archlinux-arm do custom stuff
+2020-08-09 00:24:11	dustvoice	So we don't know what special quirks archlinux-arm might have cause we run x86_64
+2020-08-09 00:24:45	-->	andril (~andril@2601:586:8400:a:488e:8cac:da17:904) has joined #archlinux
+2020-08-09 00:24:56	<--	mluser-home (~mluser-ho@cpe-107-11-253-108.columbus.res.rr.com) has quit (Read error: Connection reset by peer)
+2020-08-09 00:25:04	zuntik	yes yes. I understand. I asked here because I expected the question to be general. I think the reply I got here is satisfactory: the bootloader booted it
+2020-08-09 00:25:14	zuntik	I just want to make sure that if I add my own entry there
+2020-08-09 00:25:21	zuntik	it will mount
+2020-08-09 00:25:28	-->	HuntsMan (~hunts@unaffiliated/huntsman) has joined #archlinux
+2020-08-09 00:25:35	zuntik	I'll ask the other channel then.  thank you!
+2020-08-09 00:26:13	dustvoice	Yes. If you really need it, making an fstab entry is pretty easy
+2020-08-09 00:26:14	-->	mluser-home (~mluser-ho@cpe-107-11-253-108.columbus.res.rr.com) has joined #archlinux
+2020-08-09 00:27:11	dustvoice	You will have to do it many more times probably while running arch 'xO
+2020-08-09 00:27:19	<--	Al3v (~arch@85-76-145-47-nat.elisa-mobile.fi) has quit (Quit: Leaving)
+2020-08-09 00:27:26	zuntik	dustvoice: I want to boot 2 partitions that are on a huge external hard drive: one that is exfat and the other will be btrfs (necessary packages are installed)
+2020-08-09 00:27:43	zuntik	auto mount I should say
+2020-08-09 00:28:24	<--	aw1 (~aw1@unaffiliated/aw1) has quit (Quit: Leaving)
+2020-08-09 00:28:27	zuntik	thank you all!
+2020-08-09 00:29:17	<--	purist (~purist@gateway/tor-sasl/purist) has quit (Remote host closed the connection)
+2020-08-09 00:29:37	<--	alexherbo2 (~alexherbo@lmontsouris-659-1-2-186.w193-248.abo.wanadoo.fr) has quit (Ping timeout: 264 seconds)
+2020-08-09 00:30:03	-->	purist (~purist@gateway/tor-sasl/purist) has joined #archlinux
+2020-08-09 00:32:11	<--	danielrparks (~danielrpa@2600:1700:3f7b:200::25) has quit (Quit: Leaving)
+2020-08-09 00:32:17	j0hannes	I still can't find any reason why my wifi isnt't working anymore; journalctl says rfkill1: found Wi-Fi radio killswitch, what does that mean?
+2020-08-09 00:33:13	binTrl	I'm getting "Cannot create atjob file /var/spool/atd/a0000601961f3a: Permission denied" while running at, /var/spool : http://ix.io/2tC8 any idea what's wrong ?
+2020-08-09 00:33:37	-->	ttyX_ (~ttyX@unaffiliated/ttyx) has joined #archlinux
+2020-08-09 00:33:41	NetSysFire	j0hannes: do you have a hw switch which toggles your wifi? also rfkill list
+2020-08-09 00:33:52	dustvoice	j0hannes: The message you posted shouldn't be the most unusual.
+2020-08-09 00:34:33	<--	pnd (~un@104.221.66.247) has quit (Ping timeout: 265 seconds)
+2020-08-09 00:34:44	NetSysFire	they asked the question a few hours ago, i told them to do the rfkill stuff and to search for any relevant buttons that may do things
+2020-08-09 00:35:06	NetSysFire	what device is this?
+2020-08-09 00:35:56	<--	ttyX (~ttyX@unaffiliated/ttyx) has quit (Ping timeout: 256 seconds)
+2020-08-09 20:35:21	-->	dustvoice (~dustvoice@89-201-184-177.dsl.optinet.hr) has joined #archlinux
+2020-08-09 20:35:21	--	Topic for #archlinux is "Welcome to Arch Linux, Good Luck: https://archlinux.org | Rules: https://goo.gl/XWFreH | Pastebins: see !paste | status.archlinux.org | Installing? New `base` package; read the install guide carefully"
+2020-08-09 20:35:21	--	Topic set by phrik (~phrik@archlinux/bot/phrik) on Fri, 24 Jul 2020 22:12:54
+2020-08-09 20:35:21	--	Channel #archlinux: 1725 nicks (2 ops, 0 voices, 1723 normals)
+2020-08-09 20:35:24	--	Channel created on Sun, 15 Feb 2004 06:08:31
