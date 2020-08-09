@@ -19,7 +19,7 @@
 *.color13: #FF92D0
 *.color14: #9AEDFE
 *.color15: #E6E6E6
-*.font = "Hack:size=10:antialias=true:autohint=true"
+*.font: "Hack:size=10:antialias=true:autohint=true"
 *.termName: xterm-256color
 *.shell: /usr/bin/zsh
 *.tabspaces: 4
