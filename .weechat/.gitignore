@@ -26,7 +26,6 @@
 !/xfer.conf
 
 !/guile/
-!/logs/
 !/lua/
 !/perl/
 !/python/
