@@ -13,13 +13,14 @@ error = #ff5555
 
 [bar/top]
 monitor = ${env:MONITOR:}
-font-0 = Hack:pixelsize=10;2
+dpi = ${xrdb:Xft.dpi:-1}
+font-0 = Hack:size=10;2
 monitor-strict = false
 override-redirect = false
 bottom = false
 fixed-center = false
 width = 100%
-height = 20
+height = 2%
 offset-x = 0%
 offset-y = 0%
 
@@ -45,6 +46,7 @@ modules-left = bspwm
 
 modules-right = date sep xkeyboard sep cpu space temperature sep memory sep filesystem sep pulseaudio sep
 
+tray-scale = 1.0
 tray-position = right
 tray-padding = 0
 tray-maxsize = 14

@@ -117,13 +117,13 @@ alt + ctrl + {Left,Down,Up,Right}
     bspc node -v {-20 0,0 20,0 -20,20 0}
 
 alt + Return
-    alacritty
+    st
 
 # DMENU SCRIPTS
 
 # run program launcher
 alt + d
-    if [ -x $(command -v zsh) ]; then $HOME/.config/dmenu/dmenu_run_with_aliases; else dmenu_run -i -fn Hack -nb "#282a36" -nf "#f8f8f2" -sb "#44475a" -sf "#f8f8f2"; fi
+    if [ -x $(command -v zsh) ]; then $HOME/.config/dmenu/dmenu_run_with_aliases; else dmenu_run -i -fn "Hack:size=10:antialias=true:autohint=true" -nb "#282a36" -nf "#f8f8f2" -sb "#44475a" -sf "#f8f8f2"; fi
 
 alt + x
     $HOME/.config/dmenu/dmenu_bspwm_desktop_content goto
