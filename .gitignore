@@ -15,6 +15,7 @@
 !/.Xmodmap.example
 !/.Xresources
 !/.xsession
+!/.zsh_alias
 !/.zshenv
 !/.zshpath.example
 !/.zshrc
