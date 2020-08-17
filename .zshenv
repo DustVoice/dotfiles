@@ -36,7 +36,7 @@ export EDITOR='nvim'
 export SSH_AUTH_SOCK="$(gpgconf --list-dir socketdir)/S.gpg-agent.ssh"
 export GPG_TTY=$(tty)
 
-export TERMINAL='alacritty'
+export TERMINAL='st'
 
 export JUCE_PATH="$HOME/JUCE"
 
