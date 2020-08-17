@@ -1,26 +1,38 @@
 #!/usr/bin/env bash
-verbose=false
+clean=false
+fetch=false
 minimal=false
-update=false
 noconfirm=false
+pull=false
+update=false
+verbose=false
 
 for arg in "$@"; do
-    if [[ $arg == "-v" ]] || [[ $arg == "--verbose" ]]; then
-        verbose=true
+    if [[ $arg == "-c" ]] || [[ $arg == "--clean" ]]; then
+        clean=true
+    elif [[ $arg == "-f" ]] || [[ $arg == "--fetch" ]]; then
+        fetch=true
     elif [[ $arg == "-m" ]] || [[ $arg == "--minimal" ]]; then
         minimal=true
-    elif [[ $arg == "-u" ]] || [[ $arg == "--update" ]]; then
-        update=true
     elif [[ $arg == "--noconfirm" ]]; then
         noconfirm=true
+    elif [[ $arg == "--pull" ]]; then
+        pull=true
+    elif [[ $arg == "-u" ]] || [[ $arg == "--update" ]]; then
+        update=true
+    elif [[ $arg == "-v" ]] || [[ $arg == "--verbose" ]]; then
+        verbose=true
     elif [[ $arg == "-h" ]] || [[ $arg == "--help" ]]; then
         echo "Helper script for the AUR directory, which tells you what packages need an update.
 Usage: ./update.sh [options]
 Options:
--v, --verbose      Don't suppress the output of any command run within the script.
+-c, --clean        Do 'git reset HEAD --hard' and 'git clean -fdx'.
+-f, --fetch        Fetch the latest change from the upstream repos.
 -m, --minimal      Only show directories in need for an update.
--u, --update       If an update is needed, pull the new updates, 'makepkg -si' and afterwards 'git reset HEAD --hard' and 'git clean -fdx'.
-    --noconfirm    Pass the --noconfirm option to 'makepkg -si', if using the -u/--update option"
+-u, --update       If an update is needed, 'makepkg -si'.
+    --noconfirm    Pass the --noconfirm option to 'makepkg -si', if using the -u/--update option
+    --pull         Pull the latest changes from the repo before running any command. Note that this might fail!
+-v, --verbose      Don't suppress the output of any command run within the script."
         exit 0
     fi
 done
@@ -28,10 +40,12 @@ done
 for dir in *; do
     if [ -d "$dir" ]; then
         cd $dir
-        if $verbose; then
-            git fetch --all
-        else
-            git fetch --all > /dev/null
+        if $fetch; then
+            if $verbose; then
+                git fetch --all
+            else
+                git fetch --all --quiet
+            fi
         fi
 
         BEHIND=$(git rev-list HEAD...origin/master --count)
@@ -43,10 +57,12 @@ for dir in *; do
             echo "[X] $(pwd) is $BEHIND commits behind"
 
             if $update; then
-                if $verbose; then
-                    git pull --all
-                else
-                    git pull --all > /dev/null
+                if $pull; then
+                    if $verbose; then
+                        git pull --all
+                    else
+                        git pull --all --quiet
+                    fi
                 fi
 
                 if $noconfirm; then
@@ -62,14 +78,16 @@ for dir in *; do
                         makepkg -si > /dev/null
                     fi
                 fi
+            fi
+        fi
 
-                if $verbose; then
-                    git reset HEAD --hard
-                    git clean -fdx
-                else
-                    git reset HEAD --hard > /dev/null
-                    git clean -fdx > /dev/null
-                fi
+        if $clean; then
+            if $verbose; then
+                git reset HEAD --hard
+                git clean -fdx
+            else
+                git reset HEAD --hard --quiet
+                git clean -fdx --quiet
             fi
         fi
 
