@@ -32,5 +32,7 @@ setxkbmap "us,us" ",intl" "grp:shifts_toggle"
 xset m 0 0
 xsetroot -cursor_name left_ptr
 
+export _JAVA_AWT_WM_NONPARENTING=1
+
 mkdir -p $HOME/.local/share/bspwm
 exec bspwm >$HOME/.local/share/bspwm/output.log 2>$HOME/.local/share/bspwm/error.log
