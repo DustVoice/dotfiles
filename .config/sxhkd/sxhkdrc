@@ -54,7 +54,7 @@ alt + {p,b,comma,period}
 
 # focus the next/previous node in the current desktop
 alt + {_,shift + }n
-    bspc node -f {next,prev}.local
+    bspc node -f {next,prev}.tiled.local
 
 # focus the next/previous floating node in the current desktop
 alt + {_, shift + }space
@@ -62,7 +62,7 @@ alt + {_, shift + }space
 
 # focus the next/previous tiled node in the current desktop
 alt + ctrl + {_, shift + }space
-    bspc node -f {next,prev}.tiled.local
+    bspc node -f {next,prev}.local
 
 # focus the next/previous desktop in the current monitor
 alt + bracket{left,right}
