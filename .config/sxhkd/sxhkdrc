@@ -149,6 +149,12 @@ alt + z; h
 alt + z; l
     $HOME/.config/dmenu/dmenu_bspwm_desktop bubblenext
 
+alt + z; y
+    $HOME/.config/dmenu/dmenu_bspwm_desktop save
+
+alt + z; p
+    $HOME/.config/dmenu/dmenu_bspwm_desktop load
+
 alt + a; g
     $HOME/.config/dmenu/dmenu_bspwm_monitor goto
 

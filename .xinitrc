@@ -29,10 +29,14 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 setxkbmap "us,us" ",intl" "grp:shifts_toggle"
-xset m 0 0
+xset m 1 1
 xsetroot -cursor_name left_ptr
 
 export _JAVA_AWT_WM_NONPARENTING=1
 
-mkdir -p $HOME/.local/share/bspwm
-exec bspwm >$HOME/.local/share/bspwm/output.log 2>$HOME/.local/share/bspwm/error.log
+if [ -n $BSPWM_FILES ]; then
+    mkdir -p $BSPWM_FILES
+    exec bspwm >$BSPWM_FILES/output.log 2>$BSPWM_FILES/error.log
+else
+    exec bspwm
+fi
