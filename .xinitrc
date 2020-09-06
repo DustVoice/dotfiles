@@ -29,7 +29,10 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 setxkbmap "us,us" ",intl" "grp:shifts_toggle"
+
 xset m 1 1
+xset -dmps
+xset s off
 xsetroot -cursor_name left_ptr
 
 export _JAVA_AWT_WM_NONPARENTING=1
