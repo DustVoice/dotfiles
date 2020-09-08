@@ -57,6 +57,12 @@ function screenkey-obs-func() {
 
 alias screenkey-obs='screenkey-obs-func'
 # ======
+
+# ======
+# Firefox
+# ======
+alias firefox-private='firefox --private-window'
+# ======
 # ===
 
 # ===
