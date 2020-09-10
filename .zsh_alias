@@ -63,6 +63,12 @@ alias screenkey-obs='screenkey-obs-func'
 # ======
 alias firefox-private='firefox --private-window'
 # ======
+
+# ======
+# Polybar
+# ======
+alias polybar-launch="$HOME/.config/polybar/launch"
+# ======
 # ===
 
 # ===
