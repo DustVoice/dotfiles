@@ -76,7 +76,7 @@ if [[ -a $OH_MY_ZSH ]]; then
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=5
 
     MODE_CURSOR_DEFAULT="white blinking bar"
-    MODE_CURSOR_VICMD="magenta steady block"
+    MODE_CURSOR_VICMD="white steady block"
     MODE_CURSOR_VIINS="white blinking bar"
     MODE_CURSOR_SEARCH="cyan steady underline"
     MODE_CURSOR_REPLACE="red steady underline"
