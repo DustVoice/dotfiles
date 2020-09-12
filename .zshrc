@@ -80,7 +80,7 @@ if [[ -a $OH_MY_ZSH ]]; then
     MODE_CURSOR_VIINS="white blinking bar"
     MODE_CURSOR_SEARCH="cyan steady underline"
     MODE_CURSOR_REPLACE="red steady underline"
-    MODE_CURSOR_VISUAL="magenta steady block"
+    MODE_CURSOR_VISUAL="white steady block"
 
     # Which plugins would you like to load?
     # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
