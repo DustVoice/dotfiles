@@ -37,7 +37,7 @@ alias xfce-polkit='/usr/lib/xfce-polkit/xfce-polkit'
 # ======
 # Resolve
 # ======
-alias davinci-resolve='/opt/resolve/bin/resolve'
+alias resolve='/opt/resolve/bin/resolve'
 # ======
 
 # ======
