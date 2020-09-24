@@ -94,6 +94,21 @@ alias lock-screen='xset 600 60 && env XSECURELOCK_AUTH_BACKGROUND_COLOR=rgb:28/2
 # ===
 
 # ===
+# System maintenance
+# ===
+function check-iommu-func() {
+    for g in /sys/kernel/iommu_groups/*; do
+        echo "IOMMU Group ${g##*/}:"
+        for d in $g/devices/*; do
+            echo -e "\t$(lspci -nns ${d##*/})"
+        done;
+    done;
+}
+
+alias check-iommu='check-iommu-func'
+# ===
+
+# ===
 # bspwm
 # ===
 function bspwm-workspaces-init-func() {
