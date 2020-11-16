@@ -43,7 +43,7 @@ alias resolve='/opt/resolve/bin/resolve'
 # ======
 # Pianoteq 6
 # ======
-alias pianoteq='pianoteq\ 6'
+alias pianoteq='pianoteq\ 7'
 # ======
 
 # ======
