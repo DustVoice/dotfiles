@@ -30,9 +30,9 @@ fi
 
 setxkbmap "us,us" ",intl" "grp:shifts_toggle"
 
-xset m 1 1
-xset -dmps
 xset s off
+xset m 1 1
+xset dmps 300 600 0
 xsetroot -cursor_name left_ptr
 
 export _JAVA_AWT_WM_NONPARENTING=1
