@@ -2,10 +2,10 @@
 /*/
 !/.gitignore
 
+!/.antigenrc
 !/.bashrc
 !/.gitconfig
 !/.nvidia-xinitrc
-!/.oh-my-zsh
 !/.password-store
 !/.restore-permissions
 !/.tmux.conf
@@ -21,10 +21,10 @@
 !/.zshrc
 !/README.md
 
+!/.antigen/
 !/.config/
 !/.gnupg/
 !/.weechat/
 !/.ssh/
-!/.zsh/
 !/AUR/
 !/Wallpapers/
