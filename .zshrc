@@ -49,8 +49,6 @@ if [[ -a $ANTIGEN_ZSH && -a $ANTIGENRC ]]; then
 
     antigen init $ANTIGENRC
 
-    autoload -U compinit && compinit
-
     bindkey -M vicmd '^K' history-substring-search-up
     bindkey -M vicmd '^J' history-substring-search-down
 
