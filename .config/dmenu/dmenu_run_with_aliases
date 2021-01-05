@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
-if [[ -f $HOME/.zsh_alias ]]; then
-    source $HOME/.zsh_alias
+if [[ -f $HOME/.zshenv ]]; then
+    source $HOME/.zshenv
 fi
 
 command_to_run=$({ alias | awk '{split($0,alias,"="); print alias[1];}' ; dmenu_path ; } | sort | dmenu -i -fn $(get-font) -nb "#282a36" -nf "#f8f8f2" -sb "#44475a" -sf "#f8f8f2" "$@")
