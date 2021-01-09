@@ -114,7 +114,7 @@ function check-iommu-func() {
 alias check-iommu='check-iommu-func'
 
 function battery-monitor-func() {
-    watch -t -n 60 '( if [ $(cat /sys/class/power_supply/ACAD/online) == "1" ]; then printf "Power connected\n"; else print "Power disconnected\n"; fi; printf "\nBattery capacity: "; cat /sys/class/power_supply/BAT1/capacity; printf "\n(Updated every 60s)"; )';
+    watch -t -n 60 '( if [ $(cat /sys/class/power_supply/ACAD/online) == "1" ]; then printf "Power connected\n"; else printf "Power disconnected\n"; fi; printf "\nBattery capacity: "; cat /sys/class/power_supply/BAT1/capacity; printf "\n(Updated every 60s)"; )';
 }
 
 alias battery-monitor='battery-monitor-func'
