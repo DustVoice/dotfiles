@@ -61,3 +61,8 @@ fi
 if [ -x "$(command -v zoxide)" ]; then
     eval "$(zoxide init zsh)"
 fi
+
+alias ls='ls --color=tty'
+alias la='ls -lah'
+alias ll='ls -lh'
+alias lsa='ls -a'
