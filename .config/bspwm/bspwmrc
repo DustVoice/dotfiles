@@ -14,11 +14,15 @@ else
     fi
 fi
 
-command -v st >/dev/null 2>&1
+command -v alacritty >/dev/null 2>&1
 return_val=$?
 if [ $return_val -ne 0 ]; then
-    echo >&2 "Can't seem to find the st executable. Exiting!"
-    bspc quit && exit 1
+    command -v st >/dev/null 2>&1
+    return_val=$?
+    if [ $return_val -ne 0 ]; then
+        echo >&2 "Can't seem to find either the st or the alacritty executable. Exiting!"
+        bspc quit && exit 1
+    fi
 fi
 
 for monitor in $(bspc query -M); do

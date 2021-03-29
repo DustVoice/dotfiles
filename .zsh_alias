@@ -1,10 +1,18 @@
 # ===
 # Directory listing
 # ===
-alias la='ls -lahF'
-alias ll='ls -lhF'
-alias ls='ls -F --color=tty'
-alias lsa='ls -aF'
+# command -v exa >/dev/null 2>&1
+# if [ $? -eq 0 ]; then
+alias ea='exa -lah'
+alias ee='exa -lh'
+alias esa='exa -a'
+alias es='exa'
+# else
+alias la='ls -lahf'
+alias ll='ls -lhf'
+alias lsa='ls -af'
+alias ls='ls -f --color=tty'
+# fi
 
 # ===
 # Software

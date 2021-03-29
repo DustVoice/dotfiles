@@ -12,7 +12,7 @@
     # available, otherwise `xterm-256color` is used.
     #TERM: xterm-256color
 
-#window:
+window:
     # Window dimensions (changes require restart)
     #
     # Specified in number of columns/lines, not pixels.
@@ -33,9 +33,9 @@
     #
     # Blank space added around the window in pixels. This padding is scaled
     # by DPI and the specified value is always added at both opposing sides.
-    #padding:
-    #    x: 0
-    #    y: 0
+    padding:
+        x: 2
+        y: 2
 
     # Spread additional padding evenly around the terminal content.
     #dynamic_padding: false
@@ -283,14 +283,14 @@ background_opacity: 1.0
 # Allow terminal applications to change Alacritty's window title.
 #dynamic_title: true
 
-#cursor:
+cursor:
     # Cursor style
     #
     # Values for `style`:
     #     - ▇ Block
     #     - _ Underline
     #     - | Beam
-    #style: Block
+    style: Beam
 
     # If this is `true`, the cursor will be rendered as a hollow box when the
     # window is not focused.
@@ -512,19 +512,19 @@ mouse:
 # binding with the same triggers is defined. To unset a default binding, it can
 # be mapped to the `ReceiveChar` action. Alternatively, you can use `None` for
 # a no-op if you do not wish to receive input characters for that binding.
-#key_bindings:
+key_bindings:
     # (Windows, Linux, and BSD only)
-    #- { key: V,        mods: Control|Shift, action: Paste            }
-    #- { key: C,        mods: Control|Shift, action: Copy             }
+    - { key: V,        mods: Control|Shift, action: Paste            }
+    - { key: C,        mods: Control|Shift, action: Copy             }
     #- { key: Insert,   mods: Shift,         action: PasteSelection   }
-    #- { key: Key0,     mods: Control,       action: ResetFontSize    }
-    #- { key: Equals,   mods: Control,       action: IncreaseFontSize }
+    - { key: Key0,     mods: Control,       action: ResetFontSize    }
+    - { key: Equals,   mods: Control,       action: IncreaseFontSize }
     #- { key: Add,      mods: Control,       action: IncreaseFontSize }
     #- { key: Subtract, mods: Control,       action: DecreaseFontSize }
-    #- { key: Minus,    mods: Control,       action: DecreaseFontSize }
+    - { key: Minus,    mods: Control,       action: DecreaseFontSize }
 
     # (Windows only)
-    #- { key: Return,   mods: Alt,           action: ToggleFullscreen }
+    - { key: Return,   mods: Alt,           action: ToggleFullscreen }
 
     # (macOS only)
     #- { key: Key0,   mods: Command,         action: ResetFontSize    }
