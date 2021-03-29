@@ -1,26 +1,20 @@
 #!/usr/bin/env bash
 
-command -v sxhkd >/dev/null 2>&1
-return_val=$?
-if [ $return_val -ne 0 ]; then
-    echo >&2 "Can't seem to find the sxhkd executable. Exiting!"
-    bspc quit && exit 1
-else
+if [ -x "$(command -v sxhkd)" ]; then
     sxhkd &
     return_val=$?
     if [ $return_val -ne 0 ]; then
         echo >&2 "Couldn't fire up sxhkd: $return_val. Exiting!"
         bspc quit && exit 1
     fi
+else
+    echo >&2 "Can't seem to find the sxhkd executable. Exiting!"
+    bspc quit && exit 1
 fi
 
-command -v alacritty >/dev/null 2>&1
-return_val=$?
-if [ $return_val -ne 0 ]; then
-    command -v st >/dev/null 2>&1
-    return_val=$?
-    if [ $return_val -ne 0 ]; then
-        echo >&2 "Can't seem to find either the st or the alacritty executable. Exiting!"
+if [ ! -x "$(command -v alacritty)" ]; then
+    if [ ! -x "$(command -v st)" ]; then
+        echo >&2 "Can't seem to find neither the st nor the alacritty executable. Exiting!"
         bspc quit && exit 1
     fi
 fi
@@ -55,37 +49,36 @@ bspc config presel_feedback_color "#6272a4"
 bspc rule -a Screenkey manage=off
 bspc rule -a Zathura state=tiled manage=on
 
-command -v nitrogen >/dev/null 2>&1
-return_val=$?
-if [ $return_val -ne 0 ]; then
-    echo >&2 "Can't seem to find the nitrogen executable"
+if [ -x "$(command -v feh)" ]; then
+    feh --bg-fill "$HOME/Wallpapers/arch_dracula.png"
 else
-    nitrogen --restore &
-    return_val=$?
-    if [ $return_val -ne 0 ]; then
-        echo >&2 "Couldn't fire up nitrogen: $return_val"
+    if [ -x "$(command -v nitrogen)" ]; then
+        nitrogen --restore &
+        return_val=$?
+        if [ $return_val -ne 0 ]; then
+            echo >&2 "Couldn't fire up nitrogen: $return_val"
+        fi
+    else
+        echo >&2 "Can't seem to find neither the feh nor the nitrogen executable"
     fi
 fi
 
-command -v /usr/lib/xfce-polkit/xfce-polkit >/dev/null 2>&1
-return_val=$?
-if [ $return_val -ne 0 ]; then
-    echo >&2 "Can't seem to find the /usr/lib/xfce-polkit/xfce-polkit executable"
-else
+if [ -x "$(command -v /usr/lib/xfce-polkit/xfce-polkit)" ]; then
     /usr/lib/xfce-polkit/xfce-polkit &
     return_val=$?
     if [ $return_val -ne 0 ]; then
         echo >&2 "Couldn't fire up xfce-polkit: $return_val"
     fi
+else
+    echo >&2 "Can't seem to find the /usr/lib/xfce-polkit/xfce-polkit executable"
 fi
 
-command -v polybar >/dev/null 2>&1
-if [ $? -ne 0 ]; then
-    echo >&2 "Can't seem to find the polybar executable. Starting barless!"
-    bspc config top_padding 0
-else
+if [ -x "$(command -v polybar)" ]; then
     $HOME/.config/polybar/launch
     if [ $? -ne 0 ]; then
         echo >&2 "Couldn't fire up polybar: $?"
     fi
+else
+    echo >&2 "Can't seem to find the polybar executable. Starting barless!"
+    bspc config top_padding 0
 fi
