@@ -49,8 +49,34 @@ if [[ -a $ANTIGEN_ZSH && -a $ANTIGENRC ]]; then
 
     antigen init $ANTIGENRC
 
-    bindkey -M vicmd '^K' history-substring-search-up
-    bindkey -M vicmd '^J' history-substring-search-down
+    function zvm_after_lazy_keybindings() {
+        bindkey -M vicmd '^K' history-substring-search-up
+        bindkey -M vicmd '^J' history-substring-search-down
+    }
+    ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
+    ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BLINKING_BEAM
+    ZVM_VISUAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
+    ZVM_VISUAL_LINE_MODE_CURSOR=$ZVM_CURSOR_BLOCK
+    ZVM_OPPEND_MODE_CURSOR=$ZVM_CURSOR_BLINKING_UNDERLINE
+
+    ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
+
+    function zvm_after_select_vi_mode() {
+        case $ZVM_MODE in
+            $ZVM_MODE_NORMAL)
+                RPROMPT=$'%{$fg[blue]%}[NORMAL]%{$reset_color%}'
+            ;;
+            $ZVM_MODE_INSERT)
+                RPROMPT=$''
+            ;;
+            $ZVM_MODE_VISUAL)
+                RPROMPT=$'%{$fg[yellow]%}[VISUAL]%{$reset_color%}'
+            ;;
+            $ZVM_MODE_NORMAL)
+                RPROMPT=$'%{$fg[yellow]%}[V-LINE]%{$reset_color%}'
+            ;;
+        esac
+    }
 
     KEYTIMEOUT=5
 else
