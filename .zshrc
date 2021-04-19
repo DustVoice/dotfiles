@@ -10,8 +10,8 @@ COMPLETION_WAITING_DOTS="true"
 
 HIST_STAMPS="yyyy-mm-dd"
 
-HISTSIZE=1000000
-SAVEHIST=$HISTSIZE
+SAVEHIST=99999999
+HISTSIZE=999999999
 
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
@@ -40,6 +40,8 @@ if [[ -a $ZNAP_ZSH ]]; then
 
     znap prompt dustvoice/dustvoice-zsh-theme
 
+    znap source marlonrichert/zsh-hist
+
     znap source zsh-users/zsh-completions
 
     znap source zsh-users/zsh-autosuggestions
@@ -52,6 +54,9 @@ if [[ -a $ZNAP_ZSH ]]; then
 
     bindkey -M vicmd '^K' history-substring-search-up
     bindkey -M vicmd '^J' history-substring-search-down
+
+    bindkey -M vicmd '^H' push-line-or-edit
+    bindkey -M vicmd '^L' get-line
 else
     PS1=$'%b%n@%M %~
 %(!.#.$) '
