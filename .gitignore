@@ -2,7 +2,6 @@
 /*/
 !/.gitignore
 
-!/.antigenrc
 !/.bashrc
 !/.gitconfig
 !/.nvidia-xinitrc
@@ -21,9 +20,9 @@
 !/.zshrc
 !/README.md
 
-!/.antigen/
 !/.config/
 !/.gnupg/
 !/.weechat/
 !/.ssh/
+!/.znap/
 !/Wallpapers/
