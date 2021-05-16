@@ -1,3 +1,6 @@
 /*
 /*/
 !/.gitignore
+
+!/dustvoice-zsh-theme
+!/zsh-snap

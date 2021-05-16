@@ -3,12 +3,12 @@
 !/.gitignore
 
 !/vconsole.conf
+!/nvim
 
 !/alacritty/
 !/bspwm/
 !/dmenu/
 !/nitrogen/
-!/nvim/
 !/polybar/
 !/rustfmt/
 !/sxhkd/
