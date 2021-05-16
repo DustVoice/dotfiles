@@ -1,6 +1,6 @@
-export ZDOTDIR="$HOME/.znap"
+export ZNAPDOTDIR="$HOME/.znap"
 
-ZNAPDIR="$ZDOTDIR/zsh-snap"
+ZNAPDIR="$ZNAPDOTDIR/zsh-snap"
 ZNAP_ZSH="$ZNAPDIR/znap.zsh"
 ZNAP_LOG="$ADOTDIR/antigen.log"
 
