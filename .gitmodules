@@ -4,3 +4,6 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = git@git.dustvoice.de:DustVoice/nvim.git
+[submodule ".znap/dustvoice-zsh-theme"]
+	path = .znap/dustvoice-zsh-theme
+	url = git@github.com:DustVoice/dustvoice-zsh-theme.git
