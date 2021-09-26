@@ -38,7 +38,11 @@ if [[ -a $ZNAP_ZSH ]]; then
 
     znap source ohmyzsh/ohmyzsh lib/{git,theme-and-appearance,colored-man-pages,colorzie,command-not-found,history}
 
-    znap prompt dustvoice/dustvoice-zsh-theme
+    if [ -x "$(command -v starship)" ]; then
+        znap eval starship 'starship init zsh --print-full-init'
+    else
+        znap prompt dustvoice/dustvoice-zsh-theme
+    fi
 
     znap source marlonrichert/zsh-hist
 
