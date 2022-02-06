@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 typeset -TUx PATH path
 typeset -TUx LD_LIBRARY_PATH ld_library_path
 
