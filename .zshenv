@@ -50,8 +50,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 export WINIT_X11_SCALE_FACTOR=1
 
-export BSPWM_FILES="$HOME/.local/share/bspwm"
-
 if [[ -f $HOME/.zsh_alias ]]; then
     source $HOME/.zsh_alias
 fi
