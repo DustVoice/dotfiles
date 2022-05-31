@@ -184,8 +184,8 @@ function hyperv-gpg-agent-extra() {
 }
 
 function hyperv-ssh-agent() {
-    #socket_path="$HOME/.gnupg/S.gpg-agent.ssh"
-    socket_path="$HOME/.ssh/agent.sock"
+    socket_path="$HOME/.gnupg/S.gpg-agent.ssh"
+    #socket_path="$HOME/.ssh/agent.sock"
     host_ip=$(ip route show 0.0.0.0/0 dev eth0 | cut -d\  -f3)
     if [[ -f $socket_path ]]; then
         rm $socket_path
@@ -194,8 +194,7 @@ function hyperv-ssh-agent() {
 }
 
 function hyperv-agents() {
-    hyperv-gpg-agent
-    #hyperv-gpg-agent-extra
+    hyperv-gpg-agent &
     hyperv-ssh-agent
 }
 
