@@ -174,18 +174,8 @@ function hyperv-gpg-agent() {
     (setsid socat UNIX-LISTEN:$socket_path,fork tcp-connect:$host_ip:59545)
 }
 
-function hyperv-gpg-agent-extra() {
-    socket_path="$HOME/.gnupg/S.gpg-agent.extra"
-    host_ip=$(ip route show 0.0.0.0/0 dev eth0 | cut -d\  -f3)
-    if [[ -f $socket_path ]]; then
-        rm $socket_path
-    fi
-    (setsid socat UNIX-LISTEN:$socket_path,fork tcp-connect:$host_ip:59544)
-}
-
 function hyperv-ssh-agent() {
     socket_path="$HOME/.gnupg/S.gpg-agent.ssh"
-    #socket_path="$HOME/.ssh/agent.sock"
     host_ip=$(ip route show 0.0.0.0/0 dev eth0 | cut -d\  -f3)
     if [[ -f $socket_path ]]; then
         rm $socket_path
