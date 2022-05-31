@@ -168,7 +168,7 @@ alias bspwm-load="bspwm-load-func workspaces workspaces.prev_load"
 function hyperv-gpg-agent() {
     socket_path="$HOME/.gnupg/S.gpg-agent"
     host_ip=$(ip route show 0.0.0.0/0 dev eth0 | cut -d\  -f3)
-    if [[ -f $socket_path ]]; then
+    if [[ -x $socket_path ]]; then
         rm $socket_path
     fi
     (setsid socat UNIX-LISTEN:$socket_path,fork tcp-connect:$host_ip:59545)
@@ -177,7 +177,7 @@ function hyperv-gpg-agent() {
 function hyperv-ssh-agent() {
     socket_path="$HOME/.gnupg/S.gpg-agent.ssh"
     host_ip=$(ip route show 0.0.0.0/0 dev eth0 | cut -d\  -f3)
-    if [[ -f $socket_path ]]; then
+    if [[ -x $socket_path ]]; then
         rm $socket_path
     fi
     (setsid socat UNIX-LISTEN:$socket_path,fork tcp-connect:$host_ip:59546)
