@@ -8,7 +8,11 @@
 !/alacritty/
 !/bspwm/
 !/dmenu/
+!/dmenu-wl/
+!/fish/
 !/nitrogen/
 !/polybar/
 !/rustfmt/
+!/river/
 !/sxhkd/
+!/waybar/

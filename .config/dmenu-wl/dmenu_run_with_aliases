@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+
+if [[ -f $HOME/.zshenv ]]; then
+    source $HOME/.zshenv
+fi
+
+command_to_run=$({ alias | awk '{split($0,alias,"="); print alias[1];}' ; dmenu-wl_path ; } | sort | dmenu-wl -i -fn "Fira Code:pixelsize=12:antialias=true:autohint=true" -nb "#282a36" -nf "#f8f8f2" -sb "#44475a" -sf "#f8f8f2" "$@")
+
+eval ${command_to_run} &

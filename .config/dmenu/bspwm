@@ -1,0 +1,142 @@
+#!/bin/sh
+
+dmenu_string="Wrong parameter"
+
+function desktop() {
+    case $1 in
+        "rename")
+            dmenu_string="Rename desktop to: " ;;
+        "delete")
+            dmenu_string="Really delete this desktop? (n = abort): " ;;
+        "swap")
+            dmenu_string="Swap desktop with desktop: " ;;
+        "swapfollow")
+            dmenu_string="Swap and follow desktop with desktop: " ;;
+    esac
+
+    desktop=""
+
+    if [[ $1 == "delete" || $1 == "rename" ]]; then
+        desktop=$(echo "" | dmenu -i -fn "$get_font" -nb "#282a36" -nf "#f8f8f2" -sb "#44475a" -sf "#f8f8f2" -p "$dmenu_string")
+    else
+        if [[ $1 != "bubbleprev" && $1 != "bubblenext" && $1 != "save" && $1 != "load" ]]; then
+            desktop=$(bspc query -m focused -D --names | dmenu -i -fn "$get_font" -nb "#282a36" -nf "#f8f8f2" -sb "#44475a" -sf "#f8f8f2" -p "$dmenu_string")
+        fi
+    fi
+
+    case $1 in
+        "rename")
+            if [[ $desktop != "" ]];
+            then
+                bspc desktop -n $desktop
+            fi
+            ;;
+        "delete")
+            echo $desktop
+            if [[ $desktop != "n" ]];
+            then
+                bspc desktop -r
+            fi
+            ;;
+        "swap")
+            bspc desktop -s $desktop ;;
+        "swapfollow")
+            bspc desktop -s $desktop --follow ;;
+        "bubbleprev")
+            bspc desktop -b prev ;;
+        "bubblenext")
+            bspc desktop -b next ;;
+        "save")
+            bspwm-save ;;
+        "load")
+            bspwm-load ;;
+    esac
+}
+
+function desktop_content() {
+    case $1 in
+        "goto")
+            dmenu_string="Switch to desktop: " ;;
+        "move")
+            dmenu_string="Move node to desktop: " ;;
+        "movefollow")
+            dmenu_string="Move and follow node to desktop: " ;;
+    esac
+
+    desktop=$(bspc query -m focused -D --names | dmenu -i -fn "$get_font" -nb "#282a36" -nf "#f8f8f2" -sb "#44475a" -sf "#f8f8f2" -p "$dmenu_string")
+
+    found=false
+
+    desktop_list=$(bspc query -m focused -D --names)
+    desktop_array=$(echo $desktop_list | tr '\n' ' ')
+
+    if [[ $desktop != "" ]]; then
+        for name in $desktop_array; do
+            if [[ $name == $desktop ]]; then
+                found=true
+            fi
+        done
+    fi
+
+    if [ ! $found = true ]; then
+        bspc monitor -d $desktop_array $desktop
+    fi
+
+    case $1 in
+        "goto")
+            bspc desktop -f $desktop ;;
+        "move")
+            bspc node -d $desktop ;;
+        "movefollow")
+            bspc node -d $desktop --follow ;;
+    esac
+}
+
+function monitor() {
+    case $1 in
+        "goto")
+            dmenu_string="Switch to monitor: " ;;
+        "swap")
+            dmenu_string="Swap monitor with monitor: " ;;
+        "movenode")
+            dmenu_string="Move node to monitor: " ;;
+        "movenodefollow")
+            dmenu_string="Move and follow node to monitor: " ;;
+        "movedesktop")
+            dmenu_string="Move desktop to monitor: " ;;
+        "movedesktopfollow")
+            dmenu_string="Move and follow desktop to monitor: " ;;
+    esac
+
+    monitor=$(bspc query -M --names | dmenu -i -fn "$get_font" -nb "#282a36" -nf "#f8f8f2" -sb "#44475a" -sf "#f8f8f2" -p "$dmenu_string")
+
+    case $1 in
+        "goto")
+            bspc monitor -f $monitor ;;
+        "swap")
+            bspc monitor -s $monitor ;;
+        "movenode")
+            bspc node -m $monitor ;;
+        "movenodefollow")
+            bspc node -m $monitor --follow ;;
+        "movedesktop")
+            bspc desktop -m $monitor ;;
+        "movedesktopfollow")
+            bspc desktop -m $monitor --follow ;;
+    esac
+}
+
+if [ ! -z $SHELL ]; then
+    get_font="$($SHELL -c "get-font")"
+else
+    get_font="Fira Code:pixelsize=12:antialias=true:autohint=true"
+fi
+
+case $1 in
+    "desktop")
+        desktop $2 ;;
+    "desktop_content")
+        desktop_content $2 ;;
+    "monitor")
+        monitor $2 ;;
+esac

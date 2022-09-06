@@ -1,0 +1,8 @@
+/*
+/*/
+!/.gitignore
+
+!/dmenu_bspwm_desktop
+!/dmenu_bspwm_desktop_content
+!/dmenu_bspwm_monitor
+!/dmenu_run_with_aliases

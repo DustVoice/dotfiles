@@ -70,7 +70,7 @@ alias tmate-obs='tmate -k tmk-ET35fx5m9cA7cxOt4jjWkSmaOy -r DustVoice'
 function screenkey-obs-func() {
     width=$(xrandr | awk '$0 ~ "*" {split($1,res,"x"); print res[1];}')
     height=$(xrandr | awk '$0 ~ "*" {split($1,res,"x"); print res[2];}')
-    screenkey --no-systray -t 2 -p fixed -s small -g $(awk -v height=$height -v width=$width 'BEGIN {printf "%.0fx%.0f+%.0f+%.0f", (width * 0.5), (height * 0.06), (width * 0.25), (height * 0.02)}') --key-mode composed --bak-mode full --mods-mode normal -f Hack --font-color "#f8f8f2" --bg-color "#44475a" --opacity "1.0"
+    screenkey --no-systray -t 2 -p fixed -s small -g $(awk -v height=$height -v width=$width 'BEGIN {printf "%.0fx%.0f+%.0f+%.0f", (width * 0.5), (height * 0.06), (width * 0.25), (height * 0.02)}') --key-mode composed --bak-mode full --mods-mode normal -f "Fira Code" --font-color "#f8f8f2" --bg-color "#44475a" --opacity "1.0"
 }
 
 alias screenkey-obs='screenkey-obs-func'
@@ -93,7 +93,7 @@ alias polybar-launch="$HOME/.config/polybar/launch"
 # Font
 # ===
 function get-font-func() {
-    fallback_font="Hack:size=10:antialias=true:autohint=true"
+    fallback_font="Fira Code:pixelsize=12:antialias=true:autohint=true"
     font=""
     if [ -x $(command -v xgetres) ]; then
         font=$(xgetres font || echo $fallback_font);
@@ -126,7 +126,7 @@ function check-iommu-func() {
 alias check-iommu='check-iommu-func'
 
 function battery-monitor-func() {
-    watch1 -t -n 60 '( if [ $(cat /sys/class/power_supply/ACAD/online) == "1" ]; then printf "Power connected\n"; else printf "Power disconnected\n"; fi; printf "\nBattery capacity: "; cat /sys/class/power_supply/BAT1/capacity; printf "\n(Updated every 60s)"; )';
+    watch -t -n 60 '( if [ $(cat /sys/class/power_supply/ACAD/online) == "1" ]; then printf "Power connected\n"; else printf "Power disconnected\n"; fi; printf "\nBattery capacity: "; cat /sys/class/power_supply/BAT1/capacity; printf "\n(Updated every 60s)"; )';
 }
 
 alias battery-monitor='battery-monitor-func'
@@ -191,4 +191,14 @@ function hyperv-agents() {
 alias hyperv-gpg-forward="hyperv-gpg-agent"
 alias hyperv-ssh-forward="hyperv-ssh-agent"
 alias hyperv-forward="hyperv-agents"
+# ===
+
+# ===
+# devkitPro development
+# ===
+function devkitPro-devkitARM() {
+    path=("/opt/devkitpro/devkitARM/bin" $path)
+}
+
+alias devkitARM="devkitPro-devkitARM"
 # ===

@@ -21,7 +21,7 @@ setopt COMPLETE_ALIASES
 if [[ -a $ZNAP_ZSH ]]; then
     ZSH_AUTOSUGGEST_USE_ASYNC="true"
     ZSH_AUTOSUGGEST_STRATEGY=(history)
-    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=5
+    #ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=5
 
     ZSH_HIGHLIGHT_HIGHLIGHTERS=( main brackets )
 
@@ -37,12 +37,6 @@ if [[ -a $ZNAP_ZSH ]]; then
     source $ZNAP_ZSH
 
     znap source ohmyzsh/ohmyzsh lib/{git,theme-and-appearance,colored-man-pages,colorzie,command-not-found,history}
-
-    if [ -x "$(command -v starship)" ]; then
-        znap eval starship 'starship init zsh --print-full-init'
-    else
-        znap prompt dustvoice/dustvoice-zsh-theme
-    fi
 
     znap source marlonrichert/zsh-hist
 
@@ -61,6 +55,12 @@ if [[ -a $ZNAP_ZSH ]]; then
 
     bindkey -M vicmd '^H' push-line-or-edit
     bindkey -M vicmd '^L' get-line
+
+    if [ -x "$(command -v starship)" ]; then
+        znap eval starship 'starship init zsh --print-full-init'
+    else
+        znap prompt dustvoice/dustvoice-zsh-theme
+    fi
 else
     PS1=$'%b%n@%M %~
 %(!.#.$) '

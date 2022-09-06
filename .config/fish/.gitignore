@@ -1,0 +1,11 @@
+/*
+/*/
+!/.gitignore
+
+
+!/config.fish
+!/fish_variables
+
+!/completions/
+!/conf.d/
+!/functions

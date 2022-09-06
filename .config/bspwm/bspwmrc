@@ -63,14 +63,14 @@ else
     fi
 fi
 
-if [ -x "$(command -v /usr/lib/xfce-polkit/xfce-polkit)" ]; then
-    /usr/lib/xfce-polkit/xfce-polkit &
+if [ -x "$(command -v /usr/bin/lxqt-policykit-agent)" ]; then
+    /usr/bin/lxqt-policykit-agent &
     return_val=$?
     if [ $return_val -ne 0 ]; then
-        echo >&2 "Couldn't fire up xfce-polkit: $return_val"
+        echo >&2 "Couldn't fire up lxqt-policykit: $return_val"
     fi
 else
-    echo >&2 "Can't seem to find the /usr/lib/xfce-polkit/xfce-polkit executable"
+    echo >&2 "Can't seem to find the /usr/bin/lxqt-policykit-agent executable"
 fi
 
 if [ -x "$(command -v polybar)" ]; then

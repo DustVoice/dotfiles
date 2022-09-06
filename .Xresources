@@ -19,10 +19,12 @@
 *.color13: #FF92D0
 *.color14: #9AEDFE
 *.color15: #E6E6E6
-*.font: Hack:size=10:antialias=true:autohint=true
+*.font: Fira Code:pixelsize=12:antialias=true:autohint=true
 *.termName: xterm-256color
 *.shell: /usr/bin/zsh
 *.tabspaces: 4
 *.borderpx: 2
 
 Xft.dpi: 96
+Xcursor.theme: Bibata-Modern-Amber
+Xcursor.size: 24

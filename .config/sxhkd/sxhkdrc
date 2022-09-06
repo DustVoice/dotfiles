@@ -123,52 +123,52 @@ alt + Return
 
 # run program launcher
 alt + d
-    if [ -x $(command -v zsh) ]; then $HOME/.config/dmenu/dmenu_run_with_aliases; else dmenu_run -i -fn "Hack:size=10:antialias=true:autohint=true" -nb "#282a36" -nf "#f8f8f2" -sb "#44475a" -sf "#f8f8f2"; fi
+    $HOME/.config/dmenu/run;
 
 alt + x
-    $HOME/.config/dmenu/dmenu_bspwm_desktop_content goto
+    $HOME/.config/dmenu/bspwm desktop_content goto
 
 alt + shift + x
-    $HOME/.config/dmenu/dmenu_bspwm_desktop_content move
+    $HOME/.config/dmenu/bspwm desktop_content move
 
 alt + ctrl + shift + x
-    $HOME/.config/dmenu/dmenu_bspwm_desktop_content movefollow
+    $HOME/.config/dmenu/bspwm desktop_content movefollow
 
 alt + z; r
-    $HOME/.config/dmenu/dmenu_bspwm_desktop rename
+    $HOME/.config/dmenu/bspwm desktop rename
 
 alt + z; d
-    $HOME/.config/dmenu/dmenu_bspwm_desktop delete
+    $HOME/.config/dmenu/bspwm desktop delete
 
 alt + z; s
-    $HOME/.config/dmenu/dmenu_bspwm_desktop swap
+    $HOME/.config/dmenu/bspwm desktop swap
 
 alt + z; h
-    $HOME/.config/dmenu/dmenu_bspwm_desktop bubbleprev
+    $HOME/.config/dmenu/bspwm desktop bubbleprev
 
 alt + z; l
-    $HOME/.config/dmenu/dmenu_bspwm_desktop bubblenext
+    $HOME/.config/dmenu/bspwm desktop bubblenext
 
 alt + z; y
-    $HOME/.config/dmenu/dmenu_bspwm_desktop save
+    $HOME/.config/dmenu/bspwm desktop save
 
 alt + z; p
-    $HOME/.config/dmenu/dmenu_bspwm_desktop load
+    $HOME/.config/dmenu/bspwm desktop load
 
 alt + a; g
-    $HOME/.config/dmenu/dmenu_bspwm_monitor goto
+    $HOME/.config/dmenu/bspwm monitor goto
 
 alt + a; s
-    $HOME/.config/dmenu/dmenu_bspwm_monitor swap
+    $HOME/.config/dmenu/bspwm monitor swap
 
 alt + a; shift + n
-    $HOME/.config/dmenu/dmenu_bspwm_monitor movenode
+    $HOME/.config/dmenu/bspwm monitor movenode
 
 alt + a; ctrl + shift + n
-    $HOME/.config/dmenu/dmenu_bspwm_monitor movenodefollow
+    $HOME/.config/dmenu/bspwm monitor movenodefollow
 
 alt + a; shift + d
-    $HOME/.config/dmenu/dmenu_bspwm_monitor movedesktop
+    $HOME/.config/dmenu/bspwm monitor movedesktop
 
 alt + a; ctrl + shift + d
-    $HOME/.config/dmenu/dmenu_bspwm_movement_monitor movedesktopfollow
+    $HOME/.config/dmenu/bspwm monitor movedesktopfollow

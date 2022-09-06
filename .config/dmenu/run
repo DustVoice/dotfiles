@@ -1,0 +1,16 @@
+#!/bin/sh
+
+fallback_command="dmenu_run -i -fn \"Fira Code:pixelsize=12:antialias=true:autohint=true\" -nb \"#282a36\" -nf \"#f8f8f2\" -sb \"#44475a\" -sf \"#f8f8f2\""
+
+if [ ! -z $SHELL ]; then
+    case $SHELL in
+        *"fish")
+            fish -c "dmenu_fish" ;;
+        *"zsh")
+            $HOME/.config/dmenu/run_zsh ;;
+        *)
+        eval ${fallback_command} &
+    esac
+else
+    eval ${fallback_command} &
+fi
