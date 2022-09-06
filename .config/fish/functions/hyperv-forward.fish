@@ -6,7 +6,7 @@ function hyperv-gpg-agent
         rm $socket_path
     end
 
-    setsid socat UNIX-LISTEN:$socket_path,fork tcp-connect:$host_ip:59545 &
+    screen -dmS gpg-socat socat UNIX-LISTEN:$socket_path,fork tcp-connect:$host_ip:59545
 end
 
 function hyperv-ssh-agent
@@ -16,8 +16,7 @@ function hyperv-ssh-agent
     if test -e $socket_path
         rm $socket_path
     end
-
-    setsid socat UNIX-LISTEN:$socket_path,fork tcp-connect:$host_ip:59546 &
+    screen -dmS ssh-socat socat UNIX-LISTEN:$socket_path,fork tcp-connect:$host_ip:59546
 end
 
 function hyperv-forward --description 'Setup hyperv-agent forwarding'
