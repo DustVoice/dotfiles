@@ -10,3 +10,6 @@
 [submodule ".znap/zsh-snap"]
 	path = .znap/zsh-snap
 	url = https://github.com/marlonrichert/zsh-snap.git
+[submodule ".emacs.d"]
+	path = .emacs.d
+	url = https://github.com/doomemacs/doomemacs

@@ -3,6 +3,8 @@
 !/.gitignore
 
 !/.bashrc
+!/.doom.d
+!/.emacs.d
 !/.gitconfig
 !/.nvidia-xinitrc
 !/.password-store
@@ -25,4 +27,5 @@
 !/.weechat/
 !/.ssh/
 !/.znap/
+!/org/
 !/Wallpapers/
