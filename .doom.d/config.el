@@ -77,3 +77,29 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+;; This should of course be grammmatically correct
+
+;; Not working with hyperv-forward atm
+;;(setq epg-gpg-program "/usr/bin/gpg2")
+;;(setq epg-user-id "7A9CA430D426100E")
+;;(pinentry-start)
+;;(setq epg-agent-file "~/.gnupg/S.gpg-agent")
+
+(remove-hook 'doom-first-input-hook #'evil-snipe-mode)
+;;(define-key evil-normal-state-map (kbd "gj") 'evil-next-visual-line)
+;;(define-key evil-normal-state-map (kbd "gk") 'evil-previous-visual-line)
+
+;;(add-hook 'org-mode-hook #'org-modern-mode)
+
+;;(after! flycheck (flycheck-grammarly-setup))
+
+(setq-default lsp-rust-analyzer-proc-macro-enable t)
+
+(with-eval-after-load 'ox-latex
+  (add-to-list 'org-latex-classes
+               '("dustdoc" "\\documentclass[10pt]{dustdoc}"
+                 ("\\chapter{%s}" . "\\chapter*{%s}")
+                 ("\\section{%s}" . "\\section*{%s}")
+                 ("\\subsection{%s}" . "\\subsection*{%s}")
+                 ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))))

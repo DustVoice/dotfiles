@@ -48,6 +48,7 @@ bspc config presel_feedback_color "#6272a4"
 
 bspc rule -a Screenkey manage=off
 bspc rule -a Zathura state=tiled manage=on
+bspc rule -a Emacs state=tiled
 
 if [ -x "$(command -v feh)" ]; then
     feh --bg-fill "$HOME/Wallpapers/arch_dracula.png"

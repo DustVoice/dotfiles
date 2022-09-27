@@ -48,3 +48,17 @@
 ;(unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
+
+(package! pinentry)
+(package! fish-mode)
+
+(package! flycheck-grammarly
+  :recipe (:host github :repo "emacs-grammarly/flycheck-grammarly"))
+
+(package! evil-escape
+  :disable t)
+
+(package! git-modes
+  :recipe (:host github :repo "magit/git-modes"))
+
+(package! org-modern)
