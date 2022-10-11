@@ -13,11 +13,11 @@ function usbip-man --description "Interactive usbip helper"
     set action
 
     echo ">> What do you want to do?"
-    echo ">> (a)ttach / (d)etach"
+    echo ">> [(a)ttach] / (d)etach"
 
     read action
 
-    if test "$action" = "a"
+    if test "$action" = "a" || test "$action" = ""
         set host
         set host_type
         set bus_id
