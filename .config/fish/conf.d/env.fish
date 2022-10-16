@@ -1,5 +1,7 @@
 set -gx LANG "en_US.UTF-8"
-set -gx EDITOR "nvim"
+set -gx ALTERNATE_EDITOR ""
+set -gx EDITOR "emacsclient -ut"
+set -gx VISUAL "emacsclient -uc"
 set -gx TERMINAL "alacritty"
 set -gx GIT_PAGER "delta"
 set -gx DOOMPAGER "delta"

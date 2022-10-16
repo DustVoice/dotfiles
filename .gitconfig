@@ -4,7 +4,7 @@
     signingkey = 7A9CA430D426100E
 
 [core]
-    editor = nvim
+    editor = emacsclient -a "" -ut
     pager = delta
 
 [interactive]
