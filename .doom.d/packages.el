@@ -49,6 +49,9 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
+;; Hotfix for issue with straight.el
+(package! straight :pin "3eca39d")
+
 (package! pinentry)
 (package! fish-mode)
 
@@ -60,5 +63,16 @@
 
 (package! git-modes
   :recipe (:host github :repo "magit/git-modes"))
+
+(package! paw64-mode
+  :recipe (:host github :repo "svjson/paw64-mode"))
+(package! company-64tass
+  :recipe (:host github :repo "svjson/company-64tass"))
+(package! flycheck-64tass
+  :recipe (:host github :repo "svjson/flycheck-64tass"))
+(package! arm-mode
+  :recipe (:host github :repo "charje/arm-mode"))
+(package! nasm-mode)
+
 
 (package! org-modern)

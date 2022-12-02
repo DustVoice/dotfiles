@@ -104,3 +104,22 @@
                  ("\\section{%s}" . "\\section*{%s}")
                  ("\\subsection{%s}" . "\\subsection*{%s}")
                  ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))))
+
+(use-package! paw64-mode
+  :init
+  :config
+
+  (define-derived-mode paw64-mode
+    prog-mode
+    "Paw64"
+    "Major mode for 6502/6510 assembly with 64tass and/or paw64"
+    (set-syntax-table (make-syntax-table paw64-mode-syntax-table))
+    (set (make-local-variable 'font-lock-defaults) '(paw64-font-lock-keywords))
+    (set (make-local-variable 'indent-line-function) 'paw64-indent)
+
+    (add-hook 'post-command-hook #'paw64-post-command-hook nil t)
+    (electric-indent-local-mode -1)))
+
+(use-package! company-64tass :init :config)
+(use-package! flycheck-64tass :init :config)
+(use-package! arm-mode :init :config)

@@ -36,9 +36,7 @@
        hl-todo             ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
        ;;hydra
        ;;indent-guides     ; highlighted indent columns
-       (ligatures
-         +extra
-         +fira)            ; ligatures and symbols to make your code pretty again
+       ligatures           ; ligatures and symbols to make your code pretty again
        minimap             ; show a map of the code on the side
        modeline            ; snazzy, Atom-inspired modeline, plus API
        nav-flash           ; blink cursor line after big motions
@@ -89,7 +87,7 @@
        :tools
        ;;ansible
        ;;biblio            ; Writes a PhD for you (citation needed)
-       ;;debugger          ; FIXME stepping through code, to help you add bugs
+       debugger          ; FIXME stepping through code, to help you add bugs
        ;;direnv
        ;;docker
        ;;editorconfig      ; let someone else argue about tabs vs spaces
@@ -185,7 +183,7 @@
 
        :email
        ;;(mu4e +org +gmail)
-       notmuch
+       ;;notmuch
        ;;(wanderlust +gmail)
 
        :app
