@@ -1,3 +1,5 @@
+set -x PATH "$HOME/.emacs.d/bin" $PATH
+
 set -gx LANG "en_US.UTF-8"
 set -gx ALTERNATE_EDITOR ""
 set -gx EDITOR "emacsclient -ut"
