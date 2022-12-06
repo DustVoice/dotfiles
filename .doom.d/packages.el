@@ -54,6 +54,7 @@
 
 (package! pinentry)
 (package! fish-mode)
+(package! elvish-mode)
 
 (package! flycheck-grammarly
   :recipe (:host github :repo "emacs-grammarly/flycheck-grammarly"))

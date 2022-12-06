@@ -1,0 +1,68 @@
+echo hi
+ls .cache/starship/
+ls
+version
+echo hi
+hi
+ls
+ls | less
+git status
+git status | table
+git status
+ls
+help table
+paru -Ss ion
+paru -Ss oil
+paru -Ss oil | listing
+paru -Ss oil | tabe
+paru -Ss oil | table
+more
+paru -Ss oil | more
+paru -Ss oil | less
+paru -Ss oil | delta
+paru -Ss ion | less
+paru -S oil
+let-env PROMPT_INDICATOR_VI_INSERT = ">>"
+let-env STARSHIP_SHELL = "nu"
+let-env PROMPT_COMMAND = { create_left_prompt<\n>}
+echo hi
+exi
+dfjklg
+echo hi
+nu
+pwd
+put pwd
+pwd
+echo (pwd)
+pwd
+cd Projects/
+pwd
+cd ..
+pwd
+echo
+echo hi
+dfjfkl;dajfkl;dajfkl;sadjfkl;sajdflk;sjdakl;jkljkljk;
+echo hi
+cd Projects/
+echo hi
+pwd
+z ../
+cd ..
+pwd
+ech hi
+pwd
+echo hi
+pwd
+x
+pwd
+x
+help nu
+help ls
+ls
+starship prompt --help
+$nu.env
+cat .config/nushell/env.nu
+head .config/nushell/env.nu
+$env.PROMPT_INDICATOR
+exi
+chsh -s /usr/bin/fish dustvoice
