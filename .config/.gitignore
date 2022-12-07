@@ -2,6 +2,7 @@
 /*/
 !/.gitignore
 
+!/starship.toml
 !/vconsole.conf
 !/nvim
 
