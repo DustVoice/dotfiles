@@ -66,3 +66,30 @@ head .config/nushell/env.nu
 $env.PROMPT_INDICATOR
 exi
 chsh -s /usr/bin/fish dustvoice
+ls
+oh-my-posh init fish --config "/usr/share/oh-my-posh/themes/dracula.omp.json" | source
+oh-my-posh init nu =-config "/usr/share/oh-my-posh/themes/dracula.omp.json"
+oh-my-posh init nu --config "/usr/share/oh-my-posh/themes/dracula.omp.json"
+source .oh-my-posh.nu
+echo hi
+et .config/nushell/env.nu
+oh-my-posh init nu --config "/usr/share/oh-my-posh/themes/dracula.omp.json"
+source .oh-my-posh.nu
+echo hi
+echo hi | put
+echo hi | tabe
+echo hi | table
+ls
+ls | sort-by size
+ls | sort-by size | revese
+ls | sort-by size | reverse
+ls | sort-by size | reverse | where type == dir
+ls | where type == file
+cat
+cat README.md
+ls -l
+ls -la
+ea
+exa -la
+exa -la | table
+ls -la

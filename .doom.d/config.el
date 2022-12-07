@@ -120,6 +120,4 @@
     (add-hook 'post-command-hook #'paw64-post-command-hook nil t)
     (electric-indent-local-mode -1)))
 
-(use-package! company-64tass :init :config)
-(use-package! flycheck-64tass :init :config)
 (use-package! arm-mode :init :config)

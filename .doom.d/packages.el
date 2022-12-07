@@ -67,10 +67,6 @@
 
 (package! paw64-mode
   :recipe (:host github :repo "svjson/paw64-mode"))
-(package! company-64tass
-  :recipe (:host github :repo "svjson/company-64tass"))
-(package! flycheck-64tass
-  :recipe (:host github :repo "svjson/flycheck-64tass"))
 (package! arm-mode
   :recipe (:host github :repo "charje/arm-mode"))
 (package! nasm-mode)
