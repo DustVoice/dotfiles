@@ -284,13 +284,13 @@ ignore_submodules = true
 #conflicted = "="
 ahead = ">"
 behind = "<"
-diverged = "~"
+diverged = "<>"
 #untracked = "?"
 #stashed = "$"
 #modified = "!"
 #staged = "+"
-renamed = "#"
-deleted = "X"
+renamed = "r"
+deleted = "x"
 #style = "bold red"
 #disabled = false
 
