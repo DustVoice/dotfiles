@@ -121,3 +121,5 @@
     (electric-indent-local-mode -1)))
 
 (use-package! arm-mode :init :config)
+
+(use-package! json-navigator :init :config)

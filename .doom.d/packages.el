@@ -55,6 +55,7 @@
 (package! pinentry)
 (package! fish-mode)
 (package! elvish-mode)
+(package! nushell-mode :recipe (:host github :repo "azzamsa/emacs-nushell"))
 
 (package! flycheck-grammarly
   :recipe (:host github :repo "emacs-grammarly/flycheck-grammarly"))
@@ -73,3 +74,5 @@
 
 
 (package! org-modern)
+
+(package! json-navigator)
