@@ -126,6 +126,8 @@
 
 (use-package! ron-mode :init :config)
 
+(use-package! typst-mode :init :config)
+
 (map! :map dap-mode-map
       :leader
       :prefix ("d" . "dap")

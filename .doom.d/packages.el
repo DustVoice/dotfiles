@@ -79,3 +79,7 @@
 (package! org-modern)
 
 (package! json-navigator)
+
+(package! polymode)
+(package! typst-mode
+  :recipe (:host github :repo "Ziqi-Yang/typst-mode.el"))
