@@ -13,3 +13,6 @@
 [submodule ".emacs.d"]
 	path = .emacs.d
 	url = https://github.com/doomemacs/doomemacs
+[submodule ".config/nushell/scripts/nu_scripts"]
+	path = .config/nushell/scripts/nu_scripts
+	url = https://github.com/nushell/nu_scripts
