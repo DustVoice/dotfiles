@@ -12,6 +12,7 @@
 !/.tmux.conf
 !/.vim
 !/.vimrc
+!/.wezterm.lua
 !/.xinitrc
 !/.Xmodmap.example
 !/.xonshrc
