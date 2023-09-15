@@ -93,4 +93,4 @@ starship init nu | save -f ~/.cache/starship/init.nu
 # oh-my-posh init nu --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/dracula.omp.json' --print | save -f ~/.cache/oh-my-posh/init.nu
 
 mkdir ~/.cache/zoxide
-zoxide init nushell --cmd cd | save -f ~/.cache/zoxide/init.nu
+zoxide init nushell --cmd z | save -f ~/.cache/zoxide/init.nu
