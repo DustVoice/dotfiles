@@ -1,9 +1,9 @@
 [submodule ".password-store"]
 	path = .password-store
-	url = git@git.dustvoice.de:DustVoice/pass.git
+	url = gitlab@gitlab.dustvoice.de:DustVoice/pass.git
 [submodule ".config/nvim"]
 	path = .config/nvim
-	url = https://git.dustvoice.de/DustVoice/nvim.git
+	url = https://gitlab.dustvoice.de/DustVoice/nvim.git
 [submodule ".znap/dustvoice-zsh-theme"]
 	path = .znap/dustvoice-zsh-theme
 	url = https://github.com/DustVoice/dustvoice-zsh-theme.git
