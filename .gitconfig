@@ -4,13 +4,7 @@
     signingkey = 7A9CA430D426100E
 
 [core]
-    editor = emacsclient -a "" -ut
-    pager = delta
-
-[interactive]
-    diffFilter = delta --color-only
-[add.interactive]
-    useBuiltin = false # required for git 2.37.0
+    editor = nvim
 
 [delta]
     navigate = true    # use n and N to move between diff sections
@@ -27,6 +21,7 @@
 
 [gpg]
     program = gpg2
+    #program = "C:/Program Files (x86)/GnuPG/bin/gpg.exe"
 
 [pull]
     rebase = false
