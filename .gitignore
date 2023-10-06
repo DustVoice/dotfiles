@@ -6,6 +6,7 @@
 !/.doom.d
 !/.emacs.d
 !/.gitconfig
+!/.gitmodules
 !/.nvidia-xinitrc
 !/.password-store
 !/.restore-permissions

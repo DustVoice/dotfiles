@@ -120,13 +120,11 @@
 ;;     (add-hook 'post-command-hook #'paw64-post-command-hook nil t)
 ;;     (electric-indent-local-mode -1)))
 
-(use-package! arm-mode :init :config)
+(use-package! arm-mode)
 
-(use-package! json-navigator :init :config)
+(use-package! json-navigator)
 
-(use-package! ron-mode :init :config)
-
-(use-package! typst-mode :init :config)
+(use-package! ron-mode)
 
 (map! :map dap-mode-map
       :leader
@@ -158,3 +156,8 @@
       :desc "dap breakpoint condition"   "c" #'dap-breakpoint-condition
       :desc "dap breakpoint hit count"   "h" #'dap-breakpoint-hit-condition
       :desc "dap breakpoint log message" "l" #'dap-breakpoint-log-message)
+
+(use-package! typst-mode
+    :mode "\\.typ$")
+
+(use-package! nasm-mode)

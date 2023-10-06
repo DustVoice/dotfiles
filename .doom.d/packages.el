@@ -73,13 +73,12 @@
 ;;   :recipe (:host github :repo "svjson/paw64-mode"))
 (package! arm-mode
   :recipe (:host github :repo "charje/arm-mode"))
-;; (package! nasm-mode)
 
-
-(package! org-modern)
+(package! nasm-mode)
 
 (package! json-navigator)
 
 (package! polymode)
+
 (package! typst-mode
   :recipe (:host github :repo "Ziqi-Yang/typst-mode.el"))
