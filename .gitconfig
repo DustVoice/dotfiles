@@ -4,13 +4,7 @@
     signingkey = 7A9CA430D426100E
 
 [core]
-    editor = nvim
-
-[delta]
-    navigate = true    # use n and N to move between diff sections
-    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
-    side-by-side = false
-    line-numbers = true
+    editor = hx
 
 [push]
     default = simple
@@ -20,8 +14,8 @@
     gpgsign = true
 
 [gpg]
-    program = gpg2
-    #program = "C:/Program Files (x86)/GnuPG/bin/gpg.exe"
+    #program = gpg2
+    program = "C:/Program Files (x86)/GnuPG/bin/gpg.exe"
 
 [pull]
     rebase = false
@@ -34,3 +28,5 @@
 
 [diff]
     colorMoved = default
+[credential "https://git.dustvoice.de"]
+	provider = generic
