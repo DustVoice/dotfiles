@@ -21,6 +21,9 @@ nbsp = "all"
 [editor.indent-guides]
 render = true
 
+[editor.lsp]
+display-messages = true
+
 [keys.insert]
 up = "no_op"
 down = "no_op"
