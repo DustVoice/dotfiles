@@ -9,7 +9,7 @@ end
 config.font = wezterm.font 'JetBrainsMono NF'
 config.font_size = 13.0
 
-config.color_scheme = 'Dracula (Official)'
+config.color_scheme = 'Catppuccin Macchiato'
 
 config.default_prog = { 'nu' }
 

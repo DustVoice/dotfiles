@@ -16,3 +16,6 @@
 [submodule ".config/nushell/scripts/nu_scripts"]
 	path = .config/nushell/scripts/nu_scripts
 	url = https://github.com/nushell/nu_scripts
+[submodule ".config/alacritty/catppuccin"]
+	path = .config/alacritty/catppuccin
+	url = https://github.com/catppuccin/alacritty.git
