@@ -19,4 +19,6 @@ config.use_fancy_tab_bar = true
 
 config.window_decorations = "TITLE | RESIZE"
 
+config.window_close_confirmation = "NeverPrompt"
+
 return config

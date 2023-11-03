@@ -19,7 +19,7 @@ tab = "all"
 nbsp = "all"
 
 [editor.indent-guides]
-render = true
+render = false
 
 [editor.lsp]
 display-messages = true
