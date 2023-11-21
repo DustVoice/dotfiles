@@ -20,6 +20,7 @@ nbsp = "all"
 
 [editor.indent-guides]
 render = false
+character = "·"
 
 [editor.lsp]
 display-messages = true
