@@ -4,9 +4,6 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = https://gitlab.dustvoice.de/DustVoice/nvim.git
-[submodule ".znap/dustvoice-zsh-theme"]
-	path = .znap/dustvoice-zsh-theme
-	url = https://github.com/DustVoice/dustvoice-zsh-theme.git
 [submodule ".znap/zsh-snap"]
 	path = .znap/zsh-snap
 	url = https://github.com/marlonrichert/zsh-snap.git
