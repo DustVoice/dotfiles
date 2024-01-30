@@ -3,7 +3,7 @@
 	url = gitlab@gitlab.dustvoice.de:DustVoice/pass.git
 [submodule ".config/nvim"]
 	path = .config/nvim
-	url = https://gitlab.dustvoice.de/DustVoice/nvim.git
+	url = https://github.com/AstroNvim/AstroNvim.git
 [submodule ".znap/zsh-snap"]
 	path = .znap/zsh-snap
 	url = https://github.com/marlonrichert/zsh-snap.git
@@ -16,3 +16,6 @@
 [submodule ".config/alacritty/catppuccin"]
 	path = .config/alacritty/catppuccin
 	url = https://github.com/catppuccin/alacritty.git
+[submodule ".config/astronvim/lua/user"]
+	path = .config/astronvim/lua/user
+	url = https://gitlab.dustvoice.de/DustVoice/astronvim.git
