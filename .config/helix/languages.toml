@@ -1,0 +1,10 @@
+[[language]]
+name = "typst"
+scope = "source.typst"
+injection-regex = "typst"
+file-types = ["typst", "typ"]
+comment-token = "//"
+language-servers = ["typst-lsp"]
+indent = { tab-width = 2, unit = "  " }
+auto-format = true
+formatter = { command = "typstfmt" }
