@@ -1,4 +1,0 @@
-# XONSH WIZARD START
-$CMD_COMPLETIONS_SHOW_DESC = '1'
-xontrib load conda coreutils
-# XONSH WIZARD END
