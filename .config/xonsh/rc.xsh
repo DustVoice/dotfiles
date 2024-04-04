@@ -1,5 +1,6 @@
 # === Init ===
 xontrib load coreutils
+xontrib load coconut
 
 # carapace-bin
 COMPLETIONS_CONFIRM=True
