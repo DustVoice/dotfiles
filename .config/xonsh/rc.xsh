@@ -2,6 +2,8 @@
 xontrib load coreutils
 xontrib load coconut
 
+$VI_MODE = True
+
 # carapace-bin
 COMPLETIONS_CONFIRM=True
 exec($(carapace _carapace))
@@ -41,7 +43,7 @@ $STARSHIP_SESSION_KEY = uuid.uuid4().hex
 # === Aliases ===
 aliases['es'] = 'exa --git --icons'
 aliases['ea'] = 'exa -a --git --icons'
-aliases['el'] = 'exa -l --git --icons'
-aliases['ela'] = 'exa -la --git --icons'
-aliases['et'] = 'exa -lT --git --icons'
-aliases['eta'] = 'exa -lTa --git --icons'
+aliases['el'] = 'exa -lh --git --icons'
+aliases['ela'] = 'exa -lah --git --icons'
+aliases['et'] = 'exa -lTh --git --icons'
+aliases['eta'] = 'exa -lTah --git --icons'
