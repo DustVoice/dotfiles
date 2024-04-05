@@ -3,8 +3,6 @@
 !/.gitignore
 
 !/.bashrc
-!/.doom.d
-!/.emacs.d
 !/.gitconfig
 !/.gitmodules
 !/.nvidia-xinitrc
