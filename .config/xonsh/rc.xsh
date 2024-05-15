@@ -4,8 +4,8 @@ xontrib load coreutils coconut clp
 $VI_MODE = True
 
 # carapace-bin
-#COMPLETIONS_CONFIRM=True
-#exec($(carapace _carapace))
+COMPLETIONS_CONFIRM=True
+exec($(carapace _carapace))
 
 # zoxide
 execx($(zoxide init xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
