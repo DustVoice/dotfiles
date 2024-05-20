@@ -38,9 +38,9 @@ $STARSHIP_SHELL = "xonsh"
 $STARSHIP_SESSION_KEY = uuid.uuid4().hex
 
 # === Aliases ===
-aliases['es'] = 'exa --git --icons'
-aliases['ea'] = 'exa -a --git --icons'
-aliases['el'] = 'exa -lh --git --icons'
-aliases['ela'] = 'exa -lah --git --icons'
-aliases['et'] = 'exa -lTh --git --icons'
-aliases['eta'] = 'exa -lTah --git --icons'
+aliases['es'] = 'eza --git --icons'
+aliases['ea'] = 'eza -a --git --icons'
+aliases['el'] = 'eza -lh --git --icons'
+aliases['ela'] = 'eza -lah --git --icons'
+aliases['et'] = 'eza -lTh --git --icons'
+aliases['eta'] = 'eza -lTah --git --icons'
