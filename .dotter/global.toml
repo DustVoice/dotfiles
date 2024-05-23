@@ -34,7 +34,7 @@ depends = ["rustfmt"]
 
 [alacritty.files]
 "alacritty.toml" = "~/.config/alacritty/alacritty.toml"
-"plugs/catppuccin/alacritty/catppuccin-macchiato.toml" = "~/.config/alacritty/catppuccin-macchiato.toml"
+"plugins/catppuccin/alacritty/catppuccin-macchiato.toml" = "~/.config/alacritty/catppuccin-macchiato.toml"
 
 [bspwm.files]
 bspwmrc = "~/.config/bspwm/bspwmrc"
@@ -67,15 +67,15 @@ inputrc = "~/.inputrc"
 "config.nu" = "~/.config/nushell/config.nu"
 "env.nu" = "~/.config/nushell/env.nu"
 
-[nushell.files."plugs/nushell/nu_scripts/themes/nu-themes/catppuccin-mocha.nu"]
+[nushell.files."plugins/nushell/nu_scripts/themes/nu-themes/catppuccin-mocha.nu"]
 target = "~/.config/nushell/scripts/nu_scripts/themes/nu-themes/catppuccin-mocha.nu"
 type = "symbolic"
 
 [nvim.files]
-"plugs/nvim" = "~/.config/nvim"
+"plugins/nvim" = "~/.config/nvim"
 
 [pass.files]
-"plugs/pass" = "~/.password-store"
+"plugins/pass" = "~/.password-store"
 
 [polybar.files]
 polybar = "~/.config/polybar/config"
@@ -104,7 +104,7 @@ sxhkd = "~/.config/sxhkd/sxhkdrc"
 "arch_dracula.png" = "~/Wallpapers/arch_dracula.png"
 
 [waybar.files]
-"plugs/catppuccin/waybar/themes/macchiato.css" = "~/.config/waybar/macchiato.css"
+"plugins/catppuccin/waybar/themes/macchiato.css" = "~/.config/waybar/macchiato.css"
 waybar = "~/.config/waybar/config"
 "waybar.css" = "~/.config/waybar/style.css"
 

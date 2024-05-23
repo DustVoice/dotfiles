@@ -14,20 +14,20 @@
 	path = catppuccin-alacritty
 	url = https://github.com/catppuccin/alacritty.git
 [submodule "plug/catppuccin/alacritty"]
-	path = plugs/catppuccin/alacritty
+	path = plugins/catppuccin/alacritty
 	url = https://github.com/catppuccin/alacritty.git
 [submodule "plug/catppuccin/waybar"]
-	path = plugs/catppuccin/waybar
+	path = plugins/catppuccin/waybar
 	url = https://github.com/catppuccin/waybar
 [submodule "plug/DustroNvim"]
 	path = plug/DustroNvim
 	url = https://github.com/DustVoice/DustroNvim.git
 [submodule "plug/nvim"]
-	path = plugs/nvim
+	path = plugins/nvim
 	url = https://github.com/DustVoice/nvim.git
 [submodule "plug/nushell/nu_scripts"]
-	path = plugs/nushell/nu_scripts
+	path = plugins/nushell/nu_scripts
 	url = https://github.com/nushell/nu_scripts
 [submodule "plugs/pass"]
-	path = plugs/pass
+	path = plugins/pass
 	url = https://github.com/DustVoice/pass.git
