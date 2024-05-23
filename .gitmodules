@@ -31,6 +31,3 @@
 [submodule "plugs/pass"]
 	path = plugins/pass
 	url = https://github.com/DustVoice/pass.git
-[submodule "plugins/emacs"]
-	path = plugins/emacs
-	url = https://github.com/doomemacs/doomemacs
