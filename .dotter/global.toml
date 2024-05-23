@@ -16,7 +16,7 @@ depends = ["shell", "wezterm"]
 depends = ["nvim"]
 
 [Xorg]
-depends = ["bspwm", "inputrc", "Wallpapers"]
+depends = ["Wallpapers", "bspwm", "inputrc"]
 
 [bspwm]
 depends = ["demnu", "polybar", "sxhkd"]
@@ -46,7 +46,9 @@ bspwmrc = "~/.config/bspwm/bspwmrc"
 "scripts/dmenu-wl" = "~/.config/dmenu-wl"
 
 [fish.files]
-"dirs/fish" = "~/.config/fish"
+"config.fish" = "~/.config/fish/config.fish"
+"fish_variables" = "~/.config/fish/fish_variables"
+"scripts/fish" = "~/.config/fish"
 
 [git.files]
 gitconfig = "~/.gitconfig"
