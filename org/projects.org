@@ -1,9 +1,0 @@
-#+title: Projects
-
-* motis
-** Tasks
-*** TODO Add const_graph enable option
-
- [[file:~/Projects/motis/modules/raptor/src/raptor.cc::raptor::raptor() : module("RAPTOR Options", "raptor") {]]
-** Notes
-*** [2022-10-17 Mon 16:39] Use ~/raptor_cpu~ and ~/raptor_gpu~ targets always

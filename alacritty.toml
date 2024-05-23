@@ -1,0 +1,146 @@
+import = ["~/.config/alacritty/catppuccin-macchiato.yml"]
+draw_bold_text_with_bright_colors = true
+live_config_reload = true
+working_directory = "None"
+
+[window]
+dynamic_padding = false
+opacity = 1
+
+[window.padding]
+x = 2
+y = 2
+
+[scrolling]
+history = 100_000
+auto_scroll = false
+
+[font]
+size = 13
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainMono Nerd Font"
+style = "Italic"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "Bold Italic"
+
+[colors]
+indexed_colors = []
+
+[colors.primary]
+background = "0x282a36"
+foreground = "0xf8f8f2"
+
+[colors.cursor]
+text = "0x44475a"
+cursor = "0xf8f8f2"
+
+[colors.normal]
+black = "0x000000"
+red = "0xff5555"
+green = "0x50fa7b"
+yellow = "0xf1fa8c"
+blue = "0xbd93f9"
+magenta = "0xff79c6"
+cyan = "0x8be9fd"
+white = "0xbfbfbf"
+
+[colors.bright]
+black = "0x4d4d4d"
+red = "0xff6e67"
+green = "0x5af78e"
+yellow = "0xf4f99d"
+blue = "0xcaa9fa"
+magenta = "0xff92d0"
+cyan = "0x9aedfe"
+white = "0xe6e6e6"
+
+[colors.dim]
+black = "0x14151b"
+red = "0xff2222"
+green = "0x1ef956"
+yellow = "0xebf85b"
+blue = "0x4d5b86"
+magenta = "0xff46b0"
+cyan = "0x59dffc"
+white = "0xe6e6d1"
+
+[cursor]
+vi_mode_style = "Block"
+unfocused_hollow = true
+thickness = 0.2
+
+[cursor.style]
+shape = "Beam"
+blinking = "Off"
+
+[shell]
+program = "nu"
+
+[mouse]
+hide_when_typing = true
+
+[[key_bindings]]
+key = "PageUp"
+mods = "Shift"
+mode = "~Alt"
+action = "ScrollPageUp"
+
+[[key_bindings]]
+key = "PageDown"
+mods = "Shift"
+mode = "~Alt"
+action = "ScrollPageDown"
+
+[[key_bindings]]
+key = "Home"
+mods = "Shift"
+mode = "~Alt"
+action = "ScrollToTop"
+
+[[key_bindings]]
+key = "End"
+mods = "Shift"
+mode = "~Alt"
+action = "ScrollToBottom"
+
+[[key_bindings]]
+key = "V"
+mods = "Control|Shift"
+mode = "~Vi"
+action = "Paste"
+
+[[key_bindings]]
+key = "C"
+mods = "Control|Shift"
+action = "Copy"
+
+[[key_bindings]]
+key = "Key0"
+mods = "Control"
+action = "ResetFontSize"
+
+[[key_bindings]]
+key = "Equals"
+mods = "Control"
+action = "IncreaseFontSize"
+
+[[key_bindings]]
+key = "Minus"
+mods = "Control"
+action = "DecreaseFontSize"
+
+[[key_bindings]]
+key = "Return"
+mods = "Alt"
+action = "ToggleFullscreen"

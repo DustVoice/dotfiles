@@ -1,1 +1,0 @@
-/home/dustvoice/.config/nvim/init.vim

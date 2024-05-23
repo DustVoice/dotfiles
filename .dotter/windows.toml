@@ -1,0 +1,20 @@
+[alacritty.files]
+"alacritty.toml" = "~/AppData/Roaming/alacritty/alacritty.toml"
+"plugs/catppuccin/alacritty/catppuccin-macchiato.toml" = "~/AppData/Roaming/alacritty/catppuccin-macchiato.toml"
+
+[gnupg.files]
+"gpg-agent.conf" = "~/AppData/Roaming/gnupg/gpg-agent.conf"
+"gpg.conf" = "~/AppData/Roaming/gnupg/gpg.conf"
+sshcontrol = "~/AppData/Roaming/gnupg/sshcontrol"
+
+[helix.files]
+"helix.toml" = "~/AppData/Roaming/helix/config.toml"
+"languages.toml" = "~/AppData/Roaming/helix/languages.toml"
+
+[nushell.files]
+"config.nu" = "~/AppData/Roaming/nushell/config.nu"
+"env.nu" = "~/AppData/Roaming/nushell/env.nu"
+"plugs/nushell/nu_scripts/themes/nu-themes/catppuccin-mocha.nu" = { target = "~/AppData/Roaming/nushell/scripts/nu_scripts/themes/nu-themes/catppuccin-mocha.nu", type = "symbolic" }
+
+[nvim.files]
+"plugs/nvim" = { target = "~/AppData/Local/nvim", type = "symbolic" }

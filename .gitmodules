@@ -10,3 +10,24 @@
 [submodule ".config/alacritty/catppuccin"]
 	path = .config/alacritty/catppuccin
 	url = https://github.com/catppuccin/alacritty.git
+[submodule "catppuccin-alacritty"]
+	path = catppuccin-alacritty
+	url = https://github.com/catppuccin/alacritty.git
+[submodule "plug/catppuccin/alacritty"]
+	path = plugs/catppuccin/alacritty
+	url = https://github.com/catppuccin/alacritty.git
+[submodule "plug/catppuccin/waybar"]
+	path = plugs/catppuccin/waybar
+	url = https://github.com/catppuccin/waybar
+[submodule "plug/DustroNvim"]
+	path = plug/DustroNvim
+	url = https://github.com/DustVoice/DustroNvim.git
+[submodule "plug/nvim"]
+	path = plugs/nvim
+	url = https://github.com/DustVoice/nvim.git
+[submodule "plug/nushell/nu_scripts"]
+	path = plugs/nushell/nu_scripts
+	url = https://github.com/nushell/nu_scripts
+[submodule "plugs/pass"]
+	path = plugs/pass
+	url = https://github.com/DustVoice/pass.git

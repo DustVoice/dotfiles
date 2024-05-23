@@ -1,0 +1,121 @@
+# Group Packages
+
+[dev]
+depends = ["base", "editor", "shell", "terminal"]
+
+[base]
+depends = ["git", "gnupg", "ssh"]
+
+[shell]
+depends = ["nushell", "starship"]
+
+[terminal]
+depends = ["shell", "wezterm"]
+
+[editor]
+depends = ["nvim"]
+
+[Xorg]
+depends = ["bspwm", "inputrc", "Wallpapers"]
+
+[bspwm]
+depends = ["demnu", "polybar", "sxhkd"]
+
+[wayland]
+depends = ["river"]
+
+[river]
+depends = ["dmenu_wl", "waybar"]
+
+[rust]
+depends = ["rustfmt"]
+
+# Single Packages
+
+[alacritty.files]
+"alacritty.toml" = "~/.config/alacritty/alacritty.toml"
+"plugs/catppuccin/alacritty/catppuccin-macchiato.toml" = "~/.config/alacritty/catppuccin-macchiato.toml"
+
+[bspwm.files]
+bspwmrc = "~/.config/bspwm/bspwmrc"
+
+[dmenu.files]
+"scripts/dmenu" = "~/.config/dmenu"
+
+[dmenu_wl.files]
+"scripts/dmenu-wl" = "~/.config/dmenu-wl"
+
+[fish.files]
+"dirs/fish" = "~/.config/fish"
+
+[git.files]
+gitconfig = "~/.gitconfig"
+
+[gnupg.files]
+"gpg-agent.conf" = "~/.gnupg/gpg-agent.conf"
+"gpg.conf" = "~/.gnupg/gpg.conf"
+sshcontrol = "~/.gnupg/sshcontrol"
+
+[helix.files]
+"helix.toml" = "~/.config/helix/config.toml"
+"languages.toml" = "~/.config/helix/languages.toml"
+
+[inputrc.files]
+inputrc = "~/.inputrc"
+
+[nushell.files]
+"config.nu" = "~/.config/nushell/config.nu"
+"env.nu" = "~/.config/nushell/env.nu"
+
+[nushell.files."plugs/nushell/nu_scripts/themes/nu-themes/catppuccin-mocha.nu"]
+target = "~/.config/nushell/scripts/nu_scripts/themes/nu-themes/catppuccin-mocha.nu"
+type = "symbolic"
+
+[nvim.files]
+"plugs/nvim" = "~/.config/nvim"
+
+[pass.files]
+"plugs/pass" = "~/.password-store"
+
+[polybar.files]
+polybar = "~/.config/polybar/config"
+"polybar.sh" = "~/.config/polybar/launch"
+
+[river.files]
+river = "~/.config/river/init"
+
+[rustfmt.files]
+"rustfmt.toml" = "~/.config/rustfmt/rustfmt.toml"
+
+[ssh.files]
+known_hosts = "~/.ssh/known_hosts"
+ssh = "~/.ssh/config"
+
+[starship.files]
+"starship.toml" = "~/.config/starship.toml"
+
+[sxhkd.files]
+sxhkd = "~/.config/sxhkd/sxhkdrc"
+
+[vconsole.files]
+"vconsole.conf" = "~/.config/vconsole.conf"
+
+[Wallpapers.files]
+"arch_dracula.png" = "~/Wallpapers/arch_dracula.png"
+
+[waybar.files]
+"plugs/catppuccin/waybar/themes/macchiato.css" = "~/.config/waybar/macchiato.css"
+waybar = "~/.config/waybar/config"
+"waybar.css" = "~/.config/waybar/style.css"
+
+[wezterm.files]
+"wezterm.lua" = "~/.config/wezterm/wezterm.lua"
+
+[xonsh.files]
+"xonsh.xsh" = "~/.config/xonsh/rc.xsh"
+
+[Xorg.files]
+Xresources = "~/.Xresources"
+nvidia-xinitrc = "~/.nvidia-xinitrc"
+xinitrc = "~/.xinitrc"
+xsession = "~/.xsession"
