@@ -20,5 +20,6 @@ target = "~/AppData/Roaming/nushell/scripts/nu_scripts/themes/nu-themes/catppucc
 type = "symbolic"
 
 [nvim.files."plugins/nvim"]
+recurse = false
 target = "~/AppData/Local/nvim"
 type = "symbolic"

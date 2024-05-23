@@ -13,7 +13,10 @@ depends = ["nushell", "starship"]
 depends = ["shell", "wezterm"]
 
 [editor]
-depends = ["nvim"]
+depends = ["emacs", "nvim"]
+
+[emacs]
+depends = ["doom", "doom_repo"]
 
 [Xorg]
 depends = ["Wallpapers", "bspwm", "inputrc"]
@@ -45,6 +48,14 @@ bspwmrc = "~/.config/bspwm/bspwmrc"
 [dmenu_wl.files]
 "scripts/dmenu-wl" = "~/.config/dmenu-wl"
 
+[doom.files]
+doom = "~/.doom.d"
+
+[doom_repo.files."plugins/emacs"]
+recurse = false
+target = "~/.config/emacs"
+type = "symbolic"
+
 [fish.files]
 "config.fish" = "~/.config/fish/config.fish"
 "fish_variables" = "~/.config/fish/fish_variables"
@@ -73,8 +84,10 @@ inputrc = "~/.inputrc"
 target = "~/.config/nushell/scripts/nu_scripts/themes/nu-themes/catppuccin-mocha.nu"
 type = "symbolic"
 
-[nvim.files]
-"plugins/nvim" = "~/.config/nvim"
+[nvim.files."plugins/nvim"]
+recurse = false
+target = "~/.config/nvim"
+type = "symbolic"
 
 [pass.files]
 "plugins/pass" = "~/.password-store"
