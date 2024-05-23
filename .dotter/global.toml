@@ -16,7 +16,7 @@ depends = ["shell", "wezterm"]
 depends = ["emacs", "nvim"]
 
 [emacs]
-depends = ["doom", "doom_repo"]
+depends = ["doom"]
 
 [Xorg]
 depends = ["Wallpapers", "bspwm", "inputrc"]
@@ -50,11 +50,6 @@ bspwmrc = "~/.config/bspwm/bspwmrc"
 
 [doom.files]
 doom = "~/.doom.d"
-
-[doom_repo.files."plugins/emacs"]
-recurse = false
-target = "~/.config/emacs"
-type = "symbolic"
 
 [fish.files]
 "config.fish" = "~/.config/fish/config.fish"
