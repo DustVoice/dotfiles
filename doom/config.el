@@ -76,7 +76,10 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 (use-package! catppuccin-theme
-              :config
-              (setq catppuccin-flavor 'macchiato)
-              (catppuccin-reload)
-              (add-hook 'server-after-make-frame-hook #'catppuccin-reload))
+  :config
+  (setq catppuccin-flavor 'macchiato)
+  (catppuccin-reload)
+  (add-hook 'server-after-make-frame-hook #'catppuccin-reload))
+
+(after! evil-snipe
+  (evil-snipe-mode -1))
