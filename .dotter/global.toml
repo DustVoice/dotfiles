@@ -3,6 +3,9 @@
 [dev]
 depends = ["base", "editor", "shell", "terminal"]
 
+[dev-extra]
+depends = ["editor-extra", "rust"]
+
 [base]
 depends = ["git", "gnupg", "ssh"]
 
@@ -13,7 +16,10 @@ depends = ["nushell", "starship"]
 depends = ["shell", "wezterm"]
 
 [editor]
-depends = ["emacs", "nvim"]
+depends = ["nvim"]
+
+[editor-extra]
+depends = ["emacs", "helix"]
 
 [emacs]
 depends = ["doom"]
