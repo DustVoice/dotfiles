@@ -1,33 +1,15 @@
-[submodule ".password-store"]
-	path = .password-store
-	url = gitlab@gitlab.dustvoice.de:DustVoice/pass.git
-[submodule ".config/nvim"]
-	path = .config/nvim
-	url = https://gitlab.dustvoice.de/DustVoice/dustronvim.git
-[submodule ".config/nushell/scripts/nu_scripts"]
-	path = .config/nushell/scripts/nu_scripts
-	url = https://github.com/nushell/nu_scripts
-[submodule ".config/alacritty/catppuccin"]
-	path = .config/alacritty/catppuccin
-	url = https://github.com/catppuccin/alacritty.git
-[submodule "catppuccin-alacritty"]
-	path = catppuccin-alacritty
-	url = https://github.com/catppuccin/alacritty.git
-[submodule "plug/catppuccin/alacritty"]
+[submodule "plugins/catppuccin/alacritty"]
 	path = plugins/catppuccin/alacritty
 	url = https://github.com/catppuccin/alacritty.git
-[submodule "plug/catppuccin/waybar"]
+[submodule "plugins/catppuccin/waybar"]
 	path = plugins/catppuccin/waybar
 	url = https://github.com/catppuccin/waybar
-[submodule "plug/DustroNvim"]
-	path = plug/DustroNvim
-	url = https://github.com/DustVoice/DustroNvim.git
-[submodule "plug/nvim"]
+[submodule "plugins/nvim"]
 	path = plugins/nvim
 	url = https://github.com/DustVoice/nvim.git
-[submodule "plug/nushell/nu_scripts"]
+[submodule "plugins/nushell/nu_scripts"]
 	path = plugins/nushell/nu_scripts
 	url = https://github.com/nushell/nu_scripts
-[submodule "plugs/pass"]
+[submodule "plugins/pass"]
 	path = plugins/pass
 	url = https://github.com/DustVoice/pass.git
