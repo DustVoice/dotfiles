@@ -57,6 +57,9 @@ bspwmrc = "~/.config/bspwm/bspwmrc"
 [doom.files]
 doom = "~/.doom.d"
 
+[elvish.files]
+"rc.elv" = "~/.config/elvish/rc.elv"
+
 [fish.files]
 "config.fish" = "~/.config/fish/config.fish"
 "fish_variables" = "~/.config/fish/fish_variables"

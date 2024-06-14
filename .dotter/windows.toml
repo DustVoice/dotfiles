@@ -2,6 +2,9 @@
 "alacritty.toml" = "~/AppData/Roaming/alacritty/alacritty.toml"
 "plugins/catppuccin/alacritty/catppuccin-macchiato.toml" = "~/AppData/Roaming/alacritty/catppuccin-macchiato.toml"
 
+[elvish.files]
+"rc.elv" = "~/AppData/Roaming/elvish/rc.elv"
+
 [gnupg.files]
 "gpg-agent.conf" = "~/AppData/Roaming/gnupg/gpg-agent.conf"
 "gpg.conf" = "~/AppData/Roaming/gnupg/gpg.conf"
