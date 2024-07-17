@@ -25,4 +25,4 @@ display-messages = true
 display-inlay-hints = true
 
 [keys.normal]
-g = { "left" = "goto_line_start", "right" = "goto_line_end", "up" = "goto_file_start", "down" = "goto_last_line"}
+g = { "left" = "goto_line_start", "right" = "goto_line_end", "up" = "goto_file_start", "down" = "goto_last_line" }
