@@ -39,6 +39,14 @@ depends = ["dmenu_wl", "waybar"]
 [rust]
 depends = ["rustfmt"]
 
+# Meta Packages
+
+[ldiproxy]
+
+[yk5]
+[yk5c]
+[yk5n]
+
 # Single Packages
 
 [alacritty.files]
@@ -69,8 +77,8 @@ doom = "~/.doom.d"
 gitconfig = "~/.gitconfig"
 
 [gnupg.files]
-"gpg-agent.conf" = "~/.gnupg/gpg-agent.conf"
 "gpg.conf" = "~/.gnupg/gpg.conf"
+"gpg-agent.conf" = "~/.gnupg/gpg-agent.conf"
 sshcontrol = "~/.gnupg/sshcontrol"
 
 [helix.files]
@@ -107,6 +115,7 @@ river = "~/.config/river/init"
 "rustfmt.toml" = "~/.config/rustfmt/rustfmt.toml"
 
 [ssh.files]
+allowed_signers = "~/.ssh/allowed_signers"
 known_hosts = "~/.ssh/known_hosts"
 ssh = "~/.ssh/config"
 

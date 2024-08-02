@@ -1,6 +1,8 @@
-Host archserver
+Host contabo
     HostName pc.dustvoice.de
-    ForwardAgent yes
-    ForwardX11 yes
-    RemoteForward /run/user/1000/gnupg/S.gpg-agent /home/dustvoice/.gnupg/S.gpg-agent.extra
-    RemoteForward /run/user/1000/gnupg/S.gpg-agent.ssh /home/dustvoice/.gnupg/S.gpg-agent.ssh
+    User dustvoice
+
+{{#if dotter.packages.ldiproxy}}
+Host *
+    ProxyCommand ncat --proxy ldiproxy.lsjv.rlp.de:8080 %h %p
+{{/if}}

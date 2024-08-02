@@ -4,9 +4,16 @@
 [user]
     email = info@dustvoice.de
     name = DustVoice
-    signingkey = 7A9CA430D426100E
+    {{#if dotter.packages.yk5n}}
+    signingkey = "key::sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIF55CvSple7cBxr/zMPSd2rJtGG6Ki3pk4mfdT3/JtXzAAAAB3NzaDpnaXQ= ssh:git"
+    {{else if dotter.packages.yk5c}}
+    signingkey = "key::sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAINqMNVOHo3C5i7kqgN2yNOjYmEJmN/SDq5OBfBCqnbLvAAAAB3NzaDpnaXQ= ssh:git"
+    {{else}}
+    signingkey = ~/.ssh/id_ed25519_sk.pub
+    {{/if}}
 
 [core]
+    autocrlf = input
     editor = nvim
 
 [push]
@@ -17,7 +24,10 @@
     gpgsign = true
 
 [gpg]
-    program = {{#if (eq dotter.os "windows")}}"C:/Program Files (x86)/GnuPG/bin/gpg.exe"{{else}}gpg2{{/if}}
+    format = ssh
+
+[gpg "ssh"]
+    allowedSignersFile = ~/.ssh/allowed_signers
 
 [pull]
     rebase = false
