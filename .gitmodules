@@ -10,6 +10,3 @@
 [submodule "plugins/nushell/nu_scripts"]
 	path = plugins/nushell/nu_scripts
 	url = https://github.com/nushell/nu_scripts
-[submodule "plugins/pass"]
-	path = plugins/pass
-	url = https://github.com/DustVoice/pass.git
