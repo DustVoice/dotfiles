@@ -1,6 +1,7 @@
 Host contabo
     HostName pc.dustvoice.de
     User dustvoice
+    ForwardAgent yes
 
 {{#if dotter.packages.ldiproxy}}
 Host *
