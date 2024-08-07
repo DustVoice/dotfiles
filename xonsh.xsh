@@ -1,5 +1,5 @@
 # === Init ===
-xontrib load coreutils coconut clp
+xontrib load coreutils
 
 $VI_MODE = True
 
