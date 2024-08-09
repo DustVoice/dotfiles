@@ -21,8 +21,8 @@
        ;;layout            ; auie,ctsrnm is the superior home row
 
        :completion
-       company           ; the ultimate code completion backend
-       ;;(corfu +orderless)  ; complete with cap(f), cape and a flying feather!
+       ;;company           ; the ultimate code completion backend
+       (corfu +orderless)  ; complete with cap(f), cape and a flying feather!
        ;;helm              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
        ;;ivy               ; a search engine for love and life
@@ -35,7 +35,6 @@
        ;;doom-quit         ; DOOM quit-message prompts when you quit Emacs
        ;;(emoji +unicode)  ; 🙂
        hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
-       ;;hydra
        indent-guides     ; highlighted indent columns
        ligatures         ; ligatures and symbols to make your code pretty again
        ;;minimap           ; show a map of the code on the side
@@ -99,11 +98,9 @@
        (lsp +peek)       ; M-x vscode
        magit             ; a git porcelain for Emacs
        ;;make              ; run make tasks from Emacs
-       pass              ; password manager for nerds
+       ;;pass              ; password manager for nerds
        ;;pdf               ; pdf enhancements
        ;;prodigy           ; FIXME managing external services & code builders
-       ;;rgb               ; creating color strings
-       ;;taskrunner        ; taskrunner for all your projects
        ;;terraform         ; infrastructure as code
        ;;tmux              ; an API for interacting with tmux
        tree-sitter       ; syntax and parsing, sitting in a tree...
@@ -127,9 +124,9 @@
          +lsp
          +tree-sitter)   ; unity, .NET, and mono shenanigans
        data              ; config/data formats
-       (dart
-         +flutter
-         +lsp)           ; paint ui and not much else
+       ;;(dart
+       ;;  +flutter
+       ;;  +lsp           ; paint ui and not much else
        ;;dhall
        ;;elixir            ; erlang done right
        ;;elm               ; care for a cup of TEA?
@@ -144,9 +141,9 @@
        ;;gdscript          ; the language you waited for
        ;;(go +lsp)         ; the hipster dialect
        ;;(graphql +lsp)    ; Give queries a REST
-       (haskell
-         +lsp
-         +tree-sitter)    ; a language that's lazier than I am
+       ;;(haskell
+       ;;  +lsp
+       ;;  +tree-sitter    ; a language that's lazier than I am
        ;;hy                ; readability of scheme w/ speed of python
        ;;idris             ; a language you can depend on
        (json
@@ -154,18 +151,18 @@
          +tree-sitter)   ; At least it ain't XML
        ;;(java +lsp)       ; the poster child for carpal tunnel syndrome
        ;;javascript        ; all(hope(abandon(ye(who(enter(here))))))
-       (julia
-         +lsp
-         +tree-sitter)   ; a better, faster MATLAB
+       ;;(julia
+       ;;  +lsp
+       ;;  +tree-sitter)   ; a better, faster MATLAB
        ;;kotlin            ; a better, slicker Java(Script)
-       (latex +lsp)      ; writing papers in Emacs has never been so fun
+       ;;(latex +lsp)      ; writing papers in Emacs has never been so fun
        ;;lean              ; for folks with too much to prove
        ;;ledger            ; be audit you can be
        (lua
          +lsp
          +tree-sitter)   ; one-based indices? one-based indices
        markdown          ; writing docs for people to ignore
-       ;;nim               ; python + lisp at the speed of c
+       nim               ; python + lisp at the speed of c
        ;;nix               ; I hereby declare "nix geht mehr!"
        ;;ocaml             ; an objective camel
        org               ; organize your plain life in plain text
@@ -191,9 +188,9 @@
        ;;solidity          ; do you need a blockchain? No.
        ;;swift             ; who asked for emoji variables?
        ;;terra             ; Earth and Moon in alignment for performance.
-       (web
-         +lsp
-         +tree-sitter)   ; the tubes
+       ;;(web
+       ;;  +lsp
+       ;;  +tree-sitter)   ; the tubes
        (yaml
          +lsp
          +tree-sitter)   ; JSON, but readable
@@ -210,7 +207,6 @@
        ;;everywhere        ; *leave* Emacs!? You must be joking
        ;;irc               ; how neckbeards socialize
        ;;(rss +org)        ; emacs as an RSS reader
-       ;;twitter           ; twitter client https://twitter.com/vnought
 
        :config
        ;;literate

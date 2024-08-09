@@ -33,7 +33,9 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'catppuccin)
+;; NOTE: Currently trying to use load-theme instead, as suggested in https://github.com/catppuccin/emacs/pull/148
+;;(setq catppuccin-flavor 'macchiato)
+;;(setq doom-theme 'catppuccin)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -77,8 +79,8 @@
 ;; they are implemented.
 (use-package! catppuccin-theme
   :config
-  (setq catppuccin-flavor 'macchiato)
-  (catppuccin-reload)
+  (setq catppuccin-flavor 'macchiato) ;; 'latte, 'frappe, 'macchiato, or 'mocha
+  (load-theme 'catppuccin t t)
   (add-hook 'server-after-make-frame-hook #'catppuccin-reload))
 
 (after! evil-snipe
