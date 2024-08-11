@@ -16,10 +16,10 @@ depends = ["nushell", "starship"]
 depends = ["shell", "wezterm"]
 
 [editor]
-depends = ["nvim"]
+depends = ["emacs", "nvim"]
 
 [editor-extra]
-depends = ["emacs", "helix"]
+depends = ["helix"]
 
 [emacs]
 depends = ["doom"]
