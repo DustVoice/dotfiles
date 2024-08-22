@@ -10,7 +10,7 @@ depends = ["editor-extra", "rust"]
 depends = ["git", "gnupg", "ssh"]
 
 [shell]
-depends = ["nushell", "starship"]
+depends = ["nushell", "starship", "xonsh"]
 
 [terminal]
 depends = ["shell", "wezterm"]

@@ -1,17 +1,17 @@
 # === Init ===
 xontrib load coreutils
 
+$FORCE_POSIX_PATHS = True
 $VI_MODE = True
 
 # carapace-bin
 COMPLETIONS_CONFIRM=True
 exec($(carapace _carapace))
 
-# zoxide
-execx($(zoxide init xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
-
 # starship
+
 import uuid
+
 
 def starship_prompt():
     last_cmd = __xonsh__.history[-1] if __xonsh__.history else None
@@ -37,9 +37,12 @@ $RIGHT_PROMPT = starship_rprompt
 $STARSHIP_SHELL = "xonsh"
 $STARSHIP_SESSION_KEY = uuid.uuid4().hex
 
+# zoxide
+execx($(zoxide init xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
+
 # === Aliases ===
 aliases['es'] = 'eza --git --icons'
-aliases['ea'] = 'eza -a --git --icons'
+aliases['esa'] = 'eza -a --git --icons'
 aliases['el'] = 'eza -lh --git --icons'
 aliases['ela'] = 'eza -lah --git --icons'
 aliases['et'] = 'eza -lTh --git --icons'

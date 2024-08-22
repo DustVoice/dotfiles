@@ -50,3 +50,6 @@
 ;; (unpin! t)
 (package! catppuccin-theme)
 (package! nushell-mode :recipe (:host github :repo "mrkkrp/nushell-mode"))
+(package! xonsh-mode)
+
+(package! fountain-mode)
