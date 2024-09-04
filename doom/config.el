@@ -34,8 +34,8 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 ;; NOTE: Currently trying to use load-theme instead, as suggested in https://github.com/catppuccin/emacs/pull/148
-;(setq catppuccin-flavor 'macchiato)
-;(setq doom-theme 'catppuccin)
+                                        ;(setq catppuccin-flavor 'macchiato)
+                                        ;(setq doom-theme 'catppuccin)
 
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
@@ -46,6 +46,10 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
+(setq doom-localleader-key ",")
+
+(remove-hook 'doom-first-input-hook
+             #'evil-snipe-mode)
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -84,9 +88,6 @@
   :config
   (load-theme 'catppuccin t)
   (add-hook 'server-after-make-frame-hook #'catppuccin-reload))
-
-(after! evil-snipe
-  (evil-snipe-mode -1))
 
 (use-package! nushell-mode)
 (use-package! xonsh-mode)
