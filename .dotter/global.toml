@@ -104,8 +104,8 @@ recurse = false
 target = "~/.config/nvim"
 type = "symbolic"
 
-[omp.files."catppuccin_macchiato.omp.json"]
-target = "~/catppuccin_macchiato.omp.json"
+[omp.files."jandedobbeleer.omp.json"]
+target = "~/jandedobbeleer.omp.json"
 type = "symbolic"
 
 [pass.files]

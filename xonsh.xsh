@@ -9,7 +9,7 @@ COMPLETIONS_CONFIRM=True
 exec($(carapace _carapace))
 
 # = oh-my-posh =
-execx($(oh-my-posh init xonsh --config ~/catppuccin_macchiato.omp.json))
+execx($(oh-my-posh init xonsh --config ~/jandedobbeleer.omp.json))
 
 # = zoxide =
 execx($(zoxide init xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
