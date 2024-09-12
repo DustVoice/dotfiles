@@ -9,11 +9,17 @@ depends = ["editor-extra", "rust", "shell-extra"]
 [base]
 depends = ["git", "gnupg", "ssh"]
 
+[prompt]
+depends = ["starship"]
+
+[prompt-extra]
+dependts = ["omp"]
+
 [shell]
-depends = ["xonsh", "omp"]
+depends = ["xonsh", "prompt"]
 
 [shell-extra]
-depends = ["nushell", "starship"]
+depends = ["nushell"]
 
 [terminal]
 depends = ["shell", "wezterm"]
