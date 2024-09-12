@@ -11,7 +11,7 @@ config.font_size = 13.0
 
 config.color_scheme = "Catppuccin Macchiato"
 
-config.default_prog = { "nu" }
+config.default_prog = { "xonsh" }
 
 config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = false

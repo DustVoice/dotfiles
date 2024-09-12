@@ -116,9 +116,9 @@
        (cc
         +lsp
         +tree-sitter)   ; C > C++ == 1
-       (clojure
-        +lsp
-        +tree-sitter)   ; java with a lisp
+       ;;(clojure
+       ;; +lsp
+       ;; +tree-sitter)   ; java with a lisp
        ;;common-lisp       ; if you've seen one lisp, you've seen them all
        ;;coq               ; proofs-as-programs
        ;;crystal           ; ruby at the speed of c
@@ -176,6 +176,7 @@
        ;;purescript        ; javascript, but functional
        (python
         +lsp
+        +pyright
         +tree-sitter)   ; beautiful is better than ugly
        ;;qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs

@@ -4,13 +4,16 @@
 depends = ["base", "editor", "shell", "terminal"]
 
 [dev-extra]
-depends = ["editor-extra", "rust"]
+depends = ["editor-extra", "rust", "shell-extra"]
 
 [base]
 depends = ["git", "gnupg", "ssh"]
 
 [shell]
-depends = ["nushell", "starship", "xonsh"]
+depends = ["nushell", "starship"]
+
+[shell-extra]
+depends = ["xonsh", "omp"]
 
 [terminal]
 depends = ["shell", "wezterm"]
@@ -99,6 +102,10 @@ type = "symbolic"
 [nvim.files."plugins/nvim"]
 recurse = false
 target = "~/.config/nvim"
+type = "symbolic"
+
+[omp.files."catppuccin_macchiato.omp.json"]
+target = "~/catppuccin_macchiato.omp.json"
 type = "symbolic"
 
 [pass.files]
