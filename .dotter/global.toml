@@ -13,10 +13,10 @@ depends = ["git", "gnupg", "ssh"]
 depends = ["starship"]
 
 [prompt-extra]
-dependts = ["omp"]
+depends = ["omp"]
 
 [shell]
-depends = ["xonsh", "prompt"]
+depends = ["prompt", "xonsh"]
 
 [shell-extra]
 depends = ["nushell"]
