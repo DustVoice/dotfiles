@@ -16,10 +16,10 @@ depends = ["starship"]
 depends = ["omp"]
 
 [shell]
-depends = ["prompt", "xonsh"]
+depends = ["nushell", "prompt"]
 
 [shell-extra]
-depends = ["nushell"]
+depends = ["xonsh"]
 
 [terminal]
 depends = ["shell", "wezterm"]
