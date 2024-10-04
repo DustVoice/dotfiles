@@ -4,13 +4,16 @@
 depends = ["base", "editor", "shell", "terminal"]
 
 [dev-extra]
-depends = ["editor-extra", "rust", "shell-extra"]
+depends = ["editor-extra", "rust", "shell-extra", "vcs-extra"]
 
 [base]
 depends = ["gnupg", "ssh", "vcs"]
 
 [vcs]
-depends = ["git", "jj"]
+depends = ["git"]
+
+[vcs-extra]
+depends = ["jj"]
 
 [prompt]
 depends = ["starship"]
