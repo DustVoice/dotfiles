@@ -7,7 +7,10 @@ depends = ["base", "editor", "shell", "terminal"]
 depends = ["editor-extra", "rust", "shell-extra"]
 
 [base]
-depends = ["git", "gnupg", "ssh"]
+depends = ["gnupg", "ssh", "vcs"]
+
+[vcs]
+depends = ["git", "jj"]
 
 [prompt]
 depends = ["starship"]
@@ -96,6 +99,9 @@ sshcontrol = "~/.gnupg/sshcontrol"
 
 [inputrc.files]
 inputrc = "~/.inputrc"
+
+[jj.files]
+"jj.toml" = "~/.config/jj/config.toml"
 
 [nushell.files]
 "config.nu" = "~/.config/nushell/config.nu"

@@ -6,13 +6,16 @@
 "rc.elv" = "~/AppData/Roaming/elvish/rc.elv"
 
 [gnupg.files]
-"gpg-agent.conf" = "~/AppData/Roaming/gnupg/gpg-agent.conf"
 "gpg.conf" = "~/AppData/Roaming/gnupg/gpg.conf"
+"gpg-agent.conf" = "~/AppData/Roaming/gnupg/gpg-agent.conf"
 sshcontrol = "~/AppData/Roaming/gnupg/sshcontrol"
 
 [helix.files]
 "helix.toml" = "~/AppData/Roaming/helix/config.toml"
 "languages.toml" = "~/AppData/Roaming/helix/languages.toml"
+
+[jj.files]
+"jj.toml" = "~/Appdata/Roaming/jj/config.toml"
 
 [nushell.files]
 "config.nu" = "~/AppData/Roaming/nushell/config.nu"
