@@ -58,8 +58,8 @@
        fold              ; (nigh) universal code folding
        (format +onsave)  ; automated prettiness
        ;;god               ; run Emacs commands without modifier keys
-       ;;lispy             ; vim for lisp, for people who don't like vim
-       ;;multiple-cursors  ; editing in many places at once
+       lispy             ; vim for lisp, for people who don't like vim
+       multiple-cursors  ; editing in many places at once
        ;;objed             ; text object editing for the innocent
        ;;parinfer          ; turn lisp into python, sort of
        ;;rotate-text       ; cycle region at point between text candidates
@@ -131,10 +131,10 @@
        ;;  +flutter
        ;;  +lsp           ; paint ui and not much else
        ;;dhall
-       ;;(elixir
-       ;; +lsp
-       ;; +tree-sitter)
-                                        ; erlang done right
+       (elixir
+        +lsp
+        +tree-sitter)
+                                       ; erlang done right
        ;;elm               ; care for a cup of TEA?
        emacs-lisp        ; drown in parentheses
        ;;erlang            ; an elegant language for a more civilized age
@@ -180,7 +180,10 @@
         +pyright
         +tree-sitter)   ; beautiful is better than ugly
        ;;qt                ; the 'cutest' gui framework ever
-       ;;racket            ; a DSL for DSLs
+       (racket
+         +lsp
+         +xp
+         +hash-lang)            ; a DSL for DSLs
        ;;raku              ; the artist formerly known as perl6
        ;;rest              ; Emacs as a REST client
        ;;rst               ; ReST in peace

@@ -78,7 +78,9 @@ bspwmrc = "~/.config/bspwm/bspwmrc"
 "scripts/dmenu-wl" = "~/.config/dmenu-wl"
 
 [doom.files]
-doom = "~/.doom.d"
+"config.el" = "~/.doom.d/config.el"
+"init.el" = "~/.doom.d/init.el"
+"packages.el" = "~/.doom.d/packages.el"
 
 [elvish.files]
 "rc.elv" = "~/.config/elvish/rc.elv"
