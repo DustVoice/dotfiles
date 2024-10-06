@@ -133,8 +133,7 @@
        ;;dhall
        (elixir
         +lsp
-        +tree-sitter)
-                                       ; erlang done right
+        +tree-sitter)   ; erlang done right
        ;;elm               ; care for a cup of TEA?
        emacs-lisp        ; drown in parentheses
        ;;erlang            ; an elegant language for a more civilized age
@@ -180,10 +179,9 @@
         +pyright
         +tree-sitter)   ; beautiful is better than ugly
        ;;qt                ; the 'cutest' gui framework ever
-       (racket
-         +lsp
-         +xp
-         +hash-lang)            ; a DSL for DSLs
+       ;;(racket
+       ;;  +lsp
+       ;;  +xp)           ; a DSL for DSLs
        ;;raku              ; the artist formerly known as perl6
        ;;rest              ; Emacs as a REST client
        ;;rst               ; ReST in peace
@@ -192,7 +190,9 @@
         +lsp
         +tree-sitter)   ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        ;;scala             ; java, but good
-       ;;(scheme +guile)   ; a fully conniving family of lisps
+       ;;(scheme
+       ;;  +guile
+       ;;  +racket)     ; a fully conniving family of lisps
        sh                ; she sells {ba,z,fi}sh shells on the C xor
        ;;sml
        ;;solidity          ; do you need a blockchain? No.
