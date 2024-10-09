@@ -4,16 +4,13 @@
 depends = ["base", "editor", "shell", "terminal"]
 
 [dev-extra]
-depends = ["editor-extra", "rust", "shell-extra", "vcs-extra"]
+depends = ["editor-extra", "rust", "sbcl", "shell-extra"]
 
 [base]
 depends = ["gnupg", "ssh", "vcs"]
 
 [vcs]
-depends = ["git"]
-
-[vcs-extra]
-depends = ["jj"]
+depends = ["git", "jj"]
 
 [prompt]
 depends = ["starship"]
@@ -53,6 +50,7 @@ depends = ["dmenu_wl", "waybar"]
 
 [rust]
 depends = ["rustfmt"]
+
 
 # Meta Packages
 
@@ -137,6 +135,9 @@ river = "~/.config/river/init"
 
 [rustfmt.files]
 "rustfmt.toml" = "~/.config/rustfmt/rustfmt.toml"
+
+[sbcl.files]
+sbclrc = "~/.sbclrc"
 
 [ssh.files]
 allowed_signers = "~/.ssh/allowed_signers"

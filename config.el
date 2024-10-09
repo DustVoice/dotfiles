@@ -90,7 +90,12 @@
   (load-theme 'catppuccin t)
   (add-hook 'server-after-make-frame-hook #'catppuccin-reload))
 
+(use-package! clojure-mode
+  :config (add-to-list 'auto-mode-alist '("\\.bb\\'" . clojure-mode)))
+
 (use-package! nushell-mode)
 (use-package! xonsh-mode)
+
+(use-package! cook-mode)
 
 (use-package! fountain-mode)

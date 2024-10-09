@@ -52,4 +52,10 @@
 (package! nushell-mode :recipe (:host github :repo "mrkkrp/nushell-mode"))
 (package! xonsh-mode)
 
+(package! cook-mode
+  :recipe (:host github 
+           :repo "cooklang/cook-mode"))
+
+(package! fountain-mode)
+
 (package! fountain-mode)
