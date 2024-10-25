@@ -4,11 +4,12 @@ email = "info@dustvoice.de"
 
 [ui]
 editor = "nvim"
+default-command = "log"
 
 [signing]
 sign-all = true
-backend = "ssh"
-key = "~/.ssh/id_ed25519_sk.pub"
+backend = "gpg"
+key = "7A9CA430D426100E"
 
 [signing.ssh.backends.ssh]
 allowed-signers = "~/.ssh/allowed_signers"

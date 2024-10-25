@@ -86,3 +86,6 @@ starship init nu | save -f ~/.cache/starship/init.nu
 
 mkdir ~/.cache/zoxide
 zoxide init nushell --cmd z | save -f ~/.cache/zoxide/init.nu
+
+mkdir ~/.cache/jj
+jj util completion nushell | save -f ~/.cache/jj/init.nu

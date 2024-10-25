@@ -907,3 +907,4 @@ $env.config = ($env.config | merge {color_config: (catppuccin-mocha)})
 
 source ~/.cache/starship/init.nu
 source ~/.cache/zoxide/init.nu
+source ~/.cache/jj/init.nu
