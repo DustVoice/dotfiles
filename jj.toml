@@ -5,6 +5,7 @@ email = "info@dustvoice.de"
 [ui]
 editor = "nvim"
 default-command = "log"
+diff-editor = ":builtin"
 
 [signing]
 sign-all = true
