@@ -50,11 +50,3 @@
 ;; (unpin! t)
 (package! catppuccin-theme)
 (package! nushell-mode :recipe (:host github :repo "mrkkrp/nushell-mode"))
-(package! typst-ts-mode :recipe (:host codeberg :repo "meow_king/typst-ts-mode" :files (:defaults "*.el")))
-(package! xonsh-mode)
-
-(package! cook-mode
-  :recipe (:host github 
-           :repo "cooklang/cook-mode"))
-
-(package! fountain-mode)

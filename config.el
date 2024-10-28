@@ -94,10 +94,3 @@
   :config (add-to-list 'auto-mode-alist '("\\.bb\\'" . clojure-mode)))
 
 (use-package! nushell-mode)
-(use-package! typst-mode
-  :custom (typst-ts-mode-watch-options "--open"))
-(use-package! xonsh-mode)
-
-(use-package! cook-mode)
-
-(use-package! fountain-mode)
