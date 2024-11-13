@@ -83,6 +83,8 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+(setq-default buffer-file-coding-system 'utf-8-unix)
+
 (use-package! catppuccin-theme
   :init
   (setq catppuccin-flavor 'macchiato)
