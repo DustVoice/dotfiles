@@ -19,19 +19,19 @@ auto_scroll = false
 size = 13
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "IosevkaTerm Nerd Font"
 style = "Regular"
 
 [font.bold]
-family = "JetBrainsMono Nerd Font"
+family = "IosevkaTerm Nerd Font"
 style = "Bold"
 
 [font.italic]
-family = "JetBrainMono Nerd Font"
+family = "IosevkaTerm Nerd Font"
 style = "Italic"
 
 [font.bold_italic]
-family = "JetBrainsMono Nerd Font"
+family = "IosevkaTerm Nerd Font"
 style = "Bold Italic"
 
 [colors]

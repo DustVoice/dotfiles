@@ -6,7 +6,7 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-config.font = wezterm.font("JetBrainsMono NF")
+config.font = wezterm.font("IosefkaTerm NF")
 config.font_size = 13.0
 
 config.color_scheme = "Catppuccin Macchiato"
