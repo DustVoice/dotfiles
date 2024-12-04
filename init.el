@@ -164,6 +164,7 @@
        ;;lean              ; for folks with too much to prove
        ;;ledger            ; be audit you can be
        (lua
+        +fennel
         +lsp
         +tree-sitter)   ; one-based indices? one-based indices
        markdown          ; writing docs for people to ignore
