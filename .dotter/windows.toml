@@ -29,3 +29,6 @@ type = "symbolic"
 recurse = false
 target = "~/AppData/Local/nvim"
 type = "symbolic"
+
+[zellij.files]
+"zellij.kdl" = ""

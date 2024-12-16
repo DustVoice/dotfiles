@@ -19,7 +19,7 @@ depends = ["starship"]
 depends = ["omp"]
 
 [shell]
-depends = ["nushell", "prompt"]
+depends = ["nushell", "prompt", "zellij"]
 
 [shell-extra]
 depends = ["xonsh"]
@@ -172,3 +172,6 @@ Xresources = "~/.Xresources"
 nvidia-xinitrc = "~/.nvidia-xinitrc"
 xinitrc = "~/.xinitrc"
 xsession = "~/.xsession"
+
+[zellij.files]
+"zellij.kdl" = "~/.config/zellij/config.kdl"
