@@ -44,3 +44,6 @@ aliases['el'] = 'eza -lh --git --icons'
 aliases['ela'] = 'eza -lah --git --icons'
 aliases['et'] = 'eza -lTh --git --icons'
 aliases['eta'] = 'eza -lTah --git --icons'
+
+# === Fix for WSL ===
+[$PATH.remove(path) for path in $PATH.paths if path.startswith("/mnt/c/")]
