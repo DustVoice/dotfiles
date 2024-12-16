@@ -81,11 +81,17 @@ $env.NU_PLUGIN_DIRS = [
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 # $env.PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 
+{{#if (is_executable "starship")}}
 mkdir ~/.cache/starship
 starship init nu | save -f ~/.cache/starship/init.nu
+{{/if}}
 
+{{#if (is_executable "zoxide")}}
 mkdir ~/.cache/zoxide
 zoxide init nushell --cmd z | save -f ~/.cache/zoxide/init.nu
+{{/if}}
 
+{{#if (is_executable "jj")}}
 mkdir ~/.cache/jj
 jj util completion nushell | save -f ~/.cache/jj/init.nu
+{{/if}}

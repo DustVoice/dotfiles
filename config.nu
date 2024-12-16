@@ -905,8 +905,14 @@ $env.config = {
 use nu_scripts/themes/nu-themes/catppuccin-mocha.nu
 $env.config = ($env.config | merge {color_config: (catppuccin-mocha)})
 
+{{#if (is_executable "starship")}}
 source ~/.cache/starship/init.nu
+{{/if}}
+{{#if (is_executable "zoxide")}}
 source ~/.cache/zoxide/init.nu
+{{/if}}
+{{#if (is_executable "jj")}}
 source ~/.cache/jj/init.nu
+{{/if}}
 
 alias ljj = lazyjj
