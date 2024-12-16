@@ -12,6 +12,7 @@ exec($(carapace _carapace))
 execx($(zoxide init xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
 
 # = starship =
+{{#if (eq dotter.os "windows")}}
 import uuid
 
 def starship_prompt():
@@ -36,6 +37,9 @@ $PROMPT = starship_prompt
 $RIGHT_PROMPT = starship_rprompt
 $STARSHIP_SHELL = "xonsh"
 $STARSHIP_SESSION_KEY = uuid.uuid4().hex
+{{else}}
+execx($(starship init xonsh))
+{{/if}}
 
 # === Aliases ===
 aliases['es'] = 'eza --git --icons'
