@@ -5,5 +5,9 @@ Host contabo
 
 {{#if dotter.packages.ldiproxy}}
 Host *
+{{#if (eq dotter.os "windows")}}
     ProxyCommand ncat --proxy ldiproxy.lsjv.rlp.de:8080 %h %p
+{{else}}
+    ProxyCommand nc -X connect -x ldiproxy.lsjv.rlp.de:8080 %h %p
+{{/if}}
 {{/if}}
