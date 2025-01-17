@@ -4,7 +4,7 @@
 depends = ["base", "editor", "shell", "terminal"]
 
 [dev-extra]
-depends = ["editor-extra", "rust", "sbcl", "shell-extra"]
+depends = ["editor-extra", "python", "rust", "sbcl", "shell-extra"]
 
 [base]
 depends = ["gnupg", "ssh", "vcs"]
@@ -51,6 +51,8 @@ depends = ["dmenu_wl", "waybar"]
 [rust]
 depends = ["rustfmt"]
 
+[python]
+depends = ["conda"]
 
 # Meta Packages
 
@@ -68,6 +70,9 @@ depends = ["rustfmt"]
 
 [bspwm.files]
 bspwmrc = "~/.config/bspwm/bspwmrc"
+
+[conda.files]
+condarc = "~/.condarc"
 
 [dmenu.files]
 "scripts/dmenu" = "~/.config/dmenu"
