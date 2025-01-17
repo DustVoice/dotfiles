@@ -905,6 +905,8 @@ $env.config = {
 use nu_scripts/themes/nu-themes/catppuccin-mocha.nu
 $env.config = ($env.config | merge {color_config: (catppuccin-mocha)})
 
+use nu_scripts/modules/virtual_environments/conda.nu
+
 {{#if (is_executable "starship")}}
 source ~/.cache/starship/init.nu
 {{/if}}
