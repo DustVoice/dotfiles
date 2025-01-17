@@ -115,6 +115,10 @@ inputrc = "~/.inputrc"
 "config.nu" = "~/.config/nushell/config.nu"
 "env.nu" = "~/.config/nushell/env.nu"
 
+[nushell.files."plugins/nushell/nu_scripts/modules/virtual_environments"]
+target = "~/.config/nushell/scripts/nu_scripts/modules/virtual_environments"
+type = "symbolic"
+
 [nushell.files."plugins/nushell/nu_scripts/themes/nu-themes/catppuccin-mocha.nu"]
 target = "~/.config/nushell/scripts/nu_scripts/themes/nu-themes/catppuccin-mocha.nu"
 type = "symbolic"
