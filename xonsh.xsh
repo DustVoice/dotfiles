@@ -1,17 +1,44 @@
 # === Init ===
+
+# > Xontrib
 xontrib load coreutils
+# < Xontrib
 
+# > General
 $FORCE_POSIX_PATHS = True
+$UPDATE_OS_ENVIRON = True
+# < General
+
+# > Interactive Prompt
 $VI_MODE = True
+$XONSH_AUTOPAIR = True
+$XONSH_HISTORY_MATCH_ANYWHERE = True
+$XONSH_SUPPRESS_WELCOME = True
+# < Interactive Prompt
 
-# = carapace-bin =
-COMPLETIONS_CONFIRM=True
+# > Interpreter Behavior
+$DOTGLOB = True
+# < Interpreter Behavior
+
+# > Tab-completion behavior
+$CMD_COMPLETIONS_SHOW_DESC = True
+$COMPLETIONS_CONFIRM = False
+$COMPLETIONS_DISPLAY = 'single'
+$COMPLETION_IN_THREAD = True # NOTE: Disable to reduce flickering. Might increase lag on e.g. pacman due to $UPDATE_COMPLETIONS_ON_KEYPRESS
+$UPDATE_COMPLETIONS_ON_KEYPRESS = True
+# < Tab-completion behavior
+
+# === Tools ===
+
+# > carapace-bin
 exec($(carapace _carapace))
+# < carapace-bin
 
-# = zoxide =
+# > zoxide
 execx($(zoxide init xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
+# < zoxide
 
-# = starship =
+# > starship
 {{#if (eq dotter.os "windows")}}
 import uuid
 
@@ -40,14 +67,34 @@ $STARSHIP_SESSION_KEY = uuid.uuid4().hex
 {{else}}
 execx($(starship init xonsh))
 {{/if}}
+# < starship
 
-# === Aliases ===
+# === Default Aliases ===
+
+# > eza
 aliases['es'] = 'eza --git --icons'
 aliases['esa'] = 'eza -a --git --icons'
 aliases['el'] = 'eza -lh --git --icons'
 aliases['ela'] = 'eza -lah --git --icons'
 aliases['et'] = 'eza -lTh --git --icons'
 aliases['eta'] = 'eza -lTah --git --icons'
+# < eza
 
-# === Fix for WSL ===
-[$PATH.remove(path) for path in $PATH.paths if path.startswith("/mnt/c/")]
+# === Custom Section ===
+
+conf_dir = $XONSH_CONFIG_DIR
+
+# > User rc.xonsh
+if pf'{conf_dir}/user.xsh'.exists():
+    source $XONSH_CONFIG_DIR/user.xsh
+# <
+
+# > Aliases
+if pf'{conf_dir}/alias.xsh'.exists():
+    source $XONSH_CONFIG_DIR/alias.xsh
+# < Aliases
+
+# > Environment Variables
+if pf'{conf_dir}/env.xsh'.exists():
+    source $XONSH_CONFIG_DIR/env.xsh
+# < Environment Variables

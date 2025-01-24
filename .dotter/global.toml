@@ -19,10 +19,10 @@ depends = ["starship"]
 depends = ["omp"]
 
 [shell]
-depends = ["nushell", "prompt", "zellij"]
+depends = ["nushell", "prompt", "xonsh", "zellij"]
 
 [shell-extra]
-depends = ["xonsh"]
+depends = []
 
 [terminal]
 depends = ["shell", "wezterm"]
