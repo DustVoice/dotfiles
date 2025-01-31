@@ -12,7 +12,7 @@ $UPDATE_OS_ENVIRON = True
 # > Interactive Prompt
 $VI_MODE = True
 $XONSH_AUTOPAIR = True
-$XONSH_HISTORY_MATCH_ANYWHERE = False
+$XONSH_HISTORY_MATCH_ANYWHERE = True
 $XONSH_SUPPRESS_WELCOME = True
 # < Interactive Prompt
 
@@ -24,8 +24,8 @@ $DOTGLOB = True
 $CMD_COMPLETIONS_SHOW_DESC = True
 $COMPLETIONS_CONFIRM = True
 $COMPLETIONS_DISPLAY = 'single'
-$COMPLETION_IN_THREAD = True # NOTE: Disable to reduce flickering. Might increase lag on e.g. pacman due to $UPDATE_COMPLETIONS_ON_KEYPRESS
-$UPDATE_COMPLETIONS_ON_KEYPRESS = True
+$COMPLETION_IN_THREAD = True
+$UPDATE_COMPLETIONS_ON_KEYPRESS = False
 # < Tab-completion behavior
 
 # === Tools ===
