@@ -12,7 +12,7 @@ $UPDATE_OS_ENVIRON = True
 # > Interactive Prompt
 $VI_MODE = True
 $XONSH_AUTOPAIR = True
-$XONSH_HISTORY_MATCH_ANYWHERE = True
+$XONSH_HISTORY_MATCH_ANYWHERE = False
 $XONSH_SUPPRESS_WELCOME = True
 # < Interactive Prompt
 
@@ -22,7 +22,7 @@ $DOTGLOB = True
 
 # > Tab-completion behavior
 $CMD_COMPLETIONS_SHOW_DESC = True
-$COMPLETIONS_CONFIRM = False
+$COMPLETIONS_CONFIRM = True
 $COMPLETIONS_DISPLAY = 'single'
 $COMPLETION_IN_THREAD = True # NOTE: Disable to reduce flickering. Might increase lag on e.g. pacman due to $UPDATE_COMPLETIONS_ON_KEYPRESS
 $UPDATE_COMPLETIONS_ON_KEYPRESS = True
@@ -98,3 +98,8 @@ if pf'{conf_dir}/alias.xsh'.exists():
 if pf'{conf_dir}/env.xsh'.exists():
     source $XONSH_CONFIG_DIR/env.xsh
 # < Environment Variables
+
+# > .xonshrc (e.g. for conda init)
+if p'~/.xonshrc'.exists():
+    source ~/.xonshrc
+# > .xonshrc
