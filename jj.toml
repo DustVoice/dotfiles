@@ -15,12 +15,6 @@ key = "7A9CA430D426100E"
 [signing.ssh.backends.ssh]
 allowed-signers = "~/.ssh/allowed_signers"
 
-[aliases]
-n = ["new"]
-e = ["edit"]
-sq = ["squash"]
-sqi = ["squash", "--interactive"]
-
 [merge-tools.diffconflicts]
 program = "nvim"
 merge-args = [
