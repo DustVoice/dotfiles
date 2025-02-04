@@ -72,10 +72,10 @@ execx($(starship init xonsh))
 # === Default Aliases ===
 
 # > eza
-aliases['es'] = ['eza', '--git', '--icons auto']
-aliases['el'] = ['eza', '-lh', '--git', '--icons auto']
-aliases['et'] = ['eza', '-lTh', '--git', '--icons auto']
-aliases['esa'] = ['eza', '-a', '--git', '--icons auto']
+aliases['es'] = ['eza', '--git', '--icons=auto']
+aliases['el'] = ['eza', '-lh', '--git', '--icons=auto']
+aliases['et'] = ['eza', '-lTh', '--git', '--icons=auto']
+aliases['esa'] = ['eza', '-a', '--git', '--icons=auto']
 aliases['ela'] = ['eza', '-lah', '--git', '--icons auto']
 aliases['eta'] = ['eza', '-lTah', '--git', '--icons auto']
 # < eza
