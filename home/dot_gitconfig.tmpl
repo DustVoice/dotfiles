@@ -1,0 +1,47 @@
+# -*- mode: gitconfig -*-
+# vim: ft=gitconfig
+
+[user]
+    email = info@dustvoice.de
+    name = DustVoice
+    signingkey = 7A9CA430D426100E
+
+[core]
+    autocrlf = input
+    editor = nvim
+
+[push]
+    default = simple
+    followTags = true
+
+[commit]
+    gpgsign = true
+
+[gpg]
+    format = openpgp
+{{- if eq .chezmoi.os "linux" }}
+    program = gpg2
+{{- else if .chezmoi.os "windows" }}
+    program = "C:/Program Files (x86)/GnuPG/bin/gpg.exe"
+{{ end }}
+
+[gpg "ssh"]
+    allowedSignersFile = ~/.ssh/allowed_signers
+
+[pull]
+    rebase = false
+
+[http]
+    postBuffer = 500M
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+[filter "lfs"]
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f

@@ -3,11 +3,11 @@ Host contabo
     User dustvoice
     ForwardAgent yes
 
-{{#if dotter.packages.ldiproxy}}
+{{- if eq .chezmoi.hostname "nb-mz-holland" }}
 Host *
-{{#if (eq dotter.os "windows")}}
+{{- if eq .chezmoi.os "windows" }}
     ProxyCommand ncat --proxy ldiproxy.lsjv.rlp.de:8080 %h %p
-{{else}}
+{{- else }}
     ProxyCommand nc -X connect -x ldiproxy.lsjv.rlp.de:8080 %h %p
-{{/if}}
-{{/if}}
+{{- end}}
+{{- end }}

@@ -1,0 +1,19 @@
+[".config/nvim"]
+type = "git-repo"
+url = "https://github.com/DustVoice/nvim.git"
+
+[".config/alacritty/catppuccin-macchiato.toml"]
+type = "file"
+url = "https://raw.githubusercontent.com/catppuccin/alacritty/refs/heads/main/catppuccin-macchiato.toml"
+
+[".config/waybar/macchiato.css"]
+type = "file"
+url = "https://raw.githubusercontent.com/catppuccin/waybar/refs/heads/main/themes/macchiato.css"
+
+[".config/nushell/scripts/nu_scripts/themes/nu-themes/catppuccin-macchiato.nu"]
+type = "file"
+url = "https://raw.githubusercontent.com/nushell/nu_scripts/refs/heads/main/themes/nu-themes/catppuccin-macchiato.nu"
+
+[".config/nushell/scripts/nu_scripts/modules/virtual_environments/conda.nu"]
+type = "file"
+url = "https://raw.githubusercontent.com/nushell/nu_scripts/refs/heads/main/modules/virtual_environments/conda.nu"

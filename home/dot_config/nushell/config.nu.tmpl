@@ -907,14 +907,14 @@ $env.config = ($env.config | merge {color_config: (catppuccin-mocha)})
 
 use nu_scripts/modules/virtual_environments/conda.nu
 
-{{#if (is_executable "starship")}}
+{{ if isExecutable "starship" }}
 source ~/.cache/starship/init.nu
-{{/if}}
-{{#if (is_executable "zoxide")}}
+{{ end }}
+{{ if isExecutable "zoxide" }}
 source ~/.cache/zoxide/init.nu
-{{/if}}
-{{#if (is_executable "jj")}}
+{{ end }}
+{{ if isExecutable "jj" }}
 source ~/.cache/jj/init.nu
-{{/if}}
+{{ end }}
 
 alias ljj = lazyjj

@@ -2,13 +2,18 @@
 name = "DustVoice"
 email = "info@dustvoice.de"
 
+[git]
+subprocess = true
+sign-on-push = true
+
 [ui]
 editor = "nvim"
 default-command = "log"
 diff-editor = ":builtin"
+show-cryptographic-signatures = "true"
 
 [signing]
-sign-all = true
+sign-all = false
 backend = "gpg"
 key = "7A9CA430D426100E"
 

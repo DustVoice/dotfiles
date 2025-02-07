@@ -1,5 +1,5 @@
 # DustVoice's dotfiles
 
-My dotfiles repo utilizing [dotter](https://github.com/SuperCuber/dotter).
+My dotfiles, managed with [chezmoi](https://www.chezmoi.io)([GitHub](https://github.com/twpayne/chezmoi)).
 
 Viewer discretion advised.
