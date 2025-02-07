@@ -10,7 +10,7 @@ sign-on-push = true
 editor = "nvim"
 default-command = "log"
 diff-editor = ":builtin"
-show-cryptographic-signatures = "true"
+show-cryptographic-signatures = true
 
 [signing]
 sign-all = false
