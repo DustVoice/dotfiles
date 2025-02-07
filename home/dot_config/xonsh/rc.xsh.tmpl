@@ -46,7 +46,7 @@ execx($(zoxide init xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
 # < zoxide
 
 # > starship
-{{ if eq .chezmoi.os "windows" }}
+{{- if eq .chezmoi.os "windows" }}
 import uuid
 
 def starship_prompt():
@@ -71,12 +71,16 @@ $PROMPT = starship_prompt
 $RIGHT_PROMPT = starship_rprompt
 $STARSHIP_SHELL = "xonsh"
 $STARSHIP_SESSION_KEY = uuid.uuid4().hex
-{{ else }}
+{{- else }}
 execx($(starship init xonsh))
-{{ end }}
+{{- end }}
 # < starship
 
 # === Default Aliases ===
+
+# > chezmoi
+aliases['cz'] = ['chezmoi']
+# < chezmoi
 
 # > eza
 aliases['es'] = ['eza', '--git', '--icons=auto']

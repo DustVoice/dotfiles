@@ -8,6 +8,6 @@ max-cache-ttl-ssh 1200
 enable-ssh-support
 enable-putty-support
 allow-emacs-pinentry
-{{- if eq chezmoi.os "windows" }}
+{{- if eq .chezmoi.os "windows" }}
 enable-win32-openssh-support
 {{- end }}

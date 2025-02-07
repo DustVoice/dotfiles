@@ -2,8 +2,7 @@ Host contabo
     HostName pc.dustvoice.de
     User dustvoice
     ForwardAgent yes
-
-{{- if eq .chezmoi.hostname "nb-mz-holland" }}
+{{ if eq .chezmoi.hostname "nb-mz-holland" }}
 Host *
 {{- if eq .chezmoi.os "windows" }}
     ProxyCommand ncat --proxy ldiproxy.lsjv.rlp.de:8080 %h %p
