@@ -85,7 +85,7 @@ shape = "Beam"
 blinking = "Off"
 
 [shell]
-program = "xonsh"
+program = "nu"
 
 [mouse]
 hide_when_typing = true
