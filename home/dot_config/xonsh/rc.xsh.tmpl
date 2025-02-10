@@ -49,12 +49,6 @@ execx($(zoxide init xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
 {{- end }}
 # < zoxide
 
-# > atuin
-{{- if lookPath "atuin" }}
-execx($(atuin init xonsh))
-{{- end }}
-# < atuin
-
 # > starship
 {{- if lookPath "starship" }}
 {{- if eq .chezmoi.os "windows" }}
