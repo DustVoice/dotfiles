@@ -17,3 +17,7 @@ url = "https://raw.githubusercontent.com/nushell/nu_scripts/refs/heads/main/them
 [".config/nushell/scripts/nu_scripts/modules/virtual_environments/conda.nu"]
 type = "file"
 url = "https://raw.githubusercontent.com/nushell/nu_scripts/refs/heads/main/modules/virtual_environments/conda.nu"
+
+[".config/nushell/scripts/nu_scripts/modules/background_task/task.nu"]
+type = "file"
+url = "https://github.com/nushell/nu_scripts/raw/refs/heads/main/modules/background_task/task.nu"
