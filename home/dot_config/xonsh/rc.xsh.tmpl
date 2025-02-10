@@ -38,14 +38,25 @@ $EDITOR = "nvim"
 # === Tools ===
 
 # > carapace-bin
+{{- if lookPath "carapace" }}
 exec($(carapace _carapace))
+{{- end }}
 # < carapace-bin
 
 # > zoxide
+{{- if lookPath "zoxide" }}
 execx($(zoxide init xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
+{{- end }}
 # < zoxide
 
+# > atuin
+{{- if lookPath "atuin" }}
+execx($(atuin init xonsh))
+{{- end }}
+# < atuin
+
 # > starship
+{{- if lookPath "starship" }}
 {{- if eq .chezmoi.os "windows" }}
 import uuid
 
@@ -73,6 +84,7 @@ $STARSHIP_SHELL = "xonsh"
 $STARSHIP_SESSION_KEY = uuid.uuid4().hex
 {{- else }}
 execx($(starship init xonsh))
+{{- end }}
 {{- end }}
 # < starship
 
