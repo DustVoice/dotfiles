@@ -1,0 +1,6 @@
+command = "nu"
+
+font-family = "JuliaMono"
+font-size = 13.0
+
+theme = catppuccin-macchiato
