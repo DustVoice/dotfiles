@@ -3,4 +3,6 @@ command = "nu"
 font-family = "IosevkaTerm"
 font-size = 13.0
 
+keybind = performable:shift+insert=paste_from_clipboard
+
 theme = catppuccin-macchiato
