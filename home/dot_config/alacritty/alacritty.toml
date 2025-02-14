@@ -19,19 +19,19 @@ auto_scroll = false
 size = 13
 
 [font.normal]
-family = "IosevkaTerm Nerd Font"
+family = "VictorMono Nerd Font"
 style = "Regular"
 
 [font.bold]
-family = "IosevkaTerm Nerd Font"
+family = "VictorMono Nerd Font"
 style = "Bold"
 
 [font.italic]
-family = "IosevkaTerm Nerd Font"
+family = "VictorMono Nerd Font"
 style = "Italic"
 
 [font.bold_italic]
-family = "IosevkaTerm Nerd Font"
+family = "VictorMono Nerd Font"
 style = "Bold Italic"
 
 [colors]

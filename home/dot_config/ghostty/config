@@ -1,6 +1,6 @@
 command = "nu"
 
-font-family = "JuliaMono"
+font-family = "VictorMono Nerd Font"
 font-size = 13.0
 
 theme = catppuccin-macchiato
