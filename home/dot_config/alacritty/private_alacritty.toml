@@ -1,8 +1,3 @@
-import = ["~/.config/alacritty/catppuccin-macchiato.yml"]
-draw_bold_text_with_bright_colors = true
-live_config_reload = true
-working_directory = "None"
-
 [window]
 dynamic_padding = false
 opacity = 1
@@ -19,23 +14,24 @@ auto_scroll = false
 size = 13
 
 [font.normal]
-family = "VictorMono Nerd Font"
+family = "IosevkaTerm Nerd Font"
 style = "Regular"
 
 [font.bold]
-family = "VictorMono Nerd Font"
+family = "IosevkaTerm Nerd Font"
 style = "Bold"
 
 [font.italic]
-family = "VictorMono Nerd Font"
+family = "IosevkaTerm Nerd Font"
 style = "Italic"
 
 [font.bold_italic]
-family = "VictorMono Nerd Font"
+family = "IosevkaTerm Nerd Font"
 style = "Bold Italic"
 
 [colors]
 indexed_colors = []
+draw_bold_text_with_bright_colors = true
 
 [colors.primary]
 background = "0x282a36"
@@ -84,63 +80,72 @@ thickness = 0.2
 shape = "Beam"
 blinking = "Off"
 
-[shell]
+[terminal.shell]
 program = "nu"
 
 [mouse]
 hide_when_typing = true
 
-[[key_bindings]]
+[keyboard]
+
+[[keyboard.bindings]]
 key = "PageUp"
 mods = "Shift"
 mode = "~Alt"
 action = "ScrollPageUp"
 
-[[key_bindings]]
+[[keyboard.bindings]]
 key = "PageDown"
 mods = "Shift"
 mode = "~Alt"
 action = "ScrollPageDown"
 
-[[key_bindings]]
+[[keyboard.bindings]]
 key = "Home"
 mods = "Shift"
 mode = "~Alt"
 action = "ScrollToTop"
 
-[[key_bindings]]
+[[keyboard.bindings]]
 key = "End"
 mods = "Shift"
 mode = "~Alt"
 action = "ScrollToBottom"
 
-[[key_bindings]]
+[[keyboard.bindings]]
 key = "V"
 mods = "Control|Shift"
 mode = "~Vi"
 action = "Paste"
 
-[[key_bindings]]
+[[keyboard.bindings]]
 key = "C"
 mods = "Control|Shift"
 action = "Copy"
 
-[[key_bindings]]
+[[keyboard.bindings]]
 key = "Key0"
 mods = "Control"
 action = "ResetFontSize"
 
-[[key_bindings]]
+[[keyboard.bindings]]
 key = "Equals"
 mods = "Control"
 action = "IncreaseFontSize"
 
-[[key_bindings]]
+[[keyboard.bindings]]
 key = "Minus"
 mods = "Control"
 action = "DecreaseFontSize"
 
-[[key_bindings]]
+[[keyboard.bindings]]
 key = "Return"
 mods = "Alt"
 action = "ToggleFullscreen"
+
+[general]
+live_config_reload = true
+working_directory = "None"
+import = ["~/.config/alacritty/catppuccin-macchiato.toml"]
+
+[terminal]
