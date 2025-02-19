@@ -8,7 +8,6 @@ y = 2
 
 [scrolling]
 history = 100_000
-auto_scroll = false
 
 [font]
 size = 13
@@ -147,5 +146,3 @@ action = "ToggleFullscreen"
 live_config_reload = true
 working_directory = "None"
 import = ["~/.config/alacritty/catppuccin-macchiato.toml"]
-
-[terminal]
