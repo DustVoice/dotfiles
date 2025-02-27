@@ -1,4 +1,4 @@
-command = "nu"
+command = "zellij"
 
 font-family = "IosevkaTerm"
 font-size = 13.0
