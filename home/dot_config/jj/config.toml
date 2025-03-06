@@ -3,7 +3,6 @@ name = "DustVoice"
 email = "info@dustvoice.de"
 
 [git]
-subprocess = true
 sign-on-push = true
 
 [ui]
@@ -13,7 +12,7 @@ diff-editor = ":builtin"
 show-cryptographic-signatures = true
 
 [signing]
-sign-all = false
+behavior = "keep"
 backend = "gpg"
 key = "7A9CA430D426100E"
 
