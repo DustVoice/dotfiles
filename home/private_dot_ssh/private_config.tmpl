@@ -2,12 +2,15 @@ Host dustdev
     HostName dev.dustvoice.de
     User dustvoice
     ForwardAgent yes
+    PasswordAuthentication no
+    IdentityFile ~/.ssh/id_ed25519_sk_dustdev
 
 Host dustdev-root
     HostName dev.dustvoice.de
     User root
     ForwardAgent yes
-    IdentityFile ~/.ssh/id_ed25519_sk_root
+    PasswordAuthentication no
+    IdentityFile ~/.ssh/id_ed25519_sk_dustdev_root
 
 {{ if eq .chezmoi.hostname "nb-mz-holland" }}
 Host *
