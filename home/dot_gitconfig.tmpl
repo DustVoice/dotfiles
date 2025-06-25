@@ -9,6 +9,7 @@
 [core]
     autocrlf = input
     editor = nvim
+    attributesfile = ~/.gitattributes
 
 [push]
     default = simple
@@ -37,8 +38,17 @@
 [merge]
     conflictstyle = diff3
 
+{{ if lookPath "mergiraf" }}
+[merge "mergiraf"]
+    name = mergiraf
+    driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
+{{ end }}
+
 [diff]
     colorMoved = default
+{{- if lookPath "difft" }}
+    external = difft
+{{ end }}
 
 [filter "lfs"]
     process = git-lfs filter-process

@@ -9,6 +9,9 @@ sign-on-push = true
 editor = "nvim"
 default-command = "log"
 diff-editor = ":builtin"
+{{- if lookPath "difft" }}
+diff-formatter = ["difft", "--color=always", "$left", "$right"]
+{{- end }}
 show-cryptographic-signatures = true
 
 [signing]
