@@ -1,4 +1,5 @@
 Host dustdev
+    SetEnv TERM=xterm
     HostName dev.dustvoice.de
     User dustvoice
     ForwardAgent yes
@@ -6,14 +7,16 @@ Host dustdev
     IdentityFile ~/.ssh/id_ed25519_sk_dustdev
 
 Host dustdev-root
+    SetEnv TERM=xterm
     HostName dev.dustvoice.de
     User root
     ForwardAgent yes
     PasswordAuthentication no
     IdentityFile ~/.ssh/id_ed25519_sk_dustdev_root
 
-{{ if eq .chezmoi.hostname "nb-mz-holland" }}
 Host *
+    SetEnv TERM=xterm
+{{ if eq .chezmoi.hostname "nb-mz-holland" }}
 {{- if eq .chezmoi.os "windows" }}
     ProxyCommand ncat --proxy ldiproxy.lsjv.rlp.de:8080 %h %p
 {{- else }}
