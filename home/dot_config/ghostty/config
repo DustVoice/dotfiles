@@ -1,6 +1,6 @@
 command = "zellij"
 
-font-family = "IosevkaTerm"
+font-family = "IosevkaTerm Nerd Font"
 font-size = 13.0
 
 confirm-close-surface = false

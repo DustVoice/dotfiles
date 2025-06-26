@@ -17,12 +17,16 @@ set -gx EDITOR nvim
 set -gx TERMINAL ghostty
 # < ENV
 
-# > Starship
-if command -q starship
-    starship init fish | source
-    enable_transience
+# > Oh-My-Posh
+if command -q oh-my-posh
+    set -l config ~/.config/omp.yaml
+    if test -e $config
+        oh-my-posh init fish --config $config | source
+    else
+        oh-my-posh init fish | source
+    end
 end
-# < Starship
+# < Oh-My-Posh
 
 # > Zoxide
 if command -q zoxide
