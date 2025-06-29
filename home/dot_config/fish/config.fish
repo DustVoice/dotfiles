@@ -1,3 +1,7 @@
+# > Greeting
+set fish_greeting
+# < Greeting
+
 # > Cursor
 set fish_cursor_default block
 set fish_cursor_insert line

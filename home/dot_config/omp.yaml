@@ -38,18 +38,37 @@ palette:
   success: "p:green"
   error: "p:red"
   os: "p:overlay0"
+  time: "p:overlay0"
 
 blocks:
-  - type: "rprompt"
+  - type: rprompt
     segments:
-      - type: "jujutsu"
-        style: "plain"
-        foreground: "p:rosewater"
+      - type: status
+        style: plain
+        template: " {{ if .Error }}\ue654 {{ .String }}{{ end }}"
+        foreground: p:error
+        properties:
+          status_template: "{{ if ne .Code 0 }}{{ .Code }}{{ end }}"
+
+      - type: executiontime
+        style: plain
+        template: " {{ .FormattedMs }}"
+        foreground: p:time
+
+      - type: project
+        style: plain
+        template: " {{ if .Error }}{{ .Error }}{{ else }}{{ if eq .Type \"cargo\" }}\ue7a8 {{ else if eq .Type \"node\" }}\uf0399 {{ else }}\uf487 {{ end }}{{ if .Version }}{{.Version}}{{ end }}{{ end }}"
+        foreground: p:lavender
+
+      - type: jujutsu
+        style: plain
+        foreground: p:teal
         template: " jj {{.ChangeID}}{{if .Working.Changed}} \uf044 {{ .Working.String }}{{ end }}"
         properties:
           fetch_status: true
-      - type: "git"
-        style: "plain"
+
+      - type: git
+        style: plain
         properties:
           branch_icon: "\ue725 "
           cherry_pick_icon: "\ue29b "
@@ -62,38 +81,53 @@ blocks:
           revert_icon: "\uf0e2 "
           tag_icon: "\uf412 "
         template: " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}"
-        foreground: "p:lavender"
-        background: "transparent"
+        foreground: p:sapphire
+        background: transparent
 
-      - type: "os"
-        style: "plain"
-        template: " {{ if .WSL }}WSL at {{ end }}{{.Icon}}"
-        foreground: "p:os"
+      - type: os
+        style: plain
+        template: " {{.Icon}}"
+        foreground: p:os
         properties:
           fedoralinux: "\uf30a "
 
-  - type: "prompt"
-    alignment: "left"
-    segments:
-      - type: "session"
-        style: "plain"
-        template: "{{ if .SSHSession }}\ueba9 {{ end }}{{ .UserName }}@{{ .HostName }} "
-        foreground: "p:blue"
+      - type: upgrade
+        style: plain
+        template: " \uf019 ({{ .Current }}/ {{ .Latest }})"
+        foreground: p:red
 
-      - type: "path"
-        style: "plain"
+  - type: prompt
+    alignment: left
+    segments:
+      - type: root
+        style: plain
+        template: "\uF0E7 "
+        foreground: p:maroon
+
+      - type: session
+        style: plain
+        template: "{{ if .SSHSession }}\ueba9 {{ end }}{{ .UserName }}@{{ .HostName }} "
+        foreground: p:blue
+
+      - type: path
+        style: plain
         properties:
           display_root: true
           home_icon: "~"
-          style: "letter"
+          style: letter
         template: "{{ .Path }} "
-        foreground: "p:pink"
+        foreground: p:pink
 
-      - type: "status"
-        style: "plain"
-        template: "{{ if .Error }}{{ .String }} \uf00d{{ else }}\uf105{{ end }}"
+      - type: status
+        alias: PromptStatus
+        style: plain
+        template: "{{ if .Error }}\uf00d{{ else }}\uf105{{ end }}"
         foreground_templates:
           - "{{ if .Error }}p:error{{ else }}p:success{{ end }}"
         properties:
           always_enabled: true
-          status_template: "{{ if ne .Code 0 }}({{ .Code }}){{ end }}"
+
+transient_prompt:
+  background: transparent
+  foreground: p:yellow
+  template: "\uf105 "
