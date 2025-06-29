@@ -11,10 +11,6 @@ set fish_cursor_external line
 set fish_cursor_visual block
 # < Cursor
 
-# > Bindings
-fish_vi_key_bindings --no-erase
-# < Bindings
-
 # > ENV
 set -gx LANG "en_US.UTF-8"
 set -gx EDITOR nvim
