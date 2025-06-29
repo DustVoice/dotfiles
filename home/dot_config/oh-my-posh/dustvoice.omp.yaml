@@ -43,17 +43,29 @@ palette:
 blocks:
   - type: rprompt
     segments:
-      - type: status
-        style: plain
-        template: " {{ if .Error }}\ue654 {{ .String }}{{ end }}"
-        foreground: p:error
-        properties:
-          status_template: "{{ if ne .Code 0 }}{{ .Code }}{{ end }}"
-
       - type: executiontime
         style: plain
         template: " {{ .FormattedMs }}"
         foreground: p:time
+
+      - type: status
+        alias: PromptStatus
+        style: plain
+        template: "{{ if .Error }}{{ .String }}{{ end }}"
+        foreground_templates:
+          - "{{ if .Error }}p:error{{ else }}p:success{{ end }}"
+        properties:
+          always_enabled: true
+          status_template: "{{ if ne .Code 0 }}\ue654 {{ .Code }}{{ if reason .Code }} ({{ reason .Code }}){{ end }}{{ end }}"
+
+      - type: path
+        style: plain
+        properties:
+          display_root: true
+          home_icon: "~"
+          style: letter
+        template: " {{ .Path }}"
+        foreground: p:pink
 
       - type: project
         style: plain
@@ -84,6 +96,16 @@ blocks:
         foreground: p:sapphire
         background: transparent
 
+      - type: session
+        style: plain
+        template: " {{ if .SSHSession }}\ueba9 {{ end }}{{ .UserName }}@{{ .HostName }}"
+        foreground: p:blue
+
+      - type: root
+        style: plain
+        template: " \uF0E7"
+        foreground: p:maroon
+
       - type: os
         style: plain
         template: " {{.Icon}}"
@@ -99,25 +121,6 @@ blocks:
   - type: prompt
     alignment: left
     segments:
-      - type: root
-        style: plain
-        template: "\uF0E7 "
-        foreground: p:maroon
-
-      - type: session
-        style: plain
-        template: "{{ if .SSHSession }}\ueba9 {{ end }}{{ .UserName }}@{{ .HostName }} "
-        foreground: p:blue
-
-      - type: path
-        style: plain
-        properties:
-          display_root: true
-          home_icon: "~"
-          style: letter
-        template: "{{ .Path }} "
-        foreground: p:pink
-
       - type: status
         alias: PromptStatus
         style: plain
