@@ -111,7 +111,7 @@ blocks:
         template: " {{.Icon}}"
         foreground: p:os
         properties:
-          fedoralinux: "\uf30a "
+          fedoralinux: "\uf30a"
 
       - type: upgrade
         style: plain
