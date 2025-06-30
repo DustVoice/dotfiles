@@ -51,12 +51,12 @@ blocks:
       - type: status
         alias: PromptStatus
         style: plain
-        template: "{{ if .Error }}{{ .String }}{{ end }}"
+        template: " {{ if .Error }}{{ .String }}{{ end }}"
         foreground_templates:
           - "{{ if .Error }}p:error{{ else }}p:success{{ end }}"
         properties:
           always_enabled: true
-          status_template: "{{ if ne .Code 0 }}\ue654 {{ .Code }}{{ if reason .Code }} ({{ reason .Code }}){{ end }}{{ end }}"
+          status_template: "{{ if ne .Code 0 }}{{ if reason .Code }}{{ reason .Code }}{{ end }}\ue654 {{ .Code }}{{ end }}"
 
       - type: path
         style: plain
