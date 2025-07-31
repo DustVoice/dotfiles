@@ -26,12 +26,7 @@ display-inlay-hints = true
 
 [keys.normal]
 g = { "left" = "goto_line_start", "right" = "goto_line_end", "up" = "goto_file_start", "down" = "goto_last_line" }
-C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
-C-l = [":new", ":insert-output lazyjj", ":buffer-close!", ":redraw"]
-C-e = [
-  ':sh rm -f /tmp/unique-file',
-  ':insert-output yazi %{uffer_name} --chooser-file=/tmp/unique-file',
-  ':insert-output echo "\x1[?1049h\x1b[?2004h" > /dev/tty',
-  ':open %sh{cat /tmp/unique-file}',
-  ':redraw',
-]
+
+[keys.normal.space]
+l = { "g" = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"] }
+j = { "j" = [":new", ":insert-output lazyjj", ":buffer-close!", ":redraw"] }
