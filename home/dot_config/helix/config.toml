@@ -27,6 +27,6 @@ display-inlay-hints = true
 [keys.normal]
 g = { "left" = "goto_line_start", "right" = "goto_line_end", "up" = "goto_file_start", "down" = "goto_last_line" }
 
-[keys.normal.space]
-l = { "g" = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"] }
-j = { "j" = [":new", ":insert-output lazyjj", ":buffer-close!", ":redraw"] }
+[keys.normal.space.l]
+g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+j = [":new", ":insert-output lazyjj", ":buffer-close!", ":redraw"]
