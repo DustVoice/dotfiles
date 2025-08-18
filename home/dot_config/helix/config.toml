@@ -1,9 +1,10 @@
 theme = "catppuccin_macchiato"
 
 [editor]
-line-number = "relative"
 bufferline = "multiple"
 color-modes = true
+end-of-line-diagnostics = "hint"
+line-number = "relative"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -13,16 +14,22 @@ select = "underline"
 [editor.file-picker]
 hidden = false
 
-[editor.whitespace.render]
-tab = "all"
-nbsp = "all"
-
 [editor.indent-guides]
 render = false
 
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
 [editor.lsp]
-display-messages = true
 display-inlay-hints = true
+display-messages = true
+
+[editor.soft-wrap]
+enable = true
+
+[editor.whitespace.render]
+tab = "all"
+nbsp = "all"
 
 [keys.normal]
 g = { "left" = "goto_line_start", "right" = "goto_line_end", "up" = "goto_file_start", "down" = "goto_last_line" }
