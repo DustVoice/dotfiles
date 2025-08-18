@@ -15,7 +15,7 @@ select = "underline"
 hidden = false
 
 [editor.indent-guides]
-render = false
+render = true
 
 [editor.inline-diagnostics]
 cursor-line = "warning"
