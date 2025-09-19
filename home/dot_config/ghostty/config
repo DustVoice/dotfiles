@@ -7,4 +7,4 @@ confirm-close-surface = false
 
 keybind = performable:shift+insert=paste_from_clipboard
 
-theme = catppuccin-macchiato
+theme = Catppuccin Macchiato
