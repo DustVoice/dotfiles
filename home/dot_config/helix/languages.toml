@@ -1,3 +1,6 @@
+[language-server.gpt]
+command = "helix-gpt"
+
 [[language]]
 name = "typst"
 scope = "source.typst"
