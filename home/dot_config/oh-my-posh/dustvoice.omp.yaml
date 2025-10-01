@@ -113,11 +113,6 @@ blocks:
         properties:
           fedoralinux: "\uf30a"
 
-      - type: upgrade
-        style: plain
-        template: " \uf019 ({{ .Current }}/ {{ .Latest }})"
-        foreground: p:red
-
   - type: prompt
     alignment: left
     segments:
