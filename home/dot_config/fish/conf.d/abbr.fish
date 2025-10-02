@@ -1,5 +1,6 @@
 abbr -a sysu 'systemctl --user'
 abbr -a cz chezmoi
+abbr -a czg 'chezmoi git'
 abbr -a -c chezmoi a apply
 abbr -a -c chezmoi --set-cursor e 'edit % -a'
 abbr -a -c chezmoi g git
