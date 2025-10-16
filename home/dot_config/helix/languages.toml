@@ -1,6 +1,10 @@
 [language-server.gpt]
 command = "helix-gpt"
 
+[language-server.tabby]
+command = "npx"
+args = ["tabby-agent", "--stdio"]
+
 [[language]]
 name = "typst"
 scope = "source.typst"
