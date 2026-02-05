@@ -99,8 +99,11 @@ use nu_scripts/modules/virtual_environments/conda.nu
 
 ## Tools
 mkdir ($nu.data-dir | path join "vendor/autoload")
-{{- if lookPath "starship" }}
-starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+# {{- if lookPath "starship" }}
+# starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+# {{- end }}
+{{- if lookPath "oh-my-posh" }}
+oh-my-posh init nu -c ~/.config/oh-my-posh/dustvoice.omp.yaml -p | save -f ($nu.data-dir | path join "vendor/autoload/oh-my-posh.nu")
 {{- end }}
 {{- if lookPath "zoxide" }}
 zoxide init nushell --cmd z | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.nu")
